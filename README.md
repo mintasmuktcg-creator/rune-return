@@ -33,8 +33,9 @@ node scripts/serve.mjs --dist
 5. Open the URL reported by the deploy job: typically
    `https://YOUR-USERNAME.github.io/rune-return/`.
 
-The build only copies the public application files to `dist/`; tests, tooling and
-repository metadata are not published. Relative asset paths support project
+The build bundles the public application into versioned JavaScript/CSS assets in
+`dist/` so browser caches pick up deployments. Tests, tooling and repository
+metadata are not published. Relative asset paths support project
 subdirectories without a custom domain or routing configuration. GitHub Pages
 supports public repositories on GitHub Free. See the
 [official Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).

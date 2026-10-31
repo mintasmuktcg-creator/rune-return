@@ -24,7 +24,7 @@
       <div class="world-switch" role="group" aria-label="Game"><button data-game="osrs" aria-pressed="true"><span class="world-icon">◈</span><span>Old School<small>RUNESCAPE</small></span><i></i></button><button data-game="rs3" aria-pressed="false"><span class="world-icon">✧</span><span>RuneScape<small>RS3</small></span><i></i></button></div>
       <div class="side-divider"></div>
       <p class="eyebrow">YOUR ADVENTURE LOG</p>
-      <label class="date-label" for="last-played">I last played on</label><input type="date" id="last-played" min="2001-01-04" value="2026-07-01">
+      <label class="date-label" for="last-played">I last played on</label><div class="date-controls"><input type="date" id="last-played" min="2001-01-04" value="2026-07-01"><button class="outline-button" id="refresh-catchup" type="button">Update catch-up ↻</button></div>
       <p class="side-note" id="date-summary" role="status" aria-live="polite">Choose your last-played date to update your catch-up.</p>
       <p class="eyebrow filter-heading">WHAT CALLS TO YOU?</p>
       <div id="category-filters" class="category-filters" role="group" aria-label="Content category"></div>
@@ -39,6 +39,7 @@
       </section>
       <section id="character-bar" class="character-bar" aria-label="Active character"></section>
       <div id="notice" class="notice" hidden></div>
+      <p id="catchup-feedback" class="catchup-feedback" role="status" aria-live="polite" hidden></p>
       <section class="stats" aria-label="Your catch-up summary" id="stats"></section>
       <section class="paths" aria-label="Choose an adventure"><button data-path="quests"><span class="path-icon">⌘</span><span><small>FOLLOW A STORY</small><strong>Pick up a new chapter</strong><em>Quests, mysteries & new places</em></span><b>↗</b></button><button data-path="drops"><span class="path-icon">◇</span><span><small>CHASE SOMETHING SHINY</small><strong>Find your next big drop</strong><em>Bosses, gear & collection goals</em></span><b>↗</b></button><button data-path="activities"><span class="path-icon">❋</span><span><small>TAKE THE SCENIC ROUTE</small><strong>Something a little different</strong><em>Skilling, activities & diversions</em></span><b>↗</b></button></section>
       <section id="discoveries" class="discoveries" aria-labelledby="results-title">

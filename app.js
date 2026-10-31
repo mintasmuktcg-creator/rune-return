@@ -76,6 +76,7 @@ function renderRoutines() {
   $('#shown-count').textContent = `${relevant.length} reminders`;
 }
 function render() {
+  $('#catchup-feedback').hidden = true;
   const allNew = filterUpdates(updates, options({ view: 'discover', category: 'all', query: '', hideDone: false, includeEnded: false }));
   const selected = filterUpdates(updates, options()).filter(item => !hideSkillGaps || currentCharacter()?.game !== item.game || skillMatch(requirementsById[item.id], currentCharacter().snapshot).status !== 'training');
   document.querySelectorAll('[data-game]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.game === state.game)));
@@ -147,24 +148,33 @@ document.addEventListener('click', event => {
   }
   if (button.id === 'reset-view') { view = 'discover'; category = 'all'; query = ''; hideDone = false; $('#search').value = ''; $('#hide-done').checked = false; render(); }
 });
-function changeLastPlayed(event) {
+function changeLastPlayed(event, force = false) {
   const value = event.target.value;
   if (!validDate(value) || value < '2001-01-04' || value > today) {
     // Native date inputs emit incomplete values while a user types. Wait for
     // commitment before restoring invalid input; never replace a partial edit.
-    if (event.type === 'change') { event.target.value = state.dates[state.game]; toast('Choose a valid date between January 4, 2001 and today.'); }
+    if (event.type === 'change' || force) { event.target.value = state.dates[state.game]; toast('Choose a valid date between January 4, 2001 and today.'); }
     return;
   }
-  if (value === state.dates[state.game]) return;
+  if (value === state.dates[state.game] && !force) return;
+  const previousIds = filterUpdates(updates, options({ view: 'discover', category: 'all', query: '', hideDone: false, includeEnded: false })).map(item => item.id).sort().join('|');
   state.dates[state.game] = value;
   view = 'discover'; category = 'all'; query = ''; sort = 'newest';
   hideDone = false; hideSkillGaps = false; includeEnded = false;
   $('#search').value = ''; $('#sort').value = 'newest';
   for (const selector of ['#hide-done', '#hide-skill-gaps', '#include-ended']) $(selector).checked = false;
   persist(); syncUrl(); render();
+  const next = filterUpdates(updates, options());
+  const same = previousIds === next.map(item => item.id).sort().join('|');
+  $('#catchup-feedback').hidden = false;
+  $('#catchup-feedback').textContent = `Catch-up updated: ${next.length} ${next.length === 1 ? 'discovery' : 'discoveries'} released after ${dateLabel(value)}. ${value < catalog.coverageStart ? 'Earlier releases are not in this starter archive; its coverage begins July 2026.' : same ? 'The selected dates contain the same catalog entries; there are no additional indexed releases between them.' : 'The list below now shows this date range, newest first.'}`;
 }
 $('#last-played').addEventListener('input', changeLastPlayed);
 $('#last-played').addEventListener('change', changeLastPlayed);
+$('#refresh-catchup').addEventListener('click', () => changeLastPlayed({ target: $('#last-played'), type: 'change' }, true));
+$('#last-played').addEventListener('keydown', event => {
+  if (event.key === 'Enter') { event.preventDefault(); changeLastPlayed({ target: event.target, type: 'change' }, true); }
+});
 $('#search').addEventListener('input', event => { query = event.target.value; render(); });
 $('#sort').addEventListener('change', event => { sort = event.target.value; render(); });
 $('#hide-done').addEventListener('change', event => { hideDone = event.target.checked; render(); });
