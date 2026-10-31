@@ -1,9 +1,11 @@
+import { historicalUpdates } from './history.js';
+export { archivePosts, archiveMeta } from './archive-data.js';
 // Original editorial summaries, with per-entry provenance. No scraped article bodies.
 export const catalog = {
-  reviewed: '2026-10-30',
-  coverageStart: '2026-07-01',
+  reviewed: '2026-10-31',
+  coverageStart: '2023-01-01',
   defaultDate: '2026-07-01',
-  version: 1,
+  version: 2,
 };
 export const categories = [
   { id: 'all', name: 'Everything new', icon: '◈' },
@@ -17,7 +19,7 @@ const wiki = (game, title) => `https://${game === 'osrs' ? 'oldschool.' : ''}run
 const jagex = slug => `https://www.jagex.com/news/${slug}`;
 const wyrmSource = jagex('set-sail-for-adventure-–-old-school-runescape-unveils-new-area-wyrmscraig');
 const havenSource = jagex('runescape-expands-like-never-before-as-havenhythe-part-ii-arrives');
-export const updates = [
+const recentUpdates = [
   {
     id: 'osrs-fractured-archive', game: 'osrs', date: '2026-10-20', title: 'The Fractured Archive',
     subtitle: 'A new endgame to get lost in.', tags: ['bosses', 'drops'], level: 'Endgame', style: 'Solo or group', priority: 65,
@@ -152,6 +154,8 @@ export const updates = [
     source: jagex('leagues-ii-equilibrium-showers-blessings-of-power-in-runescape-starting-today'), guide: wiki('rs3', 'Equilibrium League'),
   },
 ];
+
+export const updates = [...recentUpdates, ...historicalUpdates];
 
 // Evergreen reminders. These are never presented as additions since the chosen date.
 export const routines = [

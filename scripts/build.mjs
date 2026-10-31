@@ -2,12 +2,18 @@ import { mkdir, cp, writeFile, readFile, rm } from 'node:fs/promises';
 import { resolve, dirname, basename } from 'node:path';
 import { build } from 'esbuild';
 import { createHash } from 'node:crypto';
-import { updates, catalog } from '../data.js';
+import { updates, catalog, archivePosts } from '../data.js';
 import { validDate } from '../core.js';
 import './prepare.mjs';
 import { config } from '../config.js';
 if (!validDate(catalog.reviewed) || !validDate(catalog.coverageStart)) throw new Error('Invalid catalog metadata');
 const seen = new Set();
+for (const post of archivePosts) {
+  const url = new URL(post.url);
+  const host = post.game === 'osrs' ? 'oldschool.runescape.wiki' : post.game === 'rs3' ? 'runescape.wiki' : null;
+  if (seen.has(post.id) || !validDate(post.date) || post.date < catalog.coverageStart || post.date > catalog.reviewed || url.protocol !== 'https:' || url.hostname !== host || !url.pathname.startsWith('/w/Update:')) throw new Error(`Invalid archive post: ${post.id}`);
+  seen.add(post.id);
+}
 for (const item of updates) {
   if (seen.has(item.id) || !validDate(item.date) || item.date > catalog.reviewed || !['osrs', 'rs3'].includes(item.game)) throw new Error(`Invalid release: ${item.id}`);
   seen.add(item.id);

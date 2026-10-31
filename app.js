@@ -1,4 +1,4 @@
-import { catalog, categories, updates, routines } from './data.js';
+import { catalog, categories, updates, routines, archivePosts } from './data.js';
 import { todayUtc, validDate, isEnded, filterUpdates, routinePeriod, cleanState, escapeHtml as esc } from './core.js';
 import { initCharacters, currentCharacter, updateCharacterProgress, selectCharacterForGame } from './characters.js';
 import { skillMatch } from './character-core.js';
@@ -24,6 +24,21 @@ let hideDone = false;
 let includeEnded = false;
 let hideSkillGaps = false;
 let toastTimer;
+let archiveLimit = 25;
+let archiveRange = '';
+function matchingPosts() {
+  return archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today && post.title.toLowerCase().includes(query.toLowerCase().trim()));
+}
+function renderArchive() {
+  const range = `${state.game}|${state.dates[state.game]}|${query}`;
+  if (range !== archiveRange) { archiveLimit = 25; archiveRange = range; }
+  const posts = matchingPosts();
+  $('#archive-section').hidden = view !== 'discover';
+  $('#archive-summary').textContent = `${posts.length} dated update posts — browse the archive`;
+  $('#archive-results').innerHTML = posts.slice(0, archiveLimit).map(post => `<li><time datetime="${post.date}">${dateLabel(post.date)}</time><a href="${esc(post.url)}" target="_blank" rel="noopener noreferrer">${esc(post.title)} ↗</a></li>`).join('') || '<li>No update posts match this date and search.</li>';
+  $('#archive-more').hidden = posts.length <= archiveLimit;
+  $('#archive-source').href = state.game === 'osrs' ? 'https://oldschool.runescape.wiki/w/Game_updates' : 'https://runescape.wiki/w/Game_updates';
+}
 const dateFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const dateLabel = date => dateFormat.format(new Date(`${date}T00:00:00Z`));
 const iconFor = item => categories.find(c => c.id === item.tags[0])?.icon || '◈';
@@ -91,10 +106,10 @@ function render() {
   $('#category-filters').hidden = view === 'routines';
   $('.filter-heading').hidden = view === 'routines';
   $('#stats').innerHTML = [
-    [allNew.length, 'discoveries since your return date', '◈'],
+    [allNew.length, 'curated catch-up highlights', '◈'],
     [allNew.filter(i => i.tags.includes('quests')).length, 'stories waiting to be told', '⌘'],
     [allNew.filter(i => i.tags.includes('drops')).length, 'new reward chases', '◇'],
-    [state.saved.filter(id => updates.find(i => i.id === id)?.game === state.game).length, 'adventures in your shortlist', '✦'],
+    [archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today).length, 'dated game-update posts', '✦'],
   ].map(([count, text, icon]) => `<div><span>${icon}</span><strong>${count}</strong><small>${text}</small></div>`).join('');
   $('#results-title').innerHTML = view === 'plan' ? 'Your next adventures<span class="gold">.</span>' : view === 'routines' ? 'A few familiar detours<span class="gold">.</span>' : `New since ${dateLabel(state.dates[state.game])}<span class="gold">.</span>`;
   $('#results-kicker').textContent = view === 'plan' ? 'SAVED ON THIS DEVICE' : view === 'routines' ? 'D&Ds & RETURNING FAVOURITES' : 'YOUR PERSONAL CATCH-UP';
@@ -109,7 +124,8 @@ function render() {
   if (!storageAvailable) warnings.push('Browser storage is unavailable. Your progress may not persist after this session.');
   $('#notice').hidden = !warnings.length;
   $('#notice').textContent = warnings.join(' ');
-  $('#coverage-note').textContent = `Sources reviewed ${dateLabel(catalog.reviewed)}. Starter coverage: selected July–October 2026 releases. Skill comparisons use the selected character’s latest hiscores snapshot and only explicitly mapped requirements. Other requirements and quest completion remain unknown. Suggested starting points are editorial picks.`;
+  $('#coverage-note').textContent = `Sources reviewed ${dateLabel(catalog.reviewed)}. Coverage from ${dateLabel(catalog.coverageStart)}: selected major highlights plus a dated game-update index. Skill comparisons use the selected character’s latest hiscores snapshot and only explicitly mapped requirements. Other requirements and quest completion remain unknown. Suggested starting points are editorial picks.`;
+  renderArchive();
   $('#news-link').href = `https://secure.runescape.com/m=news/archive${state.game === 'osrs' ? '?oldschool=1' : ''}`;
   $('#wiki-link').href = state.game === 'osrs' ? 'https://oldschool.runescape.wiki/' : 'https://runescape.wiki/';
   if (view === 'routines') renderRoutines();
@@ -167,8 +183,9 @@ function changeLastPlayed(event, force = false) {
   const next = filterUpdates(updates, options());
   const same = previousIds === next.map(item => item.id).sort().join('|');
   $('#catchup-feedback').hidden = false;
-  $('#catchup-feedback').textContent = `Catch-up updated: ${next.length} ${next.length === 1 ? 'discovery' : 'discoveries'} released after ${dateLabel(value)}. ${value < catalog.coverageStart ? 'Earlier releases are not in this starter archive; its coverage begins July 2026.' : same ? 'The selected dates contain the same catalog entries; there are no additional indexed releases between them.' : 'The list below now shows this date range, newest first.'}`;
+  $('#catchup-feedback').textContent = `Catch-up updated: ${next.length} highlights and ${matchingPosts().length} dated update posts after ${dateLabel(value)}. ${value < catalog.coverageStart ? `Coverage begins ${dateLabel(catalog.coverageStart)}; earlier releases are not indexed.` : same ? 'These dates contain the same curated highlights; browse the update-post archive for smaller changes.' : 'The list below now shows this date range, newest first.'}`;
 }
+$('#archive-more').addEventListener('click', () => { archiveLimit += 25; renderArchive(); });
 $('#last-played').addEventListener('input', changeLastPlayed);
 $('#last-played').addEventListener('change', changeLastPlayed);
 $('#refresh-catchup').addEventListener('click', () => changeLastPlayed({ target: $('#last-played'), type: 'change' }, true));
