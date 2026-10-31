@@ -1,4 +1,4 @@
-import { catalog, categories, updates, routines, archivePosts } from './data.js';
+import { catalog, categories, updates, routines, archivePosts, archiveMeta } from './data.js';
 import { todayUtc, validDate, isEnded, filterUpdates, routinePeriod, cleanState, escapeHtml as esc } from './core.js';
 import { initCharacters, currentCharacter, updateCharacterProgress, selectCharacterForGame } from './characters.js';
 import { skillMatch } from './character-core.js';
@@ -27,12 +27,14 @@ let toastTimer;
 let archiveLimit = 25;
 let archiveRange = '';
 function matchingPosts() {
-  return archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today && post.title.toLowerCase().includes(query.toLowerCase().trim()));
+  return archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today && post.title.toLowerCase().includes(query.toLowerCase().trim())).sort((a,b) => sort === 'oldest' ? a.date.localeCompare(b.date) : b.date.localeCompare(a.date));
 }
 function renderArchive() {
-  const range = `${state.game}|${state.dates[state.game]}|${query}`;
-  if (range !== archiveRange) { archiveLimit = 25; archiveRange = range; }
+  const range = `${state.game}|${state.dates[state.game]}|${query}|${sort}`;
+  if (range !== archiveRange) { archiveLimit = 25; archiveRange = range; $('#archive-section details').open = state.dates[state.game] < catalog.coverageStart; }
   const posts = matchingPosts();
+  if (state.dates[state.game] < catalog.coverageStart) $('#discoveries').before($('#archive-section'));
+  else $('#discoveries').after($('#archive-section'));
   $('#archive-section').hidden = view !== 'discover';
   $('#archive-summary').textContent = `${posts.length} dated update posts — browse the archive`;
   $('#archive-results').innerHTML = posts.slice(0, archiveLimit).map(post => `<li><time datetime="${post.date}">${dateLabel(post.date)}</time><a href="${esc(post.url)}" target="_blank" rel="noopener noreferrer">${esc(post.title)} ↗</a></li>`).join('') || '<li>No update posts match this date and search.</li>';
@@ -98,7 +100,8 @@ function render() {
   document.querySelectorAll('[data-view]').forEach(button => { button.classList.toggle('active', button.dataset.view === view); if (button.dataset.view === view) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current'); });
   $('#last-played').value = state.dates[state.game];
   $('#last-played').max = today;
-  $('#date-summary').textContent = `${allNew.length} ${allNew.length === 1 ? 'discovery' : 'discoveries'} after ${dateLabel(state.dates[state.game])}. ${state.dates[state.game] < catalog.coverageStart ? `The starter archive begins ${dateLabel(catalog.coverageStart)}; earlier releases are not indexed yet.` : 'Change this date to refresh your catch-up.'}`;
+  const postCount = archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today).length;
+  $('#date-summary').textContent = `${postCount} update posts and ${allNew.length} curated highlights after ${dateLabel(state.dates[state.game])}. Archive begins ${dateLabel(archiveMeta.starts[state.game])}.`;
   $('#edition-label').textContent = gameLabel().toUpperCase();
   $('#hero-period').textContent = `Your adventure log starts ${dateLabel(state.dates[state.game])}`;
   $('#nav-count').textContent = state.saved.length;
@@ -109,7 +112,7 @@ function render() {
     [allNew.length, 'curated catch-up highlights', '◈'],
     [allNew.filter(i => i.tags.includes('quests')).length, 'stories waiting to be told', '⌘'],
     [allNew.filter(i => i.tags.includes('drops')).length, 'new reward chases', '◇'],
-    [archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today).length, 'dated game-update posts', '✦'],
+    [postCount, 'dated game-update posts', '✦'],
   ].map(([count, text, icon]) => `<div><span>${icon}</span><strong>${count}</strong><small>${text}</small></div>`).join('');
   $('#results-title').innerHTML = view === 'plan' ? 'Your next adventures<span class="gold">.</span>' : view === 'routines' ? 'A few familiar detours<span class="gold">.</span>' : `New since ${dateLabel(state.dates[state.game])}<span class="gold">.</span>`;
   $('#results-kicker').textContent = view === 'plan' ? 'SAVED ON THIS DEVICE' : view === 'routines' ? 'D&Ds & RETURNING FAVOURITES' : 'YOUR PERSONAL CATCH-UP';
@@ -119,12 +122,12 @@ function render() {
   $('#include-ended').closest('label').hidden = view !== 'discover';
   $('#hide-skill-gaps').closest('label').hidden = view === 'routines' || !currentCharacter();
   const warnings = [];
-  if (state.dates[state.game] < catalog.coverageStart) warnings.push(`This starter catalog covers selected releases from ${dateLabel(catalog.coverageStart)} onward. Earlier updates are not yet indexed.`);
+  if (state.dates[state.game] < catalog.coverageStart) warnings.push(`Browse the open update archive below for older content. Curated highlight cards begin ${dateLabel(catalog.coverageStart)}; the update-post archive begins ${dateLabel(archiveMeta.starts[state.game])}.${state.game === 'osrs' && state.dates[state.game] < archiveMeta.starts.osrs ? ' Old School launched in 2013; pre-launch dates include its full available history.' : ''}`);
   if (today > catalog.reviewed) warnings.push(`Catalog last reviewed ${dateLabel(catalog.reviewed)}. Releases after that date may be missing; check official news for the latest.`);
   if (!storageAvailable) warnings.push('Browser storage is unavailable. Your progress may not persist after this session.');
   $('#notice').hidden = !warnings.length;
   $('#notice').textContent = warnings.join(' ');
-  $('#coverage-note').textContent = `Sources reviewed ${dateLabel(catalog.reviewed)}. Coverage from ${dateLabel(catalog.coverageStart)}: selected major highlights plus a dated game-update index. Skill comparisons use the selected character’s latest hiscores snapshot and only explicitly mapped requirements. Other requirements and quest completion remain unknown. Suggested starting points are editorial picks.`;
+  $('#coverage-note').textContent = `Update index reviewed ${dateLabel(archiveMeta.reviewed)}; archive begins ${dateLabel(archiveMeta.starts[state.game])}. It includes the available game-update posts listed by the Wiki, not every undocumented change. Curated major highlights begin ${dateLabel(catalog.coverageStart)}. Skill comparisons use the selected character’s latest hiscores snapshot and only explicitly mapped requirements. Other requirements and quest completion remain unknown. Suggested starting points are editorial picks.`;
   renderArchive();
   $('#news-link').href = `https://secure.runescape.com/m=news/archive${state.game === 'osrs' ? '?oldschool=1' : ''}`;
   $('#wiki-link').href = state.game === 'osrs' ? 'https://oldschool.runescape.wiki/' : 'https://runescape.wiki/';
@@ -183,7 +186,7 @@ function changeLastPlayed(event, force = false) {
   const next = filterUpdates(updates, options());
   const same = previousIds === next.map(item => item.id).sort().join('|');
   $('#catchup-feedback').hidden = false;
-  $('#catchup-feedback').textContent = `Catch-up updated: ${next.length} highlights and ${matchingPosts().length} dated update posts after ${dateLabel(value)}. ${value < catalog.coverageStart ? `Coverage begins ${dateLabel(catalog.coverageStart)}; earlier releases are not indexed.` : same ? 'These dates contain the same curated highlights; browse the update-post archive for smaller changes.' : 'The list below now shows this date range, newest first.'}`;
+  $('#catchup-feedback').textContent = `Catch-up updated: ${next.length} highlights and ${matchingPosts().length} dated update posts after ${dateLabel(value)}. ${value < catalog.coverageStart ? 'The update archive is open below and includes the older history. Curated highlight cards cover 2023 onward.' : same ? 'These dates contain the same curated highlights; browse the update-post archive for smaller changes.' : 'The list below now shows this date range, newest first.'}`;
 }
 $('#archive-more').addEventListener('click', () => { archiveLimit += 25; renderArchive(); });
 $('#last-played').addEventListener('input', changeLastPlayed);

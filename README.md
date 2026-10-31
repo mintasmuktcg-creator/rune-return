@@ -65,12 +65,17 @@ No deployment has been made by creating this project locally.
 
 ## Data and limitations
 
-This catalog includes **89 curated discoveries and 414 dated update posts from
-January 2023–October 2026**, reviewed October 31, 2026. Earlier dates show a
-coverage notice. Later visits show that newer content may not yet be indexed.
+This catalog includes **89 curated discoveries from 2023 onward** and **2,236
+dated update posts**, reviewed October 31, 2026. The available Wiki game-update
+indexes cover OSRS from its February 2013 launch (700 posts) and RuneScape,
+including its Classic/RS2 history, from January 2001 (1,536 posts). Any date from
+January 4, 2001 through today can be selected; pre-launch OSRS dates show all its
+available posts. Older dates open the archive above the curated cards. This is
+the available indexed post history, not a guarantee of every undocumented change.
+Later visits show that newer content may not yet be indexed.
 Highlights and update-post counts are separate: posts include patches, beta
 notices and expired events, not just newly playable additions. The archive follows
-the game, date and text search, with 25 posts displayed at a time. Refresh its
+the game, date, text search and chronological sort, with 25 posts displayed at a time. Refresh its
 static index with `npm run data:refresh-archive -- YYYY-MM-DD` after reviewing the
 cutoff; the script makes two Wiki API requests. Editorial highlights remain
 manually maintained in `history.js` and `data.js`. No database or runtime feed is required.

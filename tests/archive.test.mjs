@@ -1,8 +1,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseArchive } from '../scripts/archive-parser.mjs';
-import { updates, archivePosts } from '../data.js';
+import { updates, archivePosts, archiveMeta } from '../data.js';
 import { filterUpdates } from '../core.js';
+
+test('archive covers every year of each game, with separate launch histories', () => {
+  for (const game of ['osrs', 'rs3']) {
+    const posts = archivePosts.filter(post => post.game === game);
+    const firstYear = game === 'osrs' ? 2013 : 2001;
+    for (let year = firstYear; year <= 2026; year++) assert.ok(posts.some(post => post.date.startsWith(String(year))), `${game} missing ${year}`);
+    assert.ok(posts.every(post => post.date >= archiveMeta.starts[game] && post.date <= archiveMeta.reviewed));
+    assert.ok(posts.length >= (game === 'osrs' ? 700 : 1500));
+    const from2015 = posts.filter(post => post.date > '2015-01-01');
+    const from2020 = posts.filter(post => post.date > '2020-01-01');
+    assert.ok(from2015.length > from2020.length);
+    assert.ok(from2015.some(post => post.date.startsWith('2015')));
+  }
+});
 
 test('January 2023 returns older content for both games, rather than the starter nine', () => {
   for (const [game, title] of [['osrs', 'Desert Treasure II'], ['rs3', 'Necromancy']]) {
