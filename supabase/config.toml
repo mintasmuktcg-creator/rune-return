@@ -1,0 +1,5 @@
+project_id = "runereturn"
+
+[functions.character-lookup]
+# index.ts explicitly validates the user's JWT with auth.getUser.
+verify_jwt = false

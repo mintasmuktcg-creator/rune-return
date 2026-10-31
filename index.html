@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122621">
+  <meta name="description" content="Find your next RuneScape adventure. Catch up on OSRS and RS3 quests, bosses, rare rewards and updates since you last played.">
+  <title>RuneReturn — Your next adventure starts here</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/rune.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./characters.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to your catch-up</a>
+  <header class="topbar">
+    <a class="brand" href="./"><img src="./assets/rune.svg" alt="" width="36" height="36"><span>Rune<span class="brand-gold">Return</span><small>A RETURNING PLAYER'S COMPANION</small></span></a>
+    <nav aria-label="Main navigation"><button data-view="discover" class="nav-button active">Discover</button><button data-view="plan" class="nav-button">My adventures <span id="nav-count">0</span></button><button data-view="routines" class="nav-button">D&amp;Ds & routines</button></nav>
+    <button class="outline-button" id="account-button">Characters &amp; sign in</button>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="eyebrow">CHOOSE YOUR WORLD</p>
+      <div class="world-switch" role="group" aria-label="Game"><button data-game="osrs" aria-pressed="true"><span class="world-icon">◈</span><span>Old School<small>RUNESCAPE</small></span><i></i></button><button data-game="rs3" aria-pressed="false"><span class="world-icon">✧</span><span>RuneScape<small>RS3</small></span><i></i></button></div>
+      <div class="side-divider"></div>
+      <p class="eyebrow">YOUR ADVENTURE LOG</p>
+      <label class="date-label" for="last-played">I last played on</label><input type="date" id="last-played" min="2001-01-04" value="2026-07-01">
+      <p class="side-note">A different date for each world. Saved on this device.</p>
+      <p class="eyebrow filter-heading">WHAT CALLS TO YOU?</p>
+      <div id="category-filters" class="category-filters" role="group" aria-label="Content category"></div>
+      <div class="sidebar-bottom"><span class="tiny-rune">✦</span><strong>No grind required.</strong><p>Pick something that sounds fun.<br>The rest can wait.</p></div>
+    </aside>
+    <main id="content" tabindex="-1">
+      <div class="page-kicker"><span><i class="status-dot"></i> YOUR RETURN TO GIELINOR</span><span id="edition-label">OLD SCHOOL RUNESCAPE</span></div>
+      <section class="hero" aria-labelledby="welcome-title">
+        <div class="hero-copy"><p class="eyebrow gold">THE WORLD KEPT TURNING.</p><h1 id="welcome-title">Welcome back,<br><em>adventurer.</em></h1><p>New stories. Unfamiliar monsters. One more reason to stay up too late. Find what arrived while you were away.</p><a class="primary-button" href="#discoveries">Find my next adventure <span>↗</span></a><small id="hero-period"></small></div>
+        <img class="hero-art" src="./assets/landscape.svg" alt="An illustrated mountain valley, ancient tower and glowing portal beneath a golden sun">
+        <span class="hero-coordinate" aria-hidden="true">GIELINOR / A NEW CHAPTER</span>
+      </section>
+      <section id="character-bar" class="character-bar" aria-label="Active character"></section>
+      <div id="notice" class="notice" hidden></div>
+      <section class="stats" aria-label="Your catch-up summary" id="stats"></section>
+      <section class="paths" aria-label="Choose an adventure"><button data-path="quests"><span class="path-icon">⌘</span><span><small>FOLLOW A STORY</small><strong>Pick up a new chapter</strong><em>Quests, mysteries & new places</em></span><b>↗</b></button><button data-path="drops"><span class="path-icon">◇</span><span><small>CHASE SOMETHING SHINY</small><strong>Find your next big drop</strong><em>Bosses, gear & collection goals</em></span><b>↗</b></button><button data-path="activities"><span class="path-icon">❋</span><span><small>TAKE THE SCENIC ROUTE</small><strong>Something a little different</strong><em>Skilling, activities & diversions</em></span><b>↗</b></button></section>
+      <section id="discoveries" class="discoveries" aria-labelledby="results-title">
+        <div class="section-heading"><div><p class="eyebrow" id="results-kicker">YOUR PERSONAL CATCH-UP</p><h2 id="results-title">While you were away<span class="gold">.</span></h2><p id="result-summary"></p></div><button id="export-plan" class="outline-button">Export my plan ↓</button></div>
+        <div class="result-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Search quests, bosses, drops…" aria-label="Search updates"></label><label class="sort-label"><span class="sr-only">Sort updates</span><select id="sort"><option value="recommended">Suggested starting points</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label></div>
+        <div class="result-options"><label><input type="checkbox" id="hide-done"> Hide completed</label><label><input type="checkbox" id="include-ended"> Include ended events</label><label><input type="checkbox" id="hide-skill-gaps"> Hide known skill gaps</label><span id="shown-count" aria-live="polite"></span></div>
+        <div id="results" class="cards"></div>
+      </section>
+      <section class="source-note" id="about"><span class="source-symbol">✧</span><div><h3>A starting point, not another to-do list.</h3><p>RuneReturn is an independent fan project. This is a curated selection of major additions, not a complete patch archive. Each entry links to its sources. Prerequisites and drop tables can change; check the linked guide before gearing up.</p><p id="coverage-note"></p><div class="source-links"><a id="news-link" href="https://secure.runescape.com/m=news/archive?oldschool=1" target="_blank" rel="noopener noreferrer">Official news ↗</a><a id="wiki-link" href="https://oldschool.runescape.wiki/" target="_blank" rel="noopener noreferrer">Explore the wiki ↗</a></div></div></section>
+      <footer><a class="footer-brand" href="./">◈ RuneReturn</a><p>Browse locally or sign in to sync characters. No game passwords. No tracking.</p><span>RuneScape belongs to Jagex. We just missed it.</span></footer>
+    </main>
+  </div>
+  <dialog id="detail"><div id="detail-content"></div></dialog>
+  <dialog id="account-dialog" aria-label="RuneReturn account and characters"><div id="account-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="notice">Enable JavaScript to filter updates and save your adventure list. You can still browse the official RuneScape news and wiki links.</p></noscript>
+</body>
+</html>

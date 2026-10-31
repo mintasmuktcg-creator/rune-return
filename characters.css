@@ -1,0 +1,35 @@
+.character-bar { display:flex; align-items:center; justify-content:space-between; gap:18px; border:1px solid #d5ddca; background:#edf0e5; border-radius:7px; padding:18px 22px; margin:20px 0 0; }
+.character-bar .eyebrow { display:block; margin:0 0 5px; font-size:8px; }
+.character-bar strong { display:block; font:21px var(--serif); }
+.character-bar small { display:block; font-size:9px; line-height:1.8; color:#7c8970; margin-top:5px; }
+.character-bar-actions { display:flex; gap:22px; align-items:center; flex-shrink:0; }
+.character-total { font:26px var(--serif); text-align:right; }
+.character-total small { font:8px 'Segoe UI',sans-serif; }
+.account-form { display:grid; gap:13px; margin:20px 0 12px; }
+.account-form label, .account-label { display:grid; gap:8px; font-size:11px; color:#65795a; }
+.account-form input, .account-form select, .account-label select { width:100%; min-width:0; border:1px solid #c9d3bd; border-radius:5px; background:#fffef9; color:#2c4735; padding:12px; }
+.account-status { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+.account-status strong { font-size:12px; overflow-wrap:anywhere; }
+.account-status h3 { margin:12px 0; }
+.account-status h3 small { font-weight:normal; color:#8c987e; }
+.account-setup { background:#eceee2; padding:16px; border-radius:6px; margin:18px 0; }
+.account-setup strong { font-size:12px; }
+dialog p.account-hint { font-size:10px; margin:12px 0; }
+dialog p.account-message { font-size:11px; color:#8f713a; min-height:20px; overflow-wrap:anywhere; }
+.skill-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:20px 0; }
+.skill-grid > div { border:1px solid #d8e0cd; border-radius:5px; padding:11px 8px; background:#fbfcf5; }
+.skill-grid span { display:block; text-transform:capitalize; font-size:10px; color:#708261; overflow-wrap:anywhere; }
+.skill-grid strong { display:block; font:23px var(--serif); margin:7px 0; }
+.skill-grid small { display:block; font-size:8px; color:#929c83; overflow-wrap:anywhere; }
+.activity-list { border-top:1px solid #d8e0cd; padding-top:16px; margin:16px 0; }
+.activity-list summary { font-size:11px; cursor:pointer; line-height:1.7; }
+.activity-list dl { font-size:10px; max-height:250px; overflow:auto; }
+.activity-list dl>div { display:flex; justify-content:space-between; gap:14px; padding:8px 0; border-bottom:1px solid #e4e8dc; }
+.activity-list dd { margin:0; }
+.danger-button { background:transparent; color:#a45e4f; border:1px solid #d4b5a9; padding:10px 12px; border-radius:5px; font-size:10px; }
+.skill-match { font-size:10px; line-height:1.7; padding:9px 11px; background:#edf1e7; border-radius:4px; color:#718261; margin:0 0 18px; }
+.skill-match small { display:block; font-size:8px; opacity:.8; }
+.skill-match.training { background:#f5ecdc; color:#9b763d; }
+.skill-match.met { background:#e6efda; color:#527538; }
+.skill-match.unknown,.skill-match.stale { background:#eeeee8; color:#939481; }
+@media(max-width:580px) { #account-button { margin-left:auto; font-size:8px; padding:8px; } .topbar { column-gap:8px; } .topbar nav { order:3; } .character-bar { padding:15px; gap:12px; flex-wrap:wrap; } .character-bar-actions { width:100%; justify-content:space-between; } .character-bar strong { font-size:20px; } .skill-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
