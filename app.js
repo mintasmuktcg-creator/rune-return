@@ -82,6 +82,7 @@ function render() {
   document.querySelectorAll('[data-view]').forEach(button => { button.classList.toggle('active', button.dataset.view === view); if (button.dataset.view === view) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current'); });
   $('#last-played').value = state.dates[state.game];
   $('#last-played').max = today;
+  $('#date-summary').textContent = `${allNew.length} ${allNew.length === 1 ? 'discovery' : 'discoveries'} after ${dateLabel(state.dates[state.game])}. ${state.dates[state.game] < catalog.coverageStart ? `The starter archive begins ${dateLabel(catalog.coverageStart)}; earlier releases are not indexed yet.` : 'Change this date to refresh your catch-up.'}`;
   $('#edition-label').textContent = gameLabel().toUpperCase();
   $('#hero-period').textContent = `Your adventure log starts ${dateLabel(state.dates[state.game])}`;
   $('#nav-count').textContent = state.saved.length;
@@ -94,7 +95,7 @@ function render() {
     [allNew.filter(i => i.tags.includes('drops')).length, 'new reward chases', '◇'],
     [state.saved.filter(id => updates.find(i => i.id === id)?.game === state.game).length, 'adventures in your shortlist', '✦'],
   ].map(([count, text, icon]) => `<div><span>${icon}</span><strong>${count}</strong><small>${text}</small></div>`).join('');
-  $('#results-title').innerHTML = view === 'plan' ? 'Your next adventures<span class="gold">.</span>' : view === 'routines' ? 'A few familiar detours<span class="gold">.</span>' : 'While you were away<span class="gold">.</span>';
+  $('#results-title').innerHTML = view === 'plan' ? 'Your next adventures<span class="gold">.</span>' : view === 'routines' ? 'A few familiar detours<span class="gold">.</span>' : `New since ${dateLabel(state.dates[state.game])}<span class="gold">.</span>`;
   $('#results-kicker').textContent = view === 'plan' ? 'SAVED ON THIS DEVICE' : view === 'routines' ? 'D&Ds & RETURNING FAVOURITES' : 'YOUR PERSONAL CATCH-UP';
   $('#result-summary').textContent = view === 'plan' ? `${gameLabel()} · Your saved list, including entries outside the selected date range.` : view === 'routines' ? 'A small, optional routine. Pick the ones you actually enjoy.' : `${gameLabel()} · Released after ${dateLabel(state.dates[state.game])} · Curated highlights`;
   $('#sort').hidden = view === 'routines';
@@ -146,11 +147,24 @@ document.addEventListener('click', event => {
   }
   if (button.id === 'reset-view') { view = 'discover'; category = 'all'; query = ''; hideDone = false; $('#search').value = ''; $('#hide-done').checked = false; render(); }
 });
-$('#last-played').addEventListener('change', event => {
+function changeLastPlayed(event) {
   const value = event.target.value;
-  if (!validDate(value) || value < '2001-01-04' || value > today) { event.target.value = state.dates[state.game]; toast('Choose a valid date between January 4, 2001 and today.'); return; }
-  state.dates[state.game] = value; persist(); syncUrl(); render();
-});
+  if (!validDate(value) || value < '2001-01-04' || value > today) {
+    // Native date inputs emit incomplete values while a user types. Wait for
+    // commitment before restoring invalid input; never replace a partial edit.
+    if (event.type === 'change') { event.target.value = state.dates[state.game]; toast('Choose a valid date between January 4, 2001 and today.'); }
+    return;
+  }
+  if (value === state.dates[state.game]) return;
+  state.dates[state.game] = value;
+  view = 'discover'; category = 'all'; query = ''; sort = 'newest';
+  hideDone = false; hideSkillGaps = false; includeEnded = false;
+  $('#search').value = ''; $('#sort').value = 'newest';
+  for (const selector of ['#hide-done', '#hide-skill-gaps', '#include-ended']) $(selector).checked = false;
+  persist(); syncUrl(); render();
+}
+$('#last-played').addEventListener('input', changeLastPlayed);
+$('#last-played').addEventListener('change', changeLastPlayed);
 $('#search').addEventListener('input', event => { query = event.target.value; render(); });
 $('#sort').addEventListener('change', event => { sort = event.target.value; render(); });
 $('#hide-done').addEventListener('change', event => { hideDone = event.target.checked; render(); });
