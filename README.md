@@ -3,6 +3,13 @@
 A free returning-player companion for **Old School RuneScape and RuneScape 3**.
 Find what changed, plan a short session and track the routines you choose.
 
+**Primary direction:** an account-aware progression companion ready to integrate
+the new official API when its contract is verified. The first `Your path`
+workspace now offers seven goal lanes, prerequisite routes, explicit blockers
+and setup-aware GP scenarios. See the [progression launch plan](docs/PROGRESSION-LAUNCH-PLAN.md).
+Current progression coverage is a small starter graph (22 nodes, six GP methods),
+not a complete game-wide optimizer or collection-log importer.
+
 **[Open the live site](https://mintasmuktcg-creator.github.io/rune-return/?view=home)** ·
 **[Documentation](docs/README.md)** ·
 **[Roadmap](docs/ROADMAP.md)** ·
@@ -14,7 +21,8 @@ accounts, actual-reward tracking or journal cloud sync are already live.
 
 ## What is available
 
-- A quiet Home with three choices: catch up, plan a session, or DailyScape.
+- A quiet Home with three choices: catch up, choose a progression path, or DailyScape.
+- Seven progression lanes, prerequisite routes, manual unlock checks and setup-aware GP scenarios.
 - Separate OSRS/RS3 last-played dates, searchable highlights and a dated update archive.
 - Session suggestions for 15, 30 or 60 minutes, with at most three activities.
 - DailyScape frequency/type/status filters, pins and six cards shown at a time.
@@ -33,7 +41,7 @@ expandable so the opening screen stays small.
 - The JSON journal backup does not yet restore all device/character/catch-up data.
 - GP values are dated snapshots; variable XP rewards include labelled planning examples.
 - Journal values are estimates, not actual earnings. Quest/diary eligibility generally remains unknown.
-- Only two explicit skill-requirement mappings exist. Imported levels are not a full unlock check.
+- DailyScape has only two explicit skill-requirement mappings. The separate progression graph checks its listed requirements; neither is a full game-wide unlock check.
 - Cloud sign-in/profile storage and hosted lookup code are prepared, but configuration is blank and live production behavior remains unverified.
 - The full archive covers available indexed update posts, not every undocumented game change.
 
@@ -59,7 +67,7 @@ node scripts/serve.mjs --dist
 ```
 
 Stop the development server first when previewing `dist/` on the same port.
-The current suite has **39 automated tests**. The November 1 review also checked
+The current suite has **50 automated tests**. The November 1 review also checked
 live desktop/mobile flows; those manual browser checks are not yet CI tests.
 
 ## Hosting and accounts
@@ -104,6 +112,7 @@ parameter still open catch-up when no explicit view is supplied.
 | --- | --- |
 | `index.html`, `app.js`, stylesheets | Navigation, catch-up views and application shell |
 | `home.js`, `session-core.js` | Home and session suggestions |
+| `progression*.js` | Goal graph, player facts, setup-aware GP scenarios and provider boundary |
 | `data.js`, `history.js`, `archive-data.js` | Highlights and update-post index |
 | `dailyscape-data.js`, `dailyscape-core.js`, `dailyscape.js` | Activity catalog, reset/estimate logic and local journal |
 | `characters.js`, `character-core.js`, `auth.js` | Public character imports, profiles and optional auth |

@@ -60,7 +60,8 @@ const entry = Object.entries(bundled.metafile.outputs).find(([, value]) => value
 if (!entry) throw new Error('The browser bundle was not generated.');
 let html = (await readFile('index.html', 'utf8')).replace('src="./app.js"', `src="./${entry.replaceAll('\\', '/').replace(/^dist\//, '')}"`);
 for (const file of ['styles.css', 'characters.css']) {
-  const content = await readFile(file, 'utf8');
+  // Stylesheets move into assets/: rebase their source-root asset references.
+  const content = (await readFile(file, 'utf8')).replace(/url\((['"]?)\.\/assets\/([^'"\)]+)\1\)/g, 'url($1./$2$1)');
   const hash = createHash('sha256').update(content).digest('hex').slice(0, 10);
   const name = `${file.replace('.css', '')}-${hash}.css`;
   await writeFile(`dist/assets/${name}`, content);

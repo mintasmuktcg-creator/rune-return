@@ -1,5 +1,10 @@
 # Product roadmap
 
+**Priority update:** the [progression launch plan](PROGRESSION-LAUNCH-PLAN.md)
+is now the leading product direction. The progression foundation is implemented;
+the trust, recovery and API-verification gates below still apply. The original
+review findings describe the earlier baseline rather than the current complete feature set.
+
 Status: **proposal**, November 1, 2026. Phases are ordered by dependencies and
 evidence, not promised launch dates. Keep the current GitHub Pages site while
 the product is being validated. Findings refer to [the site review](SITE-REVIEW.md).

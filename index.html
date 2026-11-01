@@ -15,7 +15,7 @@
   <a class="skip" href="#content">Skip to your catch-up</a>
   <header class="topbar">
     <a class="brand" href="./"><img src="./assets/rune.svg" alt="" width="36" height="36"><span>Rune<span class="brand-gold">Return</span><small>A RETURNING PLAYER'S COMPANION</small></span></a>
-    <nav aria-label="Main navigation"><button data-view="home" class="nav-button active">Home</button><button data-view="discover" class="nav-button">Catch up</button><button data-view="routines" class="nav-button">DailyScape</button><button data-view="plan" class="nav-button">Saved <span id="nav-count">0</span></button></nav>
+    <nav aria-label="Main navigation"><button data-view="home" class="nav-button active">Home</button><button data-view="progression" class="nav-button">Your path</button><button data-view="discover" class="nav-button">Catch up</button><button data-view="routines" class="nav-button">DailyScape</button></nav><span id="nav-count" hidden>0</span>
     <button class="outline-button" id="account-button">Characters &amp; sign in</button>
   </header>
   <div class="app-layout">
@@ -32,14 +32,15 @@
       </details>
     </aside>
     <main id="content" tabindex="-1">
-      <div class="workspace-bar"><div class="compact-worlds" role="group" aria-label="Active game"><button data-game="osrs" aria-pressed="true">Old School</button><button data-game="rs3" aria-pressed="false">RuneScape 3</button></div><span id="edition-label" class="sr-only">OLD SCHOOL RUNESCAPE</span><span id="hero-period" hidden></span></div>
+      <div class="workspace-bar"><div class="compact-worlds" role="group" aria-label="Active game"><button data-game="osrs" aria-pressed="true">Old School</button><button data-game="rs3" aria-pressed="false">RuneScape 3</button></div><button class="text-button active-profile" id="active-profile" data-account-open>Guest · choose character</button><span id="edition-label" class="sr-only">OLD SCHOOL RUNESCAPE</span><span id="hero-period" hidden></span></div>
       <section id="home" aria-label="Your RuneReturn home"></section>
+      <section id="progression" aria-label="Your progression path" hidden></section>
       <section id="character-bar" class="character-bar" aria-label="Active character"></section>
       <div id="notice" class="notice" hidden></div>
       <p id="catchup-feedback" class="catchup-feedback" role="status" aria-live="polite" hidden></p>
       <section class="stats" aria-label="Your catch-up summary" id="stats"></section>
       <section id="discoveries" class="discoveries" aria-labelledby="results-title">
-        <div class="section-heading"><div><p class="eyebrow" id="results-kicker">YOUR PERSONAL CATCH-UP</p><h2 id="results-title">While you were away<span class="gold">.</span></h2><p id="result-summary"></p></div><button id="export-plan" class="outline-button">Export my plan ↓</button></div>
+        <div class="section-heading"><div><p class="eyebrow" id="results-kicker">YOUR PERSONAL CATCH-UP</p><h2 id="results-title">While you were away<span class="gold">.</span></h2><p id="result-summary"></p></div><button id="saved-path-back" class="text-button" data-view="progression" hidden>Back to your path ↗</button><button id="export-plan" class="outline-button">Export my plan ↓</button></div>
         <div class="result-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Search quests, bosses, drops…" aria-label="Search updates"></label><label class="sort-label"><span class="sr-only">Sort updates</span><select id="sort"><option value="recommended">Suggested starting points</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label></div>
         <div class="result-options"><label><input type="checkbox" id="hide-done"> Hide completed</label><label><input type="checkbox" id="include-ended"> Include ended events</label><label><input type="checkbox" id="hide-skill-gaps"> Hide known skill gaps</label><span id="shown-count" aria-live="polite"></span></div>
         <div id="results" class="cards"></div>

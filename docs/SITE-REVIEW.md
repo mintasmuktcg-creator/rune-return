@@ -10,6 +10,13 @@ progress, rather than add more widgets or move to a paid server.
 This pass produces documentation and recommendations. It does not implement the
 findings below, except correcting outdated project documentation.
 
+Follow-up on November 1: the progression release adds a compact active-profile
+indicator (R02) and rebases CSS asset URLs in production (R13). Compiled-site
+browser checks passed Home, progression, Saved, DailyScape and catch-up flows at
+desktop and 320/390px widths, with no failed resource responses. The suite now
+has 50 passing tests. The table below preserves the original review baseline;
+automated browser checks in CI and full profile recovery remain open.
+
 ## Checks performed
 
 Live browser checks used desktop 1440 × 1000 and mobile 320 × 844 / 390 × 844.

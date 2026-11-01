@@ -1,6 +1,6 @@
 # RuneReturn documentation
 
-Reviewed **November 1, 2026**, against application commit `95b939f` and the live
+Initial review **November 1, 2026**, against application commit `95b939f` and the live
 [GitHub Pages site](https://mintasmuktcg-creator.github.io/rune-return/).
 
 The recommendation is to improve trust and usefulness on the existing free
@@ -13,6 +13,7 @@ decision is whether to add backend services, change the frontend host, or both.
 | --- | --- |
 | [Site review](SITE-REVIEW.md) | Findings, evidence, priorities and verification limits |
 | [Product roadmap](ROADMAP.md) | What to build next, in order, with completion criteria |
+| [Progression and API launch priority](PROGRESSION-LAUNCH-PLAN.md) | The new number-one objective, current foundation and release-day gates |
 | [GitHub Pages plan and runbook](GITHUB-PAGES.md) | Keep the basic version useful, free and maintainable |
 | [Later hosting plan](HOSTING-PLAN.md) | Migration triggers, architecture, costs and rollout |
 | [Data and estimates](DATA-AND-ESTIMATES.md) | Sources, reward credibility, local storage and future sync |
@@ -21,7 +22,8 @@ decision is whether to add backend services, change the frontend host, or both.
 
 ## Current versus planned
 
-**Available:** simple Home, catch-up/archive browsing, session suggestions,
+**Available:** a starter progression workspace with seven lanes, prerequisite
+routes and six setup-aware GP scenarios; simple Home, catch-up/archive browsing, session suggestions,
 DailyScape checklists, dated local journals, editable estimates and DailyScape
 CSV/JSON exports. OSRS and RS3 remain separate game contexts.
 
@@ -29,7 +31,7 @@ CSV/JSON exports. OSRS and RS3 remain separate game contexts.
 authenticated hosted hiscores lookup. The checked-in public configuration is
 blank; a real production account service has not been verified in this review.
 
-**Planned:** actual reward recording, account-aware unlocks, complete profile
+**Planned:** actual reward recording, API-backed unlocks, a comprehensive progression catalog, complete profile
 backups, reliable cross-device journal sync, notifications and optional paid
 features. A document describing a feature does not mean it has been built.
 

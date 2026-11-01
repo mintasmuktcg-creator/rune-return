@@ -3,6 +3,7 @@ import { todayUtc, validDate, isEnded, filterUpdates, cleanState, escapeHtml as 
 import { initCharacters, currentCharacter, updateCharacterProgress, selectCharacterForGame, dailyProfile } from './characters.js';
 import { initDailyScape, renderDailyScape, dailyPlanningContext, revealDailyActivity } from './dailyscape.js';
 import { initHome, renderHome } from './home.js';
+import { initProgression, renderProgression } from './progression.js';
 import { skillMatch } from './character-core.js';
 import { requirementsById } from './requirements.js';
 
@@ -19,7 +20,7 @@ if (['osrs', 'rs3'].includes(url.searchParams.get('game'))) state.game = url.sea
 const since = url.searchParams.get('since');
 if (validDate(since) && since >= '2001-01-04' && since <= today) state.dates[state.game] = since;
 const requestedView = url.searchParams.get('view');
-let view = ({dailyscape:'routines',catchup:'discover',saved:'plan',home:'home'})[requestedView] || (validDate(since) ? 'discover' : 'home');
+let view = ({dailyscape:'routines',catchup:'discover',saved:'plan',home:'home',progression:'progression'})[requestedView] || (validDate(since) ? 'discover' : 'home');
 let category = 'all';
 let query = '';
 let sort = 'recommended';
@@ -63,7 +64,7 @@ function syncUrl() {
   const next = new URL(location.href);
   next.searchParams.set('game', state.game);
   next.searchParams.set('since', state.dates[state.game]);
-  next.searchParams.set('view',({routines:'dailyscape',discover:'catchup',plan:'saved',home:'home'})[view]);
+  next.searchParams.set('view',({routines:'dailyscape',discover:'catchup',plan:'saved',home:'home',progression:'progression'})[view]);
   history.replaceState(null, '', next);
 }
 function options(extra = {}) {
@@ -94,12 +95,15 @@ function renderRoutines() {
 function render() {
   document.body.dataset.view=view;
   $('#home').hidden=view!=='home';
-  $('#discoveries').hidden=view==='home';
+  $('#progression').hidden=view!=='progression';
+  $('#discoveries').hidden=['home','progression'].includes(view);
+  $('#saved-path-back').hidden=view!=='plan';
+  $('#active-profile').textContent=dailyProfile().label==='Guest checklist'?'Guest · choose character':dailyProfile().label;
   $('#catchup-sidebar').hidden=view!=='discover';
   $('#discoveries').before($('#catchup-sidebar'));
   $('#stats').hidden=true;
   $('#character-bar').hidden=true;
-  $('#about').hidden=view==='home';
+  $('#about').hidden=['home','progression'].includes(view);
   $('#catchup-feedback').hidden = true;
   const allNew = filterUpdates(updates, options({ view: 'discover', category: 'all', query: '', hideDone: false, includeEnded: false }));
   const selected = filterUpdates(updates, options()).filter(item => !hideSkillGaps || currentCharacter()?.game !== item.game || skillMatch(requirementsById[item.id], currentCharacter().snapshot).status !== 'training');
@@ -142,6 +146,7 @@ function render() {
   $('#news-link').href = `https://secure.runescape.com/m=news/archive${state.game === 'osrs' ? '?oldschool=1' : ''}`;
   $('#wiki-link').href = state.game === 'osrs' ? 'https://oldschool.runescape.wiki/' : 'https://runescape.wiki/';
   if (view === 'home') renderHome({game:state.game,since:state.dates[state.game],profile:dailyProfile().key});
+  else if (view === 'progression') renderProgression(state.game);
   else if (view === 'routines') renderRoutines();
   else {
     $('#shown-count').textContent = `${selected.length} ${selected.length === 1 ? 'discovery' : 'discoveries'}`;
@@ -223,6 +228,7 @@ $('#export-plan').addEventListener('click', () => {
 });
 initDailyScape({getProfile: dailyProfile, getLegacyChecks: () => state.routineChecks, isVisible: () => view === 'routines', toast, clearSearch: () => { query=''; $('#search').value=''; }});
 initHome({context:()=>({candidates:dailyPlanningContext(state.game),stories:filterUpdates(updates,options({view:'discover',category:'quests',query:'',hideDone:true,sort:'recommended'}))})});
+initProgression({getProfile:dailyProfile,getCharacter:currentCharacter,isVisible:()=>view==='progression',toast});
 syncUrl(); render();
 initCharacters({
   getGame: () => state.game,

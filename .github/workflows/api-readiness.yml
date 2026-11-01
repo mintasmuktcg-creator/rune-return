@@ -1,0 +1,29 @@
+name: Official API readiness watch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: api-readiness
+  cancel-in-progress: true
+jobs:
+  review-signals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/check-api-readiness.mjs
+      - name: Publish research summary
+        run: cat artifacts/api-watch/report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: api-readiness-report
+          path: artifacts/api-watch/
+          retention-days: 7
