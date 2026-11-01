@@ -20,3 +20,53 @@ dialog{border:1px solid #b6c3a7;border-radius:12px;background:var(--paper);color
  .update-archive time { flex: 0 0 105px; font-size: .85rem; }
  .update-archive a { overflow-wrap: anywhere; }
  @media(max-width: 600px) { .update-archive { padding: 16px; } .update-archive li { flex-direction: column; gap: 4px; } .update-archive time { flex-basis: auto; } }
+/* Gielinor palette: charcoal stone, worn leather, parchment and brass. */
+:root{--paper:#1b1c1e;--card:#302c26;--ink:#efe3ca;--muted:#c1b49d;--green:#e5bc65;--gold:#edc567;--line:#61513b;color-scheme:dark}
+body{background:radial-gradient(ellipse at top right,#35302755,transparent 60%),var(--paper)}
+.topbar{background:#222120;border-bottom-color:#897045;box-shadow:0 3px 16px #0004}
+.brand-gold,.nav-button.active,.world-icon,.tiny-rune,.path-icon,.source-symbol,.detail-symbol{color:var(--gold)}
+.brand small,.quiet-link,.eyebrow,.side-note,.sidebar-bottom p,.page-kicker,.stats small,.paths small,.paths em,.section-heading>div>p:last-child,.result-options,.card-labels time,.subtitle,.description,.card-meta,.done-label,.routine-requirements,.source-note p,footer,.hero-copy>small{color:var(--muted)}
+.nav-button{color:#c6b99f}.nav-button.active{border-bottom-color:var(--gold)}
+.nav-button span{background:#4c402d;color:#f2d48c}
+.sidebar{background:linear-gradient(180deg,#28251f,#211f1c);box-shadow:inset -1px 0 #0005}
+.world-switch button{background:#302b23;border-color:#77603d;box-shadow:inset 0 1px #ffffff0a}
+.world-switch button[aria-pressed=true]{background:linear-gradient(#655033,#453622);border-color:#d4aa56;color:#ffe3a0;box-shadow:inset 0 0 0 1px #2a2118,0 2px 6px #0003}
+.world-switch i{background:#a29379}.world-switch button[aria-pressed=true] i,.status-dot{background:#b9cf7e}
+.sidebar input[type=date],.search-box,.sort-label select{background:#24211d;border-color:#806b48;color:var(--ink)}
+.category-filters button{color:#c9bca4}.category-filters button span{color:#c1a973}
+.category-filters button.active{background:#493c28;color:#ffe1a0;box-shadow:inset 3px 0 #dfb659}
+.category-filters button.active span{color:#ffe1a0}
+.hero{background:#20262b;border:1px solid #897045;box-shadow:inset 0 0 0 3px #0003,0 10px 30px #0002}
+.hero-copy{background:linear-gradient(90deg,#20262b 60%,#20262b00)}
+.hero .gold,h1 em{color:#f1cb7b}.hero-copy>p:not(.eyebrow){color:#dfd5c0}.hero-coordinate{color:#d8c39a}
+.primary-button{background:linear-gradient(#e4bf74,#cda152);border-color:#f0d291;color:#261d12;box-shadow:inset 0 1px #fff5,0 2px 4px #0003}
+.primary-button:hover{background:#f0cf8a;border-color:#ffe7b1}
+.stats{background:#282620;border-color:#77613e;box-shadow:inset 0 1px #ffffff08}.stats strong{color:#f0d28d}.stats>div>span{color:#c0a366}
+.paths button{background:#2c2822;border-color:#69573d}.paths button:hover{background:#393022;border-color:#ba9654}.paths b{color:#dabd7c}
+.outline-button{background:#302b23;border-color:#8c734b;color:#efdcaf}.outline-button:hover{background:#493b28;border-color:#c7a15d}
+.search-box>span{color:#d4b474}.search-box input::placeholder{color:#b6a991}.sort-label select{color:#e2d1ae}
+.update-card{border-color:#77613f;box-shadow:inset 0 1px #ffffff0a,0 3px 10px #0002}.update-card:hover{border-color:#be9a59;box-shadow:0 5px 20px #0004}
+.update-card h3{color:#f2d18b}.title-button:hover{color:#ffe8af}
+.card-symbol{background:#343b2b;color:#c7d695;border-color:#6a754c}
+.card-symbol.bosses{background:#49312b;color:#efb49a;border-color:#906450}
+.card-symbol.quests{background:#4a3e28;color:#f4d48c;border-color:#937c49}
+.card-symbol.changes{background:#2a3b46;color:#b4d4e8;border-color:#5c7f94}
+.category-label{color:#dbbf82}.badge{background:#443b2b;border-color:#8c744a;color:#f0dab0}
+.badge.live{background:#303e28;color:#cfdfa6;border-color:#71874e}
+.badge.seasonal{background:#493821;color:#f3cf8d;border-color:#a48043}
+.badge.ended{background:#3a3732;color:#c9c2b3;border-color:#797268}
+.badge.beta{background:#293d48;color:#badbe9;border-color:#64899c}
+.reward-line{color:#efcf89}.reward-line,.card-bottom{border-color:#66543a}.reward-line>span{color:#c5b18c}
+.text-button,.source-links,.source-citation,.footer-brand{color:#edc777}
+.save-button{color:#f1d59c;border-color:#a08047;background:#3d3222}.save-button:hover,.save-button.saved{background:#655030;border-color:#d7b36d;color:#ffe7b4}
+.is-done{background:#25251f}.is-done h3{color:#b9b59a}
+.empty-state{border-color:#a08a61;color:#d2c3a8}.routine-intro{background:#353526;color:#dbd0b2}.routine-intro>span{color:#d4bc7b}.routine-intro strong{color:#f1d18e}
+.notice{background:#403321;border-color:#aa8549;color:#f2d69e}
+.source-note,.update-archive{background:#292722;border-color:#77613e}.update-archive summary{color:#f0d08a}.update-archive p,.update-archive time{color:#cbbb9e}.update-archive li{border-color:#61513b}.update-archive a{color:#f0d39a}
+.toast{background:#3e3323;color:#fff0cb;border-color:#c29d58}
+dialog{background:#2a2722;border-color:#bc9958;box-shadow:0 20px 90px #0009}dialog::backdrop{background:#0d1114cf}
+.dialog-close{color:#e4ca91}dialog h2,dialog h3{color:#f3d18b}dialog p:not(.eyebrow),dialog ul{color:#d7c9af}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #f0cc78;outline-offset:4px}
+input[type=checkbox]{accent-color:#dbb566}
+.skip{background:#e5bc65;color:#261d12}
+@media(max-width:580px){.hero-copy{background:linear-gradient(90deg,#20262bf5 5%,#20262bdb 45%,#20262b40 100%)}}

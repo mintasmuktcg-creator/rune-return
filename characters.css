@@ -37,3 +37,14 @@ dialog p.account-message { font-size:11px; color:#8f713a; min-height:20px; overf
 .skill-match.met { background:#e6efda; color:#527538; }
 .skill-match.unknown,.skill-match.stale { background:#eeeee8; color:#939481; }
 @media(max-width:580px) { #account-button { margin-left:auto; font-size:8px; padding:8px; } .topbar { column-gap:8px; } .topbar nav { order:3; } .character-bar { padding:15px; gap:12px; flex-wrap:wrap; } .character-bar-actions { width:100%; justify-content:space-between; } .character-bar strong { font-size:20px; } .skill-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+/* Match character and account surfaces to the game-inspired stone palette. */
+.character-bar{background:#2b2c29;border-color:#806b48}
+.character-bar small,.account-status h3 small,.skill-grid span,.skill-grid small{color:#c9baa0}
+.date-controls .outline-button{background:#3b3123;color:#f0d49a}
+.catchup-feedback{background:#333c29;color:#e0dfb1;border-left-color:#b9cb7b}
+.account-form label,.account-label{color:#dfc99f}
+.account-form input,.account-form select,.account-label select{background:#201f1b;color:#f0e0c1;border-color:#947b4e}
+.account-setup{background:#383224;color:#ecdbb7}dialog p.account-message{color:#f0cb85}
+.skill-grid>div{background:#333027;border-color:#75603d}.activity-list,.activity-list dl>div{border-color:#6a583b}
+.danger-button{background:#3b2823;color:#ffc1a8;border-color:#b87e65}
+.skill-match{background:#343b2b;color:#d4d8b3}.skill-match.training{background:#493820;color:#f4d398}.skill-match.met{background:#304025;color:#d2e6a4}.skill-match.unknown,.skill-match.stale{background:#3b3831;color:#d1c8b4}
