@@ -1,7 +1,8 @@
 import { catalog, categories, updates, routines, archivePosts, archiveMeta } from './data.js';
 import { todayUtc, validDate, isEnded, filterUpdates, cleanState, escapeHtml as esc } from './core.js';
 import { initCharacters, currentCharacter, updateCharacterProgress, selectCharacterForGame, dailyProfile } from './characters.js';
-import { initDailyScape, renderDailyScape } from './dailyscape.js';
+import { initDailyScape, renderDailyScape, dailyPlanningContext, revealDailyActivity } from './dailyscape.js';
+import { initHome, renderHome } from './home.js';
 import { skillMatch } from './character-core.js';
 import { requirementsById } from './requirements.js';
 
@@ -17,7 +18,8 @@ const url = new URL(location.href);
 if (['osrs', 'rs3'].includes(url.searchParams.get('game'))) state.game = url.searchParams.get('game');
 const since = url.searchParams.get('since');
 if (validDate(since) && since >= '2001-01-04' && since <= today) state.dates[state.game] = since;
-let view = url.searchParams.get('view') === 'dailyscape' ? 'routines' : 'discover';
+const requestedView = url.searchParams.get('view');
+let view = ({dailyscape:'routines',catchup:'discover',saved:'plan',home:'home'})[requestedView] || (validDate(since) ? 'discover' : 'home');
 let category = 'all';
 let query = '';
 let sort = 'recommended';
@@ -61,7 +63,7 @@ function syncUrl() {
   const next = new URL(location.href);
   next.searchParams.set('game', state.game);
   next.searchParams.set('since', state.dates[state.game]);
-  if (view === 'routines') next.searchParams.set('view','dailyscape'); else next.searchParams.delete('view');
+  next.searchParams.set('view',({routines:'dailyscape',discover:'catchup',plan:'saved',home:'home'})[view]);
   history.replaceState(null, '', next);
 }
 function options(extra = {}) {
@@ -90,6 +92,14 @@ function renderRoutines() {
   renderDailyScape(state.game, query);
 }
 function render() {
+  document.body.dataset.view=view;
+  $('#home').hidden=view!=='home';
+  $('#discoveries').hidden=view==='home';
+  $('#catchup-sidebar').hidden=view!=='discover';
+  $('#discoveries').before($('#catchup-sidebar'));
+  $('#stats').hidden=true;
+  $('#character-bar').hidden=true;
+  $('#about').hidden=view==='home';
   $('#catchup-feedback').hidden = true;
   const allNew = filterUpdates(updates, options({ view: 'discover', category: 'all', query: '', hideDone: false, includeEnded: false }));
   const selected = filterUpdates(updates, options()).filter(item => !hideSkillGaps || currentCharacter()?.game !== item.game || skillMatch(requirementsById[item.id], currentCharacter().snapshot).status !== 'training');
@@ -122,8 +132,8 @@ function render() {
   $('#include-ended').closest('label').hidden = view !== 'discover';
   $('#hide-skill-gaps').closest('label').hidden = view === 'routines' || !currentCharacter();
   const warnings = [];
-  if (view !== 'routines' && state.dates[state.game] < catalog.coverageStart) warnings.push(`Browse the open update archive below for older content. Curated highlight cards begin ${dateLabel(catalog.coverageStart)}; the update-post archive begins ${dateLabel(archiveMeta.starts[state.game])}.${state.game === 'osrs' && state.dates[state.game] < archiveMeta.starts.osrs ? ' Old School launched in 2013; pre-launch dates include its full available history.' : ''}`);
-  if (view !== 'routines' && today > catalog.reviewed) warnings.push(`Catalog last reviewed ${dateLabel(catalog.reviewed)}. Releases after that date may be missing; check official news for the latest.`);
+  if (view === 'discover' && state.dates[state.game] < catalog.coverageStart) warnings.push(`Browse the open update archive below for older content. Curated highlight cards begin ${dateLabel(catalog.coverageStart)}; the update-post archive begins ${dateLabel(archiveMeta.starts[state.game])}.${state.game === 'osrs' && state.dates[state.game] < archiveMeta.starts.osrs ? ' Old School launched in 2013; pre-launch dates include its full available history.' : ''}`);
+  if (view === 'discover' && today > catalog.reviewed) warnings.push(`Catalog last reviewed ${dateLabel(catalog.reviewed)}. Releases after that date may be missing; check official news for the latest.`);
   if (!storageAvailable) warnings.push('Browser storage is unavailable. Your progress may not persist after this session.');
   $('#notice').hidden = !warnings.length;
   $('#notice').textContent = warnings.join(' ');
@@ -131,7 +141,8 @@ function render() {
   renderArchive();
   $('#news-link').href = `https://secure.runescape.com/m=news/archive${state.game === 'osrs' ? '?oldschool=1' : ''}`;
   $('#wiki-link').href = state.game === 'osrs' ? 'https://oldschool.runescape.wiki/' : 'https://runescape.wiki/';
-  if (view === 'routines') renderRoutines();
+  if (view === 'home') renderHome({game:state.game,since:state.dates[state.game],profile:dailyProfile().key});
+  else if (view === 'routines') renderRoutines();
   else {
     $('#shown-count').textContent = `${selected.length} ${selected.length === 1 ? 'discovery' : 'discoveries'}`;
     $('#results').innerHTML = selected.length ? selected.map(card).join('') : `<div class="empty-state"><span>◇</span><h3>${view === 'plan' ? 'Your next chapter is unwritten.' : 'No discoveries in this view.'}</h3><p>${view === 'plan' ? 'Save an adventure from Discover to build your own return plan.' : 'Try another category, clear your search, or change your last-played date. This curated catalog is not a complete update archive.'}</p><button class="outline-button" id="reset-view">${view === 'plan' ? 'Explore updates ↗' : 'Clear filters'}</button></div>`;
@@ -148,7 +159,8 @@ document.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button) return;
   if (button.dataset.game) { state.game = button.dataset.game; selectCharacterForGame(state.game); category = 'all'; query = ''; $('#search').value = ''; persist(); syncUrl(); render(); }
-  if (button.dataset.view) { view = button.dataset.view; category = 'all'; query = ''; $('#search').value = ''; syncUrl(); render(); if (view !== 'discover') $('#discoveries').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  if (button.dataset.view) { view = button.dataset.view; category = 'all'; query = ''; $('#search').value = ''; syncUrl(); render(); $('#content').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  if (button.dataset.openRoutine) { const activity=routines.find(activity=>activity.id===button.dataset.openRoutine); if(activity){view='routines';revealDailyActivity();query=activity.title;$('#search').value=query;syncUrl();render();$('#discoveries').scrollIntoView({behavior:'smooth',block:'start'});} }
   if (button.dataset.category || button.dataset.path) { category = button.dataset.category || button.dataset.path; view = 'discover'; render(); if (button.dataset.path) $('#discoveries').scrollIntoView({ behavior: 'smooth' }); else document.querySelector(`[data-category="${category}"]`)?.focus(); }
   if (button.dataset.detail) showDetail(button.dataset.detail);
   if (button.classList.contains('dialog-close')) $('#detail').close();
@@ -210,6 +222,7 @@ $('#export-plan').addEventListener('click', () => {
   toast('Your adventure plan has been exported.');
 });
 initDailyScape({getProfile: dailyProfile, getLegacyChecks: () => state.routineChecks, isVisible: () => view === 'routines', toast, clearSearch: () => { query=''; $('#search').value=''; }});
+initHome({context:()=>({candidates:dailyPlanningContext(state.game),stories:filterUpdates(updates,options({view:'discover',category:'quests',query:'',hideDone:true,sort:'recommended'}))})});
 syncUrl(); render();
 initCharacters({
   getGame: () => state.game,

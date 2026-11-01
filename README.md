@@ -101,6 +101,22 @@ browser storage is cleared. Export your plan if you want a portable copy.
 
 ## DailyScape
 
+The default landing page is a compact Home with three entry points: catch up,
+plan a session, and DailyScape. Catch-up settings, source details, reset rules
+and reward assumptions use expandable panels. DailyScape starts with six cards
+and supports showing more without hiding activities from search or filters.
+
+The session planner offers 15-, 30- and 60-minute budgets and at most three
+suggestions. It uses current checklist readiness, membership/mode restrictions,
+pins and editable reward/time estimates. GP and XP goals rank known estimates;
+unknown returns are excluded from those rankings. Story blocks budget time to
+start or continue a quest, rather than promise a full quest completion. Quest
+eligibility and combat suitability still need user confirmation. Plans refresh
+when returning Home and never mark activities complete automatically.
+
+Views have shareable URLs (`view=home`, `view=catchup`, `view=dailyscape`,
+`view=saved`). Older links with an explicit `since` date still open catch-up.
+
 Open `?view=dailyscape&game=rs3` (or `game=osrs`). The catalog in
 `dailyscape-data.js` includes 111 reviewed activities: 84 RS3 and 27 OSRS,
 including D&Ds, recurring claims, shop routes and utility allowances. It follows
