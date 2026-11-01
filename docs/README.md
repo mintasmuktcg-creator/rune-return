@@ -16,6 +16,7 @@ decision is whether to add backend services, change the frontend host, or both.
 | [GitHub Pages plan and runbook](GITHUB-PAGES.md) | Keep the basic version useful, free and maintainable |
 | [Later hosting plan](HOSTING-PLAN.md) | Migration triggers, architecture, costs and rollout |
 | [Data and estimates](DATA-AND-ESTIMATES.md) | Sources, reward credibility, local storage and future sync |
+| [Official API integration plan](OFFICIAL-API-PLAN.md) | Verified RS3 client capabilities, replacement web-API unknowns and staged integration |
 | [Account setup](../SETUP-ACCOUNTS.md) | Existing optional Supabase implementation instructions |
 
 ## Current versus planned

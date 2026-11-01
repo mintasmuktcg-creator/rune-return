@@ -72,6 +72,7 @@ source documentation are not copied into the public app artifact.
 
 - [Free-site runbook](docs/GITHUB-PAGES.md): development, content updates, deployment and rollback.
 - [Later hosting plan](docs/HOSTING-PLAN.md): when to add a backend or change hosts, with costs and migration steps.
+- [Official API plan](docs/OFFICIAL-API-PLAN.md): verified RS3 client/plugin capabilities and a separate replacement web-API research track.
 - [Optional account setup](SETUP-ACCOUNTS.md): activate only a new dedicated RuneReturn Supabase project.
 
 The free version needs no Supabase project. Do not reuse card-platform credentials

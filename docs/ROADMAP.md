@@ -65,6 +65,12 @@ maps incrementally; the current two mappings do not establish general eligibilit
 
 ## Phase 4 — Small account pilot
 
+The [official API plan](OFFICIAL-API-PLAN.md) adds a separate optional research
+track: RS3 client skills/quest snapshots and measured XP sessions. Verify a
+permitted local transfer path before making a free-site import promise. Treat
+the replacement web API as a different adapter with an unverified contract,
+and keep full collection-log import conditional on demonstrated coverage.
+
 Only proceed if testers specifically need a second device or hosted imports.
 Keep the useful guest path. Follow [account setup](../SETUP-ACCOUNTS.md) and the
 [hosting plan](HOSTING-PLAN.md); profile sync already prepared in code does not
