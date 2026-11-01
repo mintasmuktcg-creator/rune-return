@@ -37,6 +37,10 @@ export function updateCharacterProgress(progress) {
   character.progress = structuredClone(progress); writeLocal(); cloudSave(character); return true;
 }
 export function currentCharacter() { return active(); }
+export function dailyProfile() {
+  const character = active();
+  return { key: `${session?.user.id || 'guest'}.${character?.id || 'unassigned'}`, label: character ? `${character.name} (${character.game.toUpperCase()})` : 'Guest checklist', mode: character?.mode || 'normal' };
+}
 export function selectCharacterForGame(game) {
   if (active()?.game === game) return;
   activeId = null; changed();

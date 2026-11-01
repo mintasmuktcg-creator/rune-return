@@ -4,6 +4,12 @@ The local character importer works now without Supabase. Cloud sign-in is
 implemented but intentionally inactive until a **new dedicated RuneReturn**
 project is configured. Do not use the card-platform database for this setup.
 
+DailyScape completion journals remain local to each browser and selected
+character, even after profile cloud sync is enabled. They are not written into
+`rr_characters.progress`. Use the DailyScape JSON backup to preserve or transfer
+the complete journal, and CSV for a readable export. No additional database
+tables or time-series collection are needed for DailyScape.
+
 ## 1. Create the project and private table
 
 Create a Supabase Free project named RuneReturn. In its SQL editor, run the SQL

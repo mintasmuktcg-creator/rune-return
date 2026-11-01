@@ -3,11 +3,19 @@ import { resolve, dirname, basename } from 'node:path';
 import { build } from 'esbuild';
 import { createHash } from 'node:crypto';
 import { updates, catalog, archivePosts, archiveMeta } from '../data.js';
+import { routines, dailyCatalog } from '../dailyscape-data.js';
 import { validDate } from '../core.js';
 import './prepare.mjs';
 import { config } from '../config.js';
 if (!validDate(catalog.reviewed) || !validDate(catalog.coverageStart)) throw new Error('Invalid catalog metadata');
 const seen = new Set();
+if(!validDate(dailyCatalog.reviewed))throw new Error('Invalid DailyScape review date');
+for(const activity of routines){
+  const source = new URL(activity.guide);
+  if(seen.has(activity.id) || !['daily','weekly','monthly','flexible'].includes(activity.cadence) || !['daily','weekly','monthly','cooldown','manual'].includes(activity.reset) || !(activity.minutes>=0) || source.protocol!=='https:' || source.hostname!==(activity.game==='rs3'?'runescape.wiki':'oldschool.runescape.wiki'))throw new Error(`Invalid DailyScape activity: ${activity.id}`);
+  if(activity.reset==='cooldown'&&!(activity.cooldownMinutes>0))throw new Error(`Missing cooldown: ${activity.id}`);
+  seen.add(activity.id);
+}
 for (const post of archivePosts) {
   const url = new URL(post.url);
   const host = post.game === 'osrs' ? 'oldschool.runescape.wiki' : post.game === 'rs3' ? 'runescape.wiki' : null;

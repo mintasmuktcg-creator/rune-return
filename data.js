@@ -1,4 +1,5 @@
 import { historicalUpdates } from './history.js';
+export { routines } from './dailyscape-data.js';
 export { archivePosts, archiveMeta } from './archive-data.js';
 // Original editorial summaries, with per-entry provenance. No scraped article bodies.
 export const catalog = {
@@ -156,12 +157,3 @@ const recentUpdates = [
 ];
 
 export const updates = [...recentUpdates, ...historicalUpdates];
-
-// Evergreen reminders. These are never presented as additions since the chosen date.
-export const routines = [
-  { id: 'rs3-oyster', game: 'rs3', title: 'Giant Oyster', cadence: 'monthly', summary: 'A familiar monthly treasure diversion, if you have the unlock.', requirements: 'Beneath Cursed Tides; check the guide.', guide: wiki('rs3', 'Giant Oyster') },
-  { id: 'rs3-herby', game: 'rs3', title: 'Herby Werby', cadence: 'weekly', summary: 'A weekly Anachronia detour for Herblore experience.', requirements: 'Check access and current activity rules.', guide: wiki('rs3', 'Herby Werby') },
-  { id: 'rs3-penguins', game: 'rs3', title: 'Penguin Hide and Seek', cadence: 'weekly', summary: 'Make some time for a weekly penguin hunt.', requirements: 'Quest unlocks can expand the rewards available.', guide: wiki('rs3', 'Penguin Hide and Seek') },
-  { id: 'osrs-tears', game: 'osrs', title: 'Tears of Guthix', cadence: 'manual', summary: 'A familiar weekly diversion. Eligibility is based on your own last visit and progress, so reset this reminder manually.', requirements: 'Tears of Guthix and the current weekly eligibility conditions.', guide: wiki('osrs', 'Tears of Guthix (minigame)') },
-  { id: 'osrs-stars', game: 'osrs', title: 'Shooting Stars', cadence: 'manual', summary: 'A social Mining detour when you want something slower. This is an evergreen activity, not a new release.', requirements: 'Mining level depends on the star tier.', guide: wiki('osrs', 'Shooting Stars') },
-];

@@ -93,11 +93,46 @@ These comparisons do not establish complete eligibility. Rare drops are
 goals, never guaranteed outcomes or quoted odds. Reward names are spoilers.
 
 Each `data.js` record has its own source and guide links. Summaries and art are
-original; no full news articles or wiki text are copied. A few evergreen routines
+original; no full news articles or wiki text are copied. DailyScape activities
 are included separately and are not counted as new content. This app never
 collects a RuneScape password, makes game actions or reads account activity.
 Browser data is specific to the current origin/device and can disappear when
 browser storage is cleared. Export your plan if you want a portable copy.
+
+## DailyScape
+
+Open `?view=dailyscape&game=rs3` (or `game=osrs`). The catalog in
+`dailyscape-data.js` includes 111 reviewed activities: 84 RS3 and 27 OSRS,
+including D&Ds, recurring claims, shop routes and utility allowances. It follows
+the 2026 RS3 overhaul; removed activities are excluded and uncapped activities
+appear under "On your clock". Grouped shop routes do not enumerate every item.
+OSRS has no standard monthly D&D cycle in this catalog. Requirements are shown,
+not automatically confirmed from character stats.
+
+Daily resets use midnight UTC, RS3 weekly resets Wednesday midnight UTC and
+monthly resets the first. OSRS Tears uses its personal seven-calendar-day UTC
+cooldown. Accumulating stock, variable growth clocks, weekday-only activities
+and manual clan build ticks have their own labels and reminder rules. Multiple
+daily attempts and explicit D&D reset-token runs are recorded separately.
+
+GP values are dated planning snapshots before selling fees, with shop costs
+included only where stated. Unknown loot/utility values are not invented.
+XP examples are labelled scenarios with assumptions; users can override GP,
+direct XP, bonus XP, active time and the comparison XP/hour per activity. Time
+saved is `(XP + usable BXP) / alternative XP per hour * 60 - active minutes`.
+BXP is deferred and assumes complete later consumption; mixed-skill comparisons
+need a suitable blended baseline. Neither coins nor XP are treated as actual
+verified earnings. Overrides do not change earlier completion receipts.
+
+The journal is stored separately in browser localStorage under
+`runereturn.dailyscape.v1.<RuneReturn owner or guest>.<character or unassigned>`.
+It is **not cloud-synced**, even when character profile sync is enabled, and
+never grows the Supabase database. Records store completion/undo timestamps
+and a snapshot of the estimate. Period changes reset eligibility without
+deleting records. No automatic history cap is applied; storage failures reject
+the write with a message. CSV export retains full history, including undone
+entries. JSON backups merge by stable record ID and preserve undo state.
+Clearing browser storage removes the local journal, so keep a JSON backup.
 
 ## Adding content
 

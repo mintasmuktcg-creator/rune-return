@@ -1,6 +1,7 @@
 import { catalog, categories, updates, routines, archivePosts, archiveMeta } from './data.js';
-import { todayUtc, validDate, isEnded, filterUpdates, routinePeriod, cleanState, escapeHtml as esc } from './core.js';
-import { initCharacters, currentCharacter, updateCharacterProgress, selectCharacterForGame } from './characters.js';
+import { todayUtc, validDate, isEnded, filterUpdates, cleanState, escapeHtml as esc } from './core.js';
+import { initCharacters, currentCharacter, updateCharacterProgress, selectCharacterForGame, dailyProfile } from './characters.js';
+import { initDailyScape, renderDailyScape } from './dailyscape.js';
 import { skillMatch } from './character-core.js';
 import { requirementsById } from './requirements.js';
 
@@ -16,7 +17,7 @@ const url = new URL(location.href);
 if (['osrs', 'rs3'].includes(url.searchParams.get('game'))) state.game = url.searchParams.get('game');
 const since = url.searchParams.get('since');
 if (validDate(since) && since >= '2001-01-04' && since <= today) state.dates[state.game] = since;
-let view = 'discover';
+let view = url.searchParams.get('view') === 'dailyscape' ? 'routines' : 'discover';
 let category = 'all';
 let query = '';
 let sort = 'recommended';
@@ -60,6 +61,7 @@ function syncUrl() {
   const next = new URL(location.href);
   next.searchParams.set('game', state.game);
   next.searchParams.set('since', state.dates[state.game]);
+  if (view === 'routines') next.searchParams.set('view','dailyscape'); else next.searchParams.delete('view');
   history.replaceState(null, '', next);
 }
 function options(extra = {}) {
@@ -85,12 +87,7 @@ function card(item) {
   </article>`;
 }
 function renderRoutines() {
-  const relevant = routines.filter(r => r.game === state.game && `${r.title} ${r.summary}`.toLowerCase().includes(query.toLowerCase().trim()));
-  $('#results').innerHTML = `<div class="routine-intro"><span>❋</span><p><strong>Returning favourites, not new releases.</strong> These reminders ignore your last-played date. RS3 weekly reminders reset Wednesday at 00:00 UTC; monthly reminders reset on the first. Manual reminders stay checked until you reset them. This does not read your account’s eligibility.</p></div>` + relevant.map(r => {
-    const checked = state.routineChecks[r.id] === routinePeriod(r.cadence);
-    return `<article class="update-card routine-card"><div class="card-top"><span class="card-symbol activities">❋</span><span class="badge">${r.cadence === 'manual' ? 'Manual reminder' : `${r.cadence} · UTC`}</span></div><h3>${esc(r.title)}</h3><p class="description">${esc(r.summary)}</p><p class="routine-requirements">${esc(r.requirements)}</p><div class="card-bottom"><a class="text-button" href="${esc(r.guide)}" target="_blank" rel="noopener noreferrer">Activity guide ↗</a><button class="save-button ${checked ? 'saved' : ''}" data-routine="${r.id}" aria-pressed="${checked}">${checked ? '✓ Done · undo' : 'Mark done'}</button></div></article>`;
-  }).join('') + (!relevant.length ? '<div class="empty-state"><h3>No reminders match.</h3><p>Try another search or switch worlds.</p></div>' : '');
-  $('#shown-count').textContent = `${relevant.length} reminders`;
+  renderDailyScape(state.game, query);
 }
 function render() {
   $('#catchup-feedback').hidden = true;
@@ -114,16 +111,19 @@ function render() {
     [allNew.filter(i => i.tags.includes('drops')).length, 'new reward chases', '◇'],
     [postCount, 'dated game-update posts', '✦'],
   ].map(([count, text, icon]) => `<div><span>${icon}</span><strong>${count}</strong><small>${text}</small></div>`).join('');
-  $('#results-title').innerHTML = view === 'plan' ? 'Your next adventures<span class="gold">.</span>' : view === 'routines' ? 'A few familiar detours<span class="gold">.</span>' : `New since ${dateLabel(state.dates[state.game])}<span class="gold">.</span>`;
-  $('#results-kicker').textContent = view === 'plan' ? 'SAVED ON THIS DEVICE' : view === 'routines' ? 'D&Ds & RETURNING FAVOURITES' : 'YOUR PERSONAL CATCH-UP';
-  $('#result-summary').textContent = view === 'plan' ? `${gameLabel()} · Your saved list, including entries outside the selected date range.` : view === 'routines' ? 'A small, optional routine. Pick the ones you actually enjoy.' : `${gameLabel()} · Released after ${dateLabel(state.dates[state.game])} · Curated highlights`;
+  $('#results-title').innerHTML = view === 'plan' ? 'Your next adventures<span class="gold">.</span>' : view === 'routines' ? 'Your DailyScape<span class="gold">.</span>' : `New since ${dateLabel(state.dates[state.game])}<span class="gold">.</span>`;
+  $('#results-kicker').textContent = view === 'plan' ? 'SAVED ON THIS DEVICE' : view === 'routines' ? 'DAILIES · WEEKLIES · MONTHLIES' : 'YOUR PERSONAL CATCH-UP';
+  $('#result-summary').textContent = view === 'plan' ? `${gameLabel()} · Your saved list, including entries outside the selected date range.` : view === 'routines' ? `${gameLabel()} · Rewards, reset timers and your completion journal` : `${gameLabel()} · Released after ${dateLabel(state.dates[state.game])} · Curated highlights`;
+  $('#search').placeholder = view === 'routines' ? 'Search activities, rewards and requirements…' : 'Search quests, bosses, drops…';
+  $('#search').setAttribute('aria-label', view === 'routines' ? 'Search DailyScape activities and journal' : 'Search updates');
+  $('#export-plan').hidden = view === 'routines';
   $('#sort').hidden = view === 'routines';
   $('#hide-done').closest('label').hidden = view === 'routines';
   $('#include-ended').closest('label').hidden = view !== 'discover';
   $('#hide-skill-gaps').closest('label').hidden = view === 'routines' || !currentCharacter();
   const warnings = [];
-  if (state.dates[state.game] < catalog.coverageStart) warnings.push(`Browse the open update archive below for older content. Curated highlight cards begin ${dateLabel(catalog.coverageStart)}; the update-post archive begins ${dateLabel(archiveMeta.starts[state.game])}.${state.game === 'osrs' && state.dates[state.game] < archiveMeta.starts.osrs ? ' Old School launched in 2013; pre-launch dates include its full available history.' : ''}`);
-  if (today > catalog.reviewed) warnings.push(`Catalog last reviewed ${dateLabel(catalog.reviewed)}. Releases after that date may be missing; check official news for the latest.`);
+  if (view !== 'routines' && state.dates[state.game] < catalog.coverageStart) warnings.push(`Browse the open update archive below for older content. Curated highlight cards begin ${dateLabel(catalog.coverageStart)}; the update-post archive begins ${dateLabel(archiveMeta.starts[state.game])}.${state.game === 'osrs' && state.dates[state.game] < archiveMeta.starts.osrs ? ' Old School launched in 2013; pre-launch dates include its full available history.' : ''}`);
+  if (view !== 'routines' && today > catalog.reviewed) warnings.push(`Catalog last reviewed ${dateLabel(catalog.reviewed)}. Releases after that date may be missing; check official news for the latest.`);
   if (!storageAvailable) warnings.push('Browser storage is unavailable. Your progress may not persist after this session.');
   $('#notice').hidden = !warnings.length;
   $('#notice').textContent = warnings.join(' ');
@@ -148,7 +148,7 @@ document.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button) return;
   if (button.dataset.game) { state.game = button.dataset.game; selectCharacterForGame(state.game); category = 'all'; query = ''; $('#search').value = ''; persist(); syncUrl(); render(); }
-  if (button.dataset.view) { view = button.dataset.view; category = 'all'; query = ''; $('#search').value = ''; render(); if (view !== 'discover') $('#discoveries').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  if (button.dataset.view) { view = button.dataset.view; category = 'all'; query = ''; $('#search').value = ''; syncUrl(); render(); if (view !== 'discover') $('#discoveries').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   if (button.dataset.category || button.dataset.path) { category = button.dataset.category || button.dataset.path; view = 'discover'; render(); if (button.dataset.path) $('#discoveries').scrollIntoView({ behavior: 'smooth' }); else document.querySelector(`[data-category="${category}"]`)?.focus(); }
   if (button.dataset.detail) showDetail(button.dataset.detail);
   if (button.classList.contains('dialog-close')) $('#detail').close();
@@ -158,12 +158,6 @@ document.addEventListener('click', event => {
     state.saved = saved ? state.saved.filter(value => value !== id) : [...state.saved, id];
     persist(); render(); if ($('#detail').open) showDetail(id);
     toast(saved ? 'Removed from your adventures.' : 'Saved to My adventures. Your next chapter is waiting.');
-  }
-  if (button.dataset.routine) {
-    const routine = routines.find(r => r.id === button.dataset.routine);
-    const period = routinePeriod(routine.cadence);
-    if (state.routineChecks[routine.id] === period) delete state.routineChecks[routine.id]; else state.routineChecks[routine.id] = period;
-    persist(); render(); document.querySelector(`[data-routine="${routine.id}"]`)?.focus();
   }
   if (button.id === 'reset-view') { view = 'discover'; category = 'all'; query = ''; hideDone = false; $('#search').value = ''; $('#hide-done').checked = false; render(); }
 });
@@ -215,6 +209,7 @@ $('#export-plan').addEventListener('click', () => {
   const a = document.createElement('a'); a.href = blobUrl; a.download = 'my-runereturn-plan.md'; a.click(); setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
   toast('Your adventure plan has been exported.');
 });
+initDailyScape({getProfile: dailyProfile, getLegacyChecks: () => state.routineChecks, isVisible: () => view === 'routines', toast, clearSearch: () => { query=''; $('#search').value=''; }});
 syncUrl(); render();
 initCharacters({
   getGame: () => state.game,
