@@ -1,21 +1,56 @@
 # RuneReturn
 
-A free, static returning-player companion for Old School RuneScape and RuneScape 3.
-Choose when you last played, explore additions since then, and keep a small list
-of adventures to try. The starting date is **July 1, 2026** for both games.
+A free returning-player companion for **Old School RuneScape and RuneScape 3**.
+Find what changed, plan a short session and track the routines you choose.
+
+**[Open the live site](https://mintasmuktcg-creator.github.io/rune-return/?view=home)** ·
+**[Documentation](docs/README.md)** ·
+**[Roadmap](docs/ROADMAP.md)** ·
+**[Site review](docs/SITE-REVIEW.md)**
+
+This README describes the application reviewed on **November 1, 2026**.
+Future work is labelled in the linked plans; documentation is not a claim that
+accounts, actual-reward tracking or journal cloud sync are already live.
+
+## What is available
+
+- A quiet Home with three choices: catch up, plan a session, or DailyScape.
+- Separate OSRS/RS3 last-played dates, searchable highlights and a dated update archive.
+- Session suggestions for 15, 30 or 60 minutes, with at most three activities.
+- DailyScape frequency/type/status filters, pins and six cards shown at a time.
+- Completion timestamps, undo history and estimates captured when marked complete.
+- Editable GP/XP/BXP/time assumptions, plus CSV export and JSON journal backup/merge.
+- Saved adventures, explored markers and a Markdown adventure-list export.
+- Local public hiscores imports and character-specific progress. A public name is not proof of ownership.
+
+The game-inspired stone/parchment/gold theme uses local assets, no external
+fonts and no installed tracking service. Detailed settings and assumptions are
+expandable so the opening screen stays small.
+
+## Current limitations
+
+- Progress is browser-local by default. DailyScape journals are **not cloud-synced**.
+- The JSON journal backup does not yet restore all device/character/catch-up data.
+- GP values are dated snapshots; variable XP rewards include labelled planning examples.
+- Journal values are estimates, not actual earnings. Quest/diary eligibility generally remains unknown.
+- Only two explicit skill-requirement mappings exist. Imported levels are not a full unlock check.
+- Cloud sign-in/profile storage and hosted lookup code are prepared, but configuration is blank and live production behavior remains unverified.
+- The full archive covers available indexed update posts, not every undocumented game change.
+
+See [the review](docs/SITE-REVIEW.md) for the next improvement priorities and
+[the data contract](docs/DATA-AND-ESTIMATES.md) for precise storage/estimate boundaries.
 
 ## Run locally
 
-Node.js 22 or newer. Install the dependencies once. Browsing and local character
-imports need no API keys or database. Optional cloud accounts need a separate
-Supabase project; see [account setup](SETUP-ACCOUNTS.md).
+Use **Node.js 22 or newer**. Basic browsing and local public hiscores lookup need
+no database or API keys.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5180. Use `PORT` to choose another port.
+Open `http://127.0.0.1:5180`. The server binds to loopback; `PORT` selects another port.
 
 ```sh
 npm test
@@ -23,152 +58,67 @@ npm run build
 node scripts/serve.mjs --dist
 ```
 
-## Free hosting on GitHub Pages
+Stop the development server first when previewing `dist/` on the same port.
+The current suite has **39 automated tests**. The November 1 review also checked
+live desktop/mobile flows; those manual browser checks are not yet CI tests.
 
-1. Create a **public** GitHub repository, for example `rune-return`.
-2. Push this project to its `main` branch, including `.github/workflows/pages.yml`.
-3. In the repository, open **Settings → Pages → Build and deployment → Source**
-   and select **GitHub Actions**.
-4. Run the **Publish RuneReturn to GitHub Pages** workflow (or push to `main`).
-5. Open the URL reported by the deploy job: typically
-   `https://YOUR-USERNAME.github.io/rune-return/`.
+## Hosting and accounts
 
-The build bundles the public application into versioned JavaScript/CSS assets in
-`dist/` so browser caches pick up deployments. Tests, tooling and repository
-metadata are not published. Relative asset paths support project
-subdirectories without a custom domain or routing configuration. GitHub Pages
-supports public repositories on GitHub Free. See the
-[official Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
-No deployment has been made by creating this project locally.
+The site is deployed through [GitHub Actions](.github/workflows/pages.yml) to
+[GitHub Pages](https://mintasmuktcg-creator.github.io/rune-return/). Pushes to
+`main` run tests/build and publish `dist/`. JS/CSS assets are versioned and
+relative paths support the repository subdirectory. Tooling, tests and Markdown
+source documentation are not copied into the public app artifact.
 
-## What works
+- [Free-site runbook](docs/GITHUB-PAGES.md): development, content updates, deployment and rollback.
+- [Later hosting plan](docs/HOSTING-PLAN.md): when to add a backend or change hosts, with costs and migration steps.
+- [Optional account setup](SETUP-ACCOUNTS.md): activate only a new dedicated RuneReturn Supabase project.
 
-- Separate OSRS/RS3 last-played dates with browser-local persistence.
-- Category, text, completion and release-date filters, plus chronological sorting.
-- Sourced adventure details: first step, prerequisites, reward goals and guide.
-- Save adventures, mark explored, export a Markdown checklist across both games.
-- D&D/evergreen reminders in a separate view. RS3 weekly reminders roll over on
-  Wednesday 00:00 UTC and monthly reminders on the first. OSRS reminders are
-  manual because eligibility can depend on the individual account's last visit.
-- Ended events hidden from discovery by default, retained and labelled in saved
-  lists and optional historical views.
-- Public OSRS/RS3 character imports, skills/XP/reported hiscores activities and
-  separate adventure lists per character. A public name lookup is not proof of
-  ownership; no game passwords are requested.
-- Optional Supabase email sign-in and owner-scoped cloud character storage,
-  awaiting configuration of a new project. Guest profile import is explicit.
-- Source-mapped skill comparisons; missing prerequisites and quest completion
-  remain unknown. Local imports use a read-only proxy; hosted imports need the
-  authenticated Edge Function.
-- Responsive layout, keyboard-operable modals, reduced-motion support, no external
-  fonts or trackers. The Supabase browser SDK is bundled locally during build.
+The free version needs no Supabase project. Do not reuse card-platform credentials
+or database tables. `config.js` is public browser configuration; server secrets
+and passwords never belong in it. Enabling character cloud sync would still not
+enable DailyScape journal sync.
 
-## Data and limitations
+## Catalog coverage
 
-This catalog includes **89 curated discoveries from 2023 onward** and **2,236
-dated update posts**, reviewed October 31, 2026. The available Wiki game-update
-indexes cover OSRS from its February 2013 launch (700 posts) and RuneScape,
-including its Classic/RS2 history, from January 2001 (1,536 posts). Any date from
-January 4, 2001 through today can be selected; pre-launch OSRS dates show all its
-available posts. Older dates open the archive above the curated cards. This is
-the available indexed post history, not a guarantee of every undocumented change.
-Later visits show that newer content may not yet be indexed.
-Highlights and update-post counts are separate: posts include patches, beta
-notices and expired events, not just newly playable additions. The archive follows
-the game, date, text search and chronological sort, with 25 posts displayed at a time. Refresh its
-static index with `npm run data:refresh-archive -- YYYY-MM-DD` after reviewing the
-cutoff; the script makes two Wiki API requests. Editorial highlights remain
-manually maintained in `history.js` and `data.js`. No database or runtime feed is required.
-Upcoming announcements are not mixed into released content. A release date must
-be confirmed; where only an announcement is available, `dateNote` explains that
-the date is an availability reference. Event `endDate` is conservative/exclusive:
-the event is hidden starting on that UTC date rather than promising playtime
-after an unspecified shutdown time.
+| Dataset | Size at this review | Metadata cutoff |
+| --- | --- | --- |
+| Curated highlights | 89, selected additions from 2023 onward | October 31, 2026 |
+| OSRS update posts | 700, from its February 2013 launch | October 31, 2026 |
+| RuneScape update posts | 1,536, including Classic/RS2 back to January 2001 | October 31, 2026 |
+| DailyScape | 111 activities: 84 RS3 and 27 OSRS | November 1, 2026 |
 
-An entry may be a feature, quest, boss or activity within one release, so counts
-refer to discoveries rather than unique patch days. Tags overlap. Suggested
-starting points use editorial priority. Selected character stats can be compared
-with the small set of mapped skill requirements; quest sync is not connected.
-These comparisons do not establish complete eligibility. Rare drops are
-goals, never guaranteed outcomes or quoted odds. Reward names are spoilers.
+Highlight counts and post counts are separate. Archive posts can include beta
+notices, patches and expired events. DailyScape includes grouped shop routes and
+utility allowances; it does not enumerate every tradeable item or training loop.
+The default last-played date is July 1, 2026 for both games.
 
-Each `data.js` record has its own source and guide links. Summaries and art are
-original; no full news articles or wiki text are copied. DailyScape activities
-are included separately and are not counted as new content. This app never
-collects a RuneScape password, makes game actions or reads account activity.
-Browser data is specific to the current origin/device and can disappear when
-browser storage is cleared. Export your plan if you want a portable copy.
+The homepage defaults to Home. Query views are `home`, `catchup`, `dailyscape`
+and `saved`; use `game=osrs` or `game=rs3`. Older links with a `since=YYYY-MM-DD`
+parameter still open catch-up when no explicit view is supplied.
 
-## DailyScape
+## Project map
 
-The default landing page is a compact Home with three entry points: catch up,
-plan a session, and DailyScape. Catch-up settings, source details, reset rules
-and reward assumptions use expandable panels. DailyScape starts with six cards
-and supports showing more without hiding activities from search or filters.
+| Files | Responsibility |
+| --- | --- |
+| `index.html`, `app.js`, stylesheets | Navigation, catch-up views and application shell |
+| `home.js`, `session-core.js` | Home and session suggestions |
+| `data.js`, `history.js`, `archive-data.js` | Highlights and update-post index |
+| `dailyscape-data.js`, `dailyscape-core.js`, `dailyscape.js` | Activity catalog, reset/estimate logic and local journal |
+| `characters.js`, `character-core.js`, `auth.js` | Public character imports, profiles and optional auth |
+| `requirements.js` | Explicit skill mappings; unmapped requirements remain unknown |
+| `scripts/` | Build, local server and reviewed archive-refresh tooling |
+| `supabase/` | Prepared migration and authenticated lookup function |
+| `tests/` | Node tests for state, data, parsing, lookup and planning |
+| `docs/` | Review, future plans, maintenance and migration guidance |
 
-The session planner offers 15-, 30- and 60-minute budgets and at most three
-suggestions. It uses current checklist readiness, membership/mode restrictions,
-pins and editable reward/time estimates. GP and XP goals rank known estimates;
-unknown returns are excluded from those rankings. Story blocks budget time to
-start or continue a quest, rather than promise a full quest completion. Quest
-eligibility and combat suitability still need user confirmation. Plans refresh
-when returning Home and never mark activities complete automatically.
+## Contributing data
 
-Views have shareable URLs (`view=home`, `view=catchup`, `view=dailyscape`,
-`view=saved`). Older links with an explicit `since` date still open catch-up.
-
-Open `?view=dailyscape&game=rs3` (or `game=osrs`). The catalog in
-`dailyscape-data.js` includes 111 reviewed activities: 84 RS3 and 27 OSRS,
-including D&Ds, recurring claims, shop routes and utility allowances. It follows
-the 2026 RS3 overhaul; removed activities are excluded and uncapped activities
-appear under "On your clock". Grouped shop routes do not enumerate every item.
-OSRS has no standard monthly D&D cycle in this catalog. Requirements are shown,
-not automatically confirmed from character stats.
-
-Daily resets use midnight UTC, RS3 weekly resets Wednesday midnight UTC and
-monthly resets the first. OSRS Tears uses its personal seven-calendar-day UTC
-cooldown. Accumulating stock, variable growth clocks, weekday-only activities
-and manual clan build ticks have their own labels and reminder rules. Multiple
-daily attempts and explicit D&D reset-token runs are recorded separately.
-
-GP values are dated planning snapshots before selling fees, with shop costs
-included only where stated. Unknown loot/utility values are not invented.
-XP examples are labelled scenarios with assumptions; users can override GP,
-direct XP, bonus XP, active time and the comparison XP/hour per activity. Time
-saved is `(XP + usable BXP) / alternative XP per hour * 60 - active minutes`.
-BXP is deferred and assumes complete later consumption; mixed-skill comparisons
-need a suitable blended baseline. Neither coins nor XP are treated as actual
-verified earnings. Overrides do not change earlier completion receipts.
-
-The journal is stored separately in browser localStorage under
-`runereturn.dailyscape.v1.<RuneReturn owner or guest>.<character or unassigned>`.
-It is **not cloud-synced**, even when character profile sync is enabled, and
-never grows the Supabase database. Records store completion/undo timestamps
-and a snapshot of the estimate. Period changes reset eligibility without
-deleting records. No automatic history cap is applied; storage failures reject
-the write with a message. CSV export retains full history, including undone
-entries. JSON backups merge by stable record ID and preserve undo state.
-Clearing browser storage removes the local journal, so keep a JSON backup.
-
-## Adding content
-
-Edit `data.js` to add a record with a unique stable ID, game, confirmed ISO release
-date, tags, original short summary, first step, prerequisite guidance, reward
-names and source/guide URLs. Reuse the category IDs already listed. Confirm the
-release itself, not just a roadmap or poll. Add `endDate` to temporary events.
-Update `catalog.reviewed` only after checking the catalog. Run the tests/build,
-review the result and push. GitHub Actions publishes the new static version.
-
-The next sensible data pipeline is a scheduled news-link inbox (official RSS or
-approved wiki access) with human review before adding released entries. Automatic
-classification is intentionally absent here: announcements, beta tests, polls
-and seasonal repeats otherwise become misleading “new content”.
-
-## Next useful extensions
-
-- Expand the reviewed release catalog and add explicit prerequisite chains.
-- Expand the skill-requirement maps and evaluate the replacement RS3 web API
-  for quest data, rather than depending on the retiring RuneMetrics API.
-- Spoiler controls and a data contribution form backed by GitHub issues.
+Provide a stable ID, correct game, dated source, original summary and clear
+requirements/reward assumptions. Distinguish releases from announcements, index
+refreshes from editorial review, and price observations from personalized results.
+Retain IDs needed to read existing journals. See [source maintenance](docs/DATA-AND-ESTIMATES.md)
+and [the content runbook](docs/GITHUB-PAGES.md) before refreshing catalogs.
 
 Independent fan project. RuneScape and Old School RuneScape belong to Jagex.
+No game passwords are collected and the app does not perform in-game actions.

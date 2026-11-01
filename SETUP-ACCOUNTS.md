@@ -1,5 +1,10 @@
 # Activate RuneReturn accounts
 
+For the broader rollout decision, see the [hosting plan](docs/HOSTING-PLAN.md)
+and [data/sync design](docs/DATA-AND-ESTIMATES.md). This guide activates the
+prepared character-profile integration; future DailyScape cloud sync remains
+a separate, unimplemented project.
+
 The local character importer works now without Supabase. Cloud sign-in is
 implemented but intentionally inactive until a **new dedicated RuneReturn**
 project is configured. Do not use the card-platform database for this setup.
