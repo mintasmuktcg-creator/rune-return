@@ -23,7 +23,8 @@ accounts, actual-reward tracking or journal cloud sync are already live.
 
 - A quiet Home with three choices: catch up, choose a progression path, or DailyScape.
 - Seven progression lanes, prerequisite routes, manual unlock checks and setup-aware GP scenarios.
-- [AFK routes](docs/AFK-ROUTES.md): all 24 OSRS and 29 RS3 skills selectable, 143 route entries, explicit AFK limitations, level ladders and attention filters.
+- [AFK routes](docs/AFK-ROUTES.md): all 24 OSRS and 29 RS3 skills selectable, 148 route entries, explicit AFK limitations, level ladders and attention filters.
+- [Creator/community guides](docs/CREATOR-METHODS.md), with source credits, publication dates, skill chapters and reviewed-method filtering.
 - Separate OSRS/RS3 last-played dates, searchable highlights and a dated update archive.
 - Session suggestions for 15, 30 or 60 minutes, with at most three activities.
 - DailyScape frequency/type/status filters, pins and six cards shown at a time.
@@ -68,7 +69,7 @@ node scripts/serve.mjs --dist
 ```
 
 Stop the development server first when previewing `dist/` on the same port.
-The current suite has **59 automated tests**. The November 1 review also checked
+The current suite has **63 automated tests**. The November 1 review also checked
 live desktop/mobile flows; those manual browser checks are not yet CI tests.
 
 ## Hosting and accounts

@@ -2,17 +2,18 @@ import { afkMethods } from './afk-data.js';
 import { gameSkills,skillNames } from './progression-data.js';
 export function afkSkills(game){const label=id=>id==='constitution'?(game==='osrs'?'Hitpoints':'Constitution'):skillNames[id];return [...(gameSkills[game]||[])].sort((a,b)=>label(a).localeCompare(label(b)));}
 export function cleanAfkPreferences(raw,game){
-  const skills=afkSkills(game),p={skill:skills.includes('mining')?'mining':skills[0],level:null,access:'all',attention:'all'};
+  const skills=afkSkills(game),p={skill:skills.includes('mining')?'mining':skills[0],level:null,access:'all',attention:'all',evidence:'all'};
   if(!raw||typeof raw!=='object')return p;
   if(skills.includes(raw.skill))p.skill=raw.skill;
   if(Number.isInteger(raw.level)&&raw.level>=1&&raw.level<=(game==='osrs'?99:120))p.level=raw.level;
   if(['all','f2p'].includes(raw.access))p.access=raw.access;
   if(['all','long','variable','batch','passive','active'].includes(raw.attention))p.attention=raw.attention;
+  if(['all','creator'].includes(raw.evidence))p.evidence=raw.evidence;
   return p;
 }
-export function buildAfkRoute({game,skill,level=null,skills={},membership='unknown',access='all',attention='all'}){
+export function buildAfkRoute({game,skill,level=null,skills={},membership='unknown',access='all',attention='all',evidence='all'}){
   const known=Number.isInteger(level)&&level>=1&&level<=(game==='osrs'?99:120);
-  const rows=afkMethods.filter(m=>m.game===game&&m.skill===skill&&(access!=='f2p'||!m.members)&&(attention==='all'||m.attention===attention)).sort((a,b)=>a.level-b.level||a.id.localeCompare(b.id)).map(method=>{
+  const rows=afkMethods.filter(m=>m.game===game&&m.skill===skill&&(access!=='f2p'||!m.members)&&(attention==='all'||m.attention===attention)&&(evidence!=='creator'||m.creatorRefs?.length)).sort((a,b)=>a.level-b.level||a.id.localeCompare(b.id)).map(method=>{
     const reasons=[];
     if(!known)reasons.push('Add your level to locate yourself on this route.');
     else if(level<method.level)reasons.push(`Requires ${method.level} ${skill}.`);

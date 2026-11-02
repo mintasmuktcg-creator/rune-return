@@ -6,7 +6,7 @@ The workspace is also directly addressable with `?view=afk&game=osrs` or `game=r
 
 ## Current coverage
 
-The catalog has 143 entries: 72 OSRS and 71 RS3. All 24 OSRS skills and all 29
+The catalog has 148 entries: 76 OSRS and 72 RS3. All 24 OSRS skills and all 29
 RS3 skills are selectable. Different tiers/styles of a single activity count as
 separate entries, not distinct minigames. Dungeoneering has a sourced limitation
 notice rather than an invented regular solo AFK method.
@@ -71,6 +71,11 @@ source datasets. The expansion checked 86 distinct method-source URLs. Useful st
 - [RS3 Runespan](https://runescape.wiki/w/Runespan)
 - [RS3 Fishing training](https://runescape.wiki/w/Pay-to-play_Fishing_training)
 - [RS3 Archaeology training](https://runescape.wiki/w/Archaeology_training)
+
+Creator/community references, evidence states, chapter links and five newer
+catalog additions are documented in [Creator methods](CREATOR-METHODS.md).
+The creator filter only includes reviewed method-specific associations; video
+chapter discovery links alone do not qualify.
 
 Check current unlocks rather than copying old guides: RS3 oaks/willows now unlock
 at 10/20, while OSRS uses 15/30. The reviewed RS3 Seren-stone requirement is 89.
