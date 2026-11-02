@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {afkMethods} from '../afk-data.js';
+import {afkMethods,afkSkillNotes} from '../afk-data.js';
+import {gameSkills} from '../progression-data.js';
 import {afkSkills,cleanAfkPreferences,buildAfkRoute} from '../afk-core.js';
 test('AFK ladders separate games, preserve unknown levels and never assert setup eligibility',()=>{
   const route=buildAfkRoute({game:'osrs',skill:'mining'});
@@ -29,5 +30,24 @@ test('AFK preferences bound levels and reject skills from the wrong game',()=>{
 });
 test('AFK catalog has unique stable ids, valid ranges and dated sources',()=>{
   assert.equal(new Set(afkMethods.map(m=>m.id)).size,afkMethods.length);
-  for(const m of afkMethods){assert.ok(m.level>=1&&m.until>=m.level&&m.until<=120,m.id);assert.ok(['long','variable','batch'].includes(m.attention));assert.ok(m.window&&m.requirements&&m.notes);assert.match(m.reviewed,/^\d{4}-\d{2}-\d{2}$/);const url=new URL(m.source);assert.equal(url.protocol,'https:');assert.equal(url.hostname,m.game==='osrs'?'oldschool.runescape.wiki':'runescape.wiki');}
+  for(const m of afkMethods){assert.ok(m.level>=1&&m.until>=m.level&&m.until<=120,m.id);assert.ok(['long','variable','batch','passive','active'].includes(m.attention));assert.ok(m.window&&m.requirements&&m.notes);assert.match(m.reviewed,/^\d{4}-\d{2}-\d{2}$/);const url=new URL(m.source);assert.equal(url.protocol,'https:');assert.equal(url.hostname,m.game==='osrs'?'oldschool.runescape.wiki':'runescape.wiki');}
+});
+test('every skill is selectable with actual routes or an explicit sourced limitation',()=>{
+  for(const game of ['osrs','rs3']){assert.deepEqual(new Set(afkSkills(game)),new Set(gameSkills[game]));for(const skill of gameSkills[game]){const methods=afkMethods.filter(m=>m.game===game&&m.skill===skill);const note=afkSkillNotes[`${game}-${skill}`];assert.ok(methods.length||note,`${game} ${skill} is missing`);if(note)assert.ok(note.text&&note.source);}}
+  assert.equal(afkSkills('osrs').length,24);assert.equal(afkSkills('rs3').length,29);
+});
+test('passive waiting and active alternatives cannot leak into long-AFK filtering',()=>{
+  assert.ok(buildAfkRoute({game:'osrs',skill:'farming',attention:'passive'}).rows.length>0);
+  assert.equal(buildAfkRoute({game:'osrs',skill:'farming',attention:'long'}).rows.length,0);
+  assert.ok(buildAfkRoute({game:'osrs',skill:'agility',attention:'active'}).rows.length>0);
+  assert.equal(buildAfkRoute({game:'osrs',skill:'agility',attention:'long'}).rows.length,0);
+  assert.equal(buildAfkRoute({game:'rs3',skill:'dungeoneering'}).rows.length,0);
+});
+test('expanded routes use verified unlocks, membership and secondary requirements',()=>{
+  assert.equal(afkMethods.find(m=>m.id==='osrs-repair-kits').level,19);
+  assert.equal(afkMethods.find(m=>m.id==='rs3-town-hall-2').level,45);
+  assert.equal(afkMethods.find(m=>m.id==='osrs-cook-80').members,true);
+  assert.equal(afkMethods.find(m=>m.id==='rs3-potions').level,1);
+  const route=buildAfkRoute({game:'rs3',skill:'summoning',level:21,membership:'members',skills:{dungeoneering:30}});assert.equal(route.rows[0].status,'locked');
+  assert.equal(buildAfkRoute({game:'osrs',skill:'runecrafting',level:77,membership:'members',skills:{mining:20,crafting:38}}).rows[0].status,'locked');
 });

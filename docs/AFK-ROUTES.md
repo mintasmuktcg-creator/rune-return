@@ -6,13 +6,15 @@ The workspace is also directly addressable with `?view=afk&game=osrs` or `game=r
 
 ## Current coverage
 
-The starter catalog has 40 entries: 19 OSRS and 21 RS3. Different tiers of a
-single activity count as separate entries, not distinct minigames.
+The catalog has 143 entries: 72 OSRS and 71 RS3. All 24 OSRS skills and all 29
+RS3 skills are selectable. Different tiers/styles of a single activity count as
+separate entries, not distinct minigames. Dungeoneering has a sourced limitation
+notice rather than an invented regular solo AFK method.
 
 | Game | Included skills |
 | --- | --- |
-| OSRS | Mining, Woodcutting, Fishing, Smithing and early melee combat |
-| RS3 | Mining, Woodcutting, Fishing, Runecrafting, Divination, early Archaeology and Crafting |
+| OSRS | All 24 skills, including Sailing, all combat styles and production skills |
+| RS3 | All 29 skills, including Necromancy, Summoning and Invention; Dungeoneering limitation explained |
 
 This is not every AFK method or a complete level-one-to-max guide for every
 skill. Archaeology coverage stops at 23; the linked training guide covers later
@@ -25,8 +27,10 @@ with frequent interruptions clearly described rather than long idle claims.
   level are separate; older methods remain visible and useful after a milestone.
 - The current range and next listed skill unlock respond to the selected level.
   The next unlock is not a claim that its quests, membership or equipment are ready.
-- Long stretches, variable interruptions and short batches describe interaction
-  patterns. Only a verified source earns a numeric attention interval.
+- Long stretches, variable interruptions, short batches, passive/return-later
+  methods and active alternatives are separate filterable patterns. Only a
+  verified source earns a numeric attention interval. Farming and birdhouse
+  waits are not continuous skilling; an active Agility alternative is not AFK.
 - Level-qualified cards still say **check setup**. Unknown quests, location
   access and equipment never become automatically confirmed eligibility.
 - Membership and explicitly mapped secondary skills can mark a method locked.
@@ -58,7 +62,7 @@ Every catalog entry has its own Wiki link and review date. Primary method pages
 and skill guides were checked through the Wikis' public read API and indexed
 pages; original summaries are maintained in `afk-data.js`. Research captures
 under ignored `artifacts/afk-research/` are development evidence, not published
-source datasets. Useful starting references:
+source datasets. The expansion checked 86 distinct method-source URLs. Useful starting references:
 
 - [OSRS Shooting Stars](https://oldschool.runescape.wiki/w/Shooting_Stars)
 - [OSRS Woodcutting training](https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training)
@@ -71,15 +75,15 @@ source datasets. Useful starting references:
 Check current unlocks rather than copying old guides: RS3 oaks/willows now unlock
 at 10/20, while OSRS uses 15/30. The reviewed RS3 Seren-stone requirement is 89.
 
-Next expansion should prioritize later Archaeology routes, more combat styles
-with tested gear/sustain assumptions, additional low-attention training skills,
-and measured level/setup-specific XP samples. Keep method availability separate
+Next expansion should prioritize later Archaeology routes, deeper combat tiers
+with tested gear/sustain assumptions, and measured level/setup-specific XP
+samples. Keep method availability separate
 from preference ranking and verified account access.
 
 ## Validation
 
-Six unit tests cover game separation, level ranges, filters, membership,
-secondary skills, F2P caps, preference validation and catalog integrity. Browser
+Nine unit tests cover game separation, level ranges, filters, membership,
+secondary skills, F2P caps, all-skill coverage, preference validation and catalog integrity. Browser
 checks cover saved preferences, game/profile isolation, imported/manual/stale
-levels, navigation, and 320/390/768/1024px layouts. Browser checks are currently
+levels, all 53 skill selections, navigation, and 320/390/768/1024px layouts. Browser checks are currently
 manual development checks, not a new CI browser job.

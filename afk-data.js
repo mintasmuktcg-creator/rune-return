@@ -1,5 +1,6 @@
-// Reviewed starter coverage; ranges are browsing suggestions, not forced cutoffs.
-export const afkCatalog={reviewed:'2026-11-02',version:1};
+import { addExpandedAfk } from './afk-expanded-data.js';
+// Ranges are browsing suggestions, not forced cutoffs. Passive and active alternatives are explicit.
+export const afkCatalog={reviewed:'2026-11-02',version:2};
 const rows=[];
 function add(game,id,skill,level,until,title,page,attention,window,requirements,notes,xp=null,extra={}){
   rows.push({id:`${game}-${id}`,game,skill,level,until,title,attention,window,requirements,notes,xp,members:true,otherSkills:{},source:`https://${game==='osrs'?'oldschool.':''}runescape.wiki/w/${encodeURIComponent(page.replaceAll(' ','_'))}`,reviewed:afkCatalog.reviewed,...extra});
@@ -43,4 +44,8 @@ r('venator','archaeology',5,11,'Venator remains','Archaeology training','variabl
 r('legionary','archaeology',12,16,'Legionary remains','Legionary remains','variable','Inventory and artefact discoveries','Kharid-et barracks access through Breaking the Seal; mattock.','Porters can bank materials, but not damaged artefacts. Soil handling and restoring add active steps.',null,{members:false});
 r('castra','archaeology',17,23,'Castra debris','Archaeology training','variable','Inventory and artefact discoveries','Access to the Kharid-et barracks excavation area; mattock.','Higher hotspots need separate mysteries and access checks; this starter route stops at 23. F2P Archaeology progression is capped at 20.',null,{members:false,f2pLevelCap:20});
 r('harps','crafting',75,120,'Prifddinas harps','Harps','variable','Retune as the harp loses tune','Plague’s End and Ithell district access; Crafting 75 and Construction 75 for tuning.','Harmonic dust is the main resource. Fully out-of-tune harps stop; relaxed play earns less than focused guide setups.',null,{otherSkills:{construction:75}});
+addExpandedAfk(add);
 export const afkMethods=rows;
+export const afkSkillNotes={
+  'rs3-dungeoneering':{title:'No regular solo AFK training route verified',text:'Ordinary floors require active navigation and combat. Group leeching depends on other players and is not a solo AFK progression method. Seasonal activities are not assumed available year-round.',source:'https://runescape.wiki/w/AFK#Dungeoneering'},
+};

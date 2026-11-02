@@ -25,7 +25,7 @@ decision is whether to add backend services, change the frontend host, or both.
 
 **Available:** a starter progression workspace with seven lanes, prerequisite
 routes and six setup-aware GP scenarios; simple Home, catch-up/archive browsing, session suggestions,
-40 AFK route entries with level/attention filters,
+143 route entries with all 53 game/skill selections and explicit AFK limitations,
 DailyScape checklists, dated local journals, editable estimates and DailyScape
 CSV/JSON exports. OSRS and RS3 remain separate game contexts.
 
