@@ -32,7 +32,7 @@
       </details>
     </aside>
     <main id="content" tabindex="-1">
-      <div class="workspace-bar"><div class="compact-worlds" role="group" aria-label="Active game"><button data-game="osrs" aria-pressed="true">Old School</button><button data-game="rs3" aria-pressed="false">RuneScape 3</button></div><button class="text-button active-profile" id="active-profile" data-account-open>Guest · choose character</button><span id="edition-label" class="sr-only">OLD SCHOOL RUNESCAPE</span><span id="hero-period" hidden></span></div>
+      <div class="workspace-bar"><div class="compact-worlds" role="group" aria-label="Active game"><button data-game="osrs" aria-pressed="true">Old School</button><button data-game="rs3" aria-pressed="false">RuneScape 3</button></div><div class="workspace-actions"><button class="text-button active-profile" id="active-profile" data-account-open>Guest · choose character</button><button class="return-date-edit" id="edit-return-date" aria-label="Edit last-played date" aria-haspopup="dialog" title="Edit last-played date"><span id="return-date-label"></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 5 5M3 21l5-1L21 7a2.1 2.1 0 0 0-5-5L3 16z"/></svg></button></div><span id="edition-label" class="sr-only">OLD SCHOOL RUNESCAPE</span><span id="hero-period" hidden></span></div>
       <section id="home" aria-label="Your RuneReturn home"></section>
       <section id="progression" aria-label="Your progression path" hidden></section>
       <section id="character-bar" class="character-bar" aria-label="Active character"></section>
@@ -51,6 +51,7 @@
     </main>
   </div>
   <dialog id="detail"><div id="detail-content"></div></dialog>
+  <dialog id="return-date-dialog" aria-labelledby="return-date-title"><form id="return-date-form"><h2 id="return-date-title">When did you last play?</h2><p id="return-date-game"></p><label for="return-date-input">Last-played date</label><input type="date" id="return-date-input" min="2001-01-04" required><p>Your catch-up will refresh with updates released after this date.</p><div class="return-date-buttons"><button class="outline-button" id="cancel-return-date" type="button">Cancel</button><button class="primary-button" type="submit">Save date</button></div></form></dialog>
   <dialog id="account-dialog" aria-label="RuneReturn account and characters"><div id="account-content"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <noscript><p class="notice">Enable JavaScript to filter updates and save your adventure list. You can still browse the official RuneScape news and wiki links.</p></noscript>

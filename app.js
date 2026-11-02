@@ -110,6 +110,8 @@ function render() {
   document.querySelectorAll('[data-game]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.game === state.game)));
   document.querySelectorAll('[data-view]').forEach(button => { button.classList.toggle('active', button.dataset.view === view); if (button.dataset.view === view) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current'); });
   $('#last-played').value = state.dates[state.game];
+  $('#return-date-label').textContent = `Last played ${dateLabel(state.dates[state.game])}`;
+  $('#edit-return-date').setAttribute('aria-label', `Edit last-played date: ${dateLabel(state.dates[state.game])}`);
   $('#last-played').max = today;
   const postCount = archivePosts.filter(post => post.game === state.game && post.date > state.dates[state.game] && post.date <= today).length;
   $('#date-summary').textContent = `${postCount} update posts and ${allNew.length} curated highlights after ${dateLabel(state.dates[state.game])}. Archive begins ${dateLabel(archiveMeta.starts[state.game])}.`;
@@ -200,6 +202,22 @@ function changeLastPlayed(event, force = false) {
   $('#catchup-feedback').textContent = `Catch-up updated: ${next.length} highlights and ${matchingPosts().length} dated update posts after ${dateLabel(value)}. ${value < catalog.coverageStart ? 'The update archive is open below and includes the older history. Curated highlight cards cover 2023 onward.' : same ? 'These dates contain the same curated highlights; browse the update-post archive for smaller changes.' : 'The list below now shows this date range, newest first.'}`;
 }
 $('#archive-more').addEventListener('click', () => { archiveLimit += 25; renderArchive(); });
+$('#edit-return-date').addEventListener('click', () => {
+  $('#return-date-input').value = state.dates[state.game];
+  $('#return-date-input').max = today;
+  $('#return-date-game').textContent = gameLabel();
+  $('#return-date-dialog').showModal();
+  $('#return-date-input').focus();
+});
+$('#cancel-return-date').addEventListener('click', () => $('#return-date-dialog').close());
+$('#return-date-form').addEventListener('submit', event => {
+  event.preventDefault();
+  if (!event.target.reportValidity()) return;
+  const value = $('#return-date-input').value;
+  if (!validDate(value) || value < '2001-01-04' || value > today) return;
+  $('#return-date-dialog').close();
+  changeLastPlayed({ target: $('#return-date-input'), type: 'change' }, true);
+});
 $('#last-played').addEventListener('input', changeLastPlayed);
 $('#last-played').addEventListener('change', changeLastPlayed);
 $('#refresh-catchup').addEventListener('click', () => changeLastPlayed({ target: $('#last-played'), type: 'change' }, true));
