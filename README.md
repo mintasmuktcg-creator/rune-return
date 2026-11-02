@@ -15,7 +15,7 @@ not a complete game-wide optimizer or collection-log importer.
 **[Roadmap](docs/ROADMAP.md)** ·
 **[Site review](docs/SITE-REVIEW.md)**
 
-This README describes the application reviewed on **November 1, 2026**.
+This README was updated on **November 2, 2026**; the site review preserves its November 1 baseline.
 Future work is labelled in the linked plans; documentation is not a claim that
 accounts, actual-reward tracking or journal cloud sync are already live.
 
@@ -23,6 +23,7 @@ accounts, actual-reward tracking or journal cloud sync are already live.
 
 - A quiet Home with three choices: catch up, choose a progression path, or DailyScape.
 - Seven progression lanes, prerequisite routes, manual unlock checks and setup-aware GP scenarios.
+- [AFK routes](docs/AFK-ROUTES.md): 40 reviewed entries across both games, with skill/level ladders, attention filters and character-level comparisons.
 - Separate OSRS/RS3 last-played dates, searchable highlights and a dated update archive.
 - Session suggestions for 15, 30 or 60 minutes, with at most three activities.
 - DailyScape frequency/type/status filters, pins and six cards shown at a time.
@@ -67,7 +68,7 @@ node scripts/serve.mjs --dist
 ```
 
 Stop the development server first when previewing `dist/` on the same port.
-The current suite has **50 automated tests**. The November 1 review also checked
+The current suite has **56 automated tests**. The November 1 review also checked
 live desktop/mobile flows; those manual browser checks are not yet CI tests.
 
 ## Hosting and accounts
@@ -113,6 +114,7 @@ parameter still open catch-up when no explicit view is supplied.
 | `index.html`, `app.js`, stylesheets | Navigation, catch-up views and application shell |
 | `home.js`, `session-core.js` | Home and session suggestions |
 | `progression*.js` | Goal graph, player facts, setup-aware GP scenarios and provider boundary |
+| `afk*.js` | Reviewed AFK methods, level ladders, attention filters and profile-scoped preferences |
 | `data.js`, `history.js`, `archive-data.js` | Highlights and update-post index |
 | `dailyscape-data.js`, `dailyscape-core.js`, `dailyscape.js` | Activity catalog, reset/estimate logic and local journal |
 | `characters.js`, `character-core.js`, `auth.js` | Public character imports, profiles and optional auth |
