@@ -1,3 +1,5 @@
+import {reviewedCreatorSources} from './reviewed-creator-sources.js';
+import {deepMethodRefs} from './afk-deep-data.js';
 // Only primary creator/community publications. Chapter-only records are not method reviews.
 export const creatorSources=[
   {id:'theoatrix-longest-2026',game:'osrs',creator:'Theoatrix',title:'Longest AFK Methods in 2026',url:'https://www.theoatrix.net/post/longest-afk-methods-in-2026-osrs',published:'2026-03-03',dateBasis:'Publisher datePublished metadata; visible page displays March 4.',checked:'2026-11-02',review:'written',skills:['woodcutting','fishing','strength','mining','agility','sailing','attack','defence','ranged','magic','slayer'],summary:'Written method sections reviewed; quoted maxima depend on setup and timers. No claim of personal testing.'},
@@ -6,6 +8,10 @@ export const creatorSources=[
   {id:'pvme-beasts',game:'rs3',creator:'PvM Encyclopedia community',title:'Abyssal Beasts: AFK setups',url:'https://pvme.io/pvme-guides/slayer/abyssal-beasts/',published:null,checked:'2026-11-02',review:'written',skills:['slayer','attack','strength','defence','ranged','magic','constitution','necromancy','invention'],summary:'Published combat setups reviewed. Gear, sustain and location are essential; optimal rates are not personal forecasts.'},
   {id:'pvme-demons',game:'rs3',creator:'PvM Encyclopedia community',title:'Abyssal Demons: AFK setups',url:'https://pvme.io/pvme-guides/slayer/abyssal-demons/',published:null,checked:'2026-11-02',review:'written',skills:['slayer','attack','strength','defence','ranged','magic','constitution','necromancy','invention'],summary:'Setup guide reviewed. Read the current equipment and positioning requirements before attempting it.'},
 ];
+creatorSources.push(...reviewedCreatorSources,
+  {id:'kaoz-afk-2026',game:'osrs',creator:'Kaoz OSRS',title:'The BEST AFK Method Per Skill In OSRS (Mobile Friendly 2026)',url:'https://www.youtube.com/watch?v=o9iJOi742co',published:'2026-04-20',checked:'2026-11-02',review:'chapters',summary:'Primary video description and grouped chapters checked. No gameplay or full setup review; a grouped chapter is not a per-method endorsement.',chapters:{attack:67,strength:67,defence:67,constitution:67,ranged:67,prayer:67,magic:198,runecrafting:198,construction:198,agility:198,herblore:379,thieving:379,crafting:379,fletching:379,slayer:553,hunter:553,mining:553,smithing:553,fishing:735,cooking:735,firemaking:735,woodcutting:892,farming:892,sailing:892}},
+  {id:'silenced-afk-early-2026',game:'rs3',creator:'Silenced',title:'Early/mid-game AFK guide (description index)',titleBasis:'Editorial label; exact video title was unavailable in the captured primary result.',url:'https://www.youtube.com/watch?v=xONmeRFausY',published:'2026-01-28',checked:'2026-11-02',review:'chapters',summary:'Primary description chapters checked; full gameplay and setup not reviewed. Publication predates the March combat and July skilling changes.',compatibilityNote:'Recheck combat and skilling assumptions against the 2026 updates before using a preset.',chapters:{smithing:27,agility:104,crafting:307,attack:430,strength:430,defence:430,ranged:430,magic:430,constitution:430,archaeology:537,woodcutting:577,thieving:632}}
+);
 export const creatorSource=id=>creatorSources.find(source=>source.id===id);
 export function guidesForSkill(game,skill){return creatorSources.filter(source=>source.game===game&&(Object.hasOwn(source.chapters||{},skill)||source.skills?.includes(skill))).sort((a,b)=>(b.published||'').localeCompare(a.published||''));}
 export function creatorGuideUrl(source,skill){const seconds=source.chapters?.[skill];if(!Number.isInteger(seconds))return source.url;const url=new URL(source.url);url.searchParams.set('t',`${seconds}s`);return url.href;}
@@ -13,6 +19,7 @@ export const methodCreatorRefs={
   'osrs-infected-roots':['theoatrix-longest-2026'],'osrs-stranglewood':['theoatrix-longest-2026'],'osrs-pump':['theoatrix-longest-2026'],'osrs-cave-eels':['theoatrix-longest-2026'],
   'osrs-stars':['theoatrix-longest-2026'],'osrs-karambwan':['theoatrix-longest-2026'],'osrs-redwood':['theoatrix-longest-2026'],'osrs-magic':['theoatrix-longest-2026'],
   'rs3-beasts-afk':['pvme-beasts'],'rs3-abyssal-task':['pvme-demons'],
+  ...deepMethodRefs,
 };
 export function addCreatorAfk(add){
   const o=(id,skill,level,until,title,page,window,requirements,notes)=>add('osrs',id,skill,level,until,title,page,'long',window,requirements,notes,null,{members:true});

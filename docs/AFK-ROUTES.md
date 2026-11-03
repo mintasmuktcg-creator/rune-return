@@ -6,7 +6,7 @@ The workspace is also directly addressable with `?view=afk&game=osrs` or `game=r
 
 ## Current coverage
 
-The catalog has 148 entries: 76 OSRS and 72 RS3. All 24 OSRS skills and all 29
+The catalog has 205 entries: 93 OSRS and 112 RS3. All 24 OSRS skills and all 29
 RS3 skills are selectable. Different tiers/styles of a single activity count as
 separate entries, not distinct minigames. Dungeoneering has a sourced limitation
 notice rather than an invented regular solo AFK method.
@@ -17,8 +17,8 @@ notice rather than an invented regular solo AFK method.
 | RS3 | All 29 skills, including Necromancy, Summoning and Invention; Dungeoneering limitation explained |
 
 This is not every AFK method or a complete level-one-to-max guide for every
-skill. Archaeology coverage stops at 23; the linked training guide covers later
-hotspots. Early tree cutting and fishing are included as low-attention bridges,
+skill. Archaeology now includes sampled hotspots through 120 and a separate
+research-expedition route; complete collections and mysteries need other steps. Early tree cutting and fishing are included as low-attention bridges,
 with frequent interruptions clearly described rather than long idle claims.
 
 ## Recommendations and attention
@@ -72,15 +72,16 @@ source datasets. The expansion checked 86 distinct method-source URLs. Useful st
 - [RS3 Fishing training](https://runescape.wiki/w/Pay-to-play_Fishing_training)
 - [RS3 Archaeology training](https://runescape.wiki/w/Archaeology_training)
 
-Creator/community references, evidence states, chapter links and five newer
-catalog additions are documented in [Creator methods](CREATOR-METHODS.md).
-The creator filter only includes reviewed method-specific associations; video
+Creator/community references, evidence states, chapter links and method
+associations are documented in [Creator methods](CREATOR-METHODS.md).
+The [deep-dive report](AFK-DEEP-DIVE.md) adds the dated source inventory,
+corrections and skill coverage matrix. The creator filter only includes reviewed method-specific associations; video
 chapter discovery links alone do not qualify.
 
 Check current unlocks rather than copying old guides: RS3 oaks/willows now unlock
 at 10/20, while OSRS uses 15/30. The reviewed RS3 Seren-stone requirement is 89.
 
-Next expansion should prioritize later Archaeology routes, deeper combat tiers
+Next expansion should prioritize full Archaeology dependencies, deeper combat tiers
 with tested gear/sustain assumptions, and measured level/setup-specific XP
 samples. Keep method availability separate
 from preference ranking and verified account access.

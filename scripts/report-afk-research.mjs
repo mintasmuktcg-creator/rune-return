@@ -1,0 +1,24 @@
+// Publish metadata and original coverage summaries, never fetched article bodies.
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {afkMethods,afkSkillNotes} from '../afk-data.js';
+import {creatorSources} from '../creator-sources.js';
+import {gameSkills,skillNames} from '../progression-data.js';
+const manifest=JSON.parse(await readFile('artifacts/afk-deep-dive/manifest.json','utf8'));
+const queue=JSON.parse(await readFile('research/afk-video-discovery.json','utf8'));
+const inventory=new Map();
+for(const p of manifest.sources){const source=creatorSources.find(s=>s.url===p.url);inventory.set(p.url,{url:p.url,game:p.game,provider:p.provider,title:p.title,published:source?source.published:p.published?.slice(0,10)||null,modified:source?.modified||p.modified?.slice(0,10)||null,checked:'2026-11-02',evidence:source?'written-sections-reviewed':p.provider==='jagex'?'official-patch-sections-reviewed':p.status,publisherWarnings:p.warnings||[],methodIds:afkMethods.filter(m=>(m.creatorRefs||[]).some(id=>creatorSources.find(s=>s.id===id)?.url===p.url)).map(m=>m.id)});}
+for(const s of creatorSources)if(!inventory.has(s.url))inventory.set(s.url,{url:s.url,game:s.game,provider:s.creator,title:s.title,published:s.published,modified:s.modified||null,checked:s.checked,evidence:s.review==='chapters'?'description-chapters-only':'written-sections-reviewed',publisherWarnings:s.compatibilityNote?[s.compatibilityNote]:[],methodIds:afkMethods.filter(m=>m.creatorRefs.includes(s.id)).map(m=>m.id)});
+for(const q of queue)if(!inventory.has(q.url))inventory.set(q.url,{...q,provider:q.creator,checked:'2026-11-02',evidence:q.state,publisherWarnings:[],methodIds:[]});
+for(const m of afkMethods){const p=inventory.get(m.source)||{url:m.source,game:m.game,provider:'RuneScape Wiki',published:null,modified:null,checked:m.reviewed,evidence:'mechanics-reference',publisherWarnings:[],methodIds:[]};if(!p.methodIds.includes(m.id))p.methodIds.push(m.id);inventory.set(m.source,p);}
+const sources=[...inventory.values()].sort((a,b)=>a.url.localeCompare(b.url));
+await mkdir('docs/research',{recursive:true});
+await writeFile('docs/research/afk-source-inventory.json',JSON.stringify({reviewed:'2026-11-02',meaning:'Captures, section reviews, chapter metadata and mechanics references are different evidence states. No full-video review or personal gameplay test is claimed.',captures:manifest.sources.length,creatorSources:creatorSources.length,methods:afkMethods.length,sources},null,2)+'\n');
+const columns=['game','provider','evidence','title','url','published','modified','checked','methodIds','publisherWarnings'];
+const csv=value=>'"'+String(Array.isArray(value)?value.join(' | '):value??'').replaceAll('"','""')+'"';
+await writeFile('docs/research/afk-source-inventory.csv',columns.join(',')+'\n'+sources.map(s=>columns.map(key=>csv(s[key])).join(',')).join('\n')+'\n');
+let matrix='# AFK coverage by skill\n\nGenerated from the current catalog; reviewed November 2, 2026. Counts are route entries, not unique best methods. “Creator-linked” means a written method discussion is associated with the route; chapter-only links do not qualify. Suggested ranges are editorial and may omit useful intermediate hotspots. No row establishes account eligibility.\n\n';
+for(const game of ['osrs','rs3']){matrix+=`## ${game.toUpperCase()}\n\n| Skill | Entries | Creator-linked | Attention patterns | Listed unlocks |\n| --- | ---: | ---: | --- | --- |\n`;for(const skill of gameSkills[game]){const rows=afkMethods.filter(m=>m.game===game&&m.skill===skill);const label=skill==='constitution'?(game==='osrs'?'Hitpoints':'Constitution'):skillNames[skill];matrix+=`| ${label} | ${rows.length} | ${rows.filter(m=>m.creatorRefs.length).length} | ${[...new Set(rows.map(m=>m.attention))].join(', ')||'No regular solo AFK route verified'} | ${[...new Set(rows.map(m=>m.level))].sort((a,b)=>a-b).join(', ')||'See sourced limitation'} |\n`;}}
+matrix+='\n## Explicit limitations\n\n'+Object.entries(afkSkillNotes).map(([key,note])=>`- **${key}:** ${note.text} [Source](${note.source}).`).join('\n')+'\n\nBatch = repeat production manually; passive = progress attached to another activity or a return-later resource; active = useful alternative that is not AFK; variable = interruptions depend on the setup; long = longer stretches with inventory/resource/logout limits.\n';
+await writeFile('docs/research/AFK-SKILL-COVERAGE.md',matrix);
+const count=key=>Object.fromEntries([...new Set(sources.map(s=>s[key]))].map(v=>[v,sources.filter(s=>s[key]===v).length]));
+console.log(JSON.stringify({captures:manifest.sources.length,methods:afkMethods.length,creatorSources:creatorSources.length,creatorLinkedMethods:afkMethods.filter(m=>m.creatorRefs.length).length,byProvider:count('provider'),byEvidence:count('evidence'),pvmeCompatibilityWarnings:manifest.sources.filter(s=>s.provider==='pvme'&&s.warnings.some(w=>/may not work/i.test(w))).length},null,2));

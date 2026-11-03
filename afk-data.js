@@ -1,7 +1,8 @@
 import { addExpandedAfk } from './afk-expanded-data.js';
 import { addCreatorAfk,methodCreatorRefs } from './creator-sources.js';
+import { addDeepAfk,applyDeepAfk } from './afk-deep-data.js';
 // Ranges are browsing suggestions, not forced cutoffs. Passive and active alternatives are explicit.
-export const afkCatalog={reviewed:'2026-11-02',version:2};
+export const afkCatalog={reviewed:'2026-11-02',version:3};
 const rows=[];
 function add(game,id,skill,level,until,title,page,attention,window,requirements,notes,xp=null,extra={}){
   rows.push({id:`${game}-${id}`,game,skill,level,until,title,attention,window,requirements,notes,xp,members:true,otherSkills:{},source:`https://${game==='osrs'?'oldschool.':''}runescape.wiki/w/${encodeURIComponent(page.replaceAll(' ','_'))}`,reviewed:afkCatalog.reviewed,...extra});
@@ -47,6 +48,8 @@ r('castra','archaeology',17,23,'Castra debris','Archaeology training','variable'
 r('harps','crafting',75,120,'Prifddinas harps','Harps','variable','Retune as the harp loses tune','Plague’s End and Ithell district access; Crafting 75 and Construction 75 for tuning.','Harmonic dust is the main resource. Fully out-of-tune harps stop; relaxed play earns less than focused guide setups.',null,{otherSkills:{construction:75}});
 addExpandedAfk(add);
 addCreatorAfk(add);
+addDeepAfk(add);
+applyDeepAfk(rows);
 for(const row of rows)row.creatorRefs=methodCreatorRefs[row.id]||[];
 export const afkMethods=rows;
 export const afkSkillNotes={

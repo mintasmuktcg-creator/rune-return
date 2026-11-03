@@ -16,6 +16,7 @@ decision is whether to add backend services, change the frontend host, or both.
 | [Progression and API launch priority](PROGRESSION-LAUNCH-PLAN.md) | The new number-one objective, current foundation and release-day gates |
 | [AFK progression routes](AFK-ROUTES.md) | Current level ladders, attention patterns, source coverage and storage boundaries |
 | [Creator/community methods](CREATOR-METHODS.md) | Creator credits, dated guides, video chapters and evidence limits |
+| [AFK deep dive](AFK-DEEP-DIVE.md) | Research findings, source conflicts, exclusions, all-skill matrix and review queue |
 | [GitHub Pages plan and runbook](GITHUB-PAGES.md) | Keep the basic version useful, free and maintainable |
 | [Later hosting plan](HOSTING-PLAN.md) | Migration triggers, architecture, costs and rollout |
 | [Data and estimates](DATA-AND-ESTIMATES.md) | Sources, reward credibility, local storage and future sync |
@@ -26,7 +27,7 @@ decision is whether to add backend services, change the frontend host, or both.
 
 **Available:** a starter progression workspace with seven lanes, prerequisite
 routes and six setup-aware GP scenarios; simple Home, catch-up/archive browsing, session suggestions,
-148 route entries with all 53 game/skill selections, creator guide links and explicit AFK limitations,
+205 route entries with all 53 game/skill selections, creator guide links and explicit AFK limitations,
 DailyScape checklists, dated local journals, editable estimates and DailyScape
 CSV/JSON exports. OSRS and RS3 remain separate game contexts.
 

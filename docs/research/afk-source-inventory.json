@@ -1,0 +1,4855 @@
+{
+  "reviewed": "2026-11-02",
+  "meaning": "Captures, section reviews, chapter metadata and mechanics references are different evidence states. No full-video review or personal gameplay test is claimed.",
+  "captures": 221,
+  "creatorSources": 53,
+  "methods": 205,
+  "sources": [
+    {
+      "url": "https://artisanrs.com/tools/afk-thieving/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RS3 AFK Thieving Supply Planner | ArtisanRS",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/tools/auto-screener/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Auto-Screener calculator",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/tools/equilibrium-afk/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Leagues II AFK Task Planner",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/tools/stone-spirits/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Stone spirit calculator",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-chaos-giants-dragon-pickaxe/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Dragon Pickaxe Is 10× Easier Now — AFK Chaos Giants (RS3) | ArtisanRS",
+      "published": "2026-08-05",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-1/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Turning My 7,347-Day-Old RuneScape Main Into an AFK Money Machine (#1) | ArtisanRS",
+      "published": "2026-08-27",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-2/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "My RuneScape Money Machine Finally Started Working (#2) | ArtisanRS",
+      "published": "2026-09-03",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-3/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "I Finally Built My First Invention Machine (#3) | ArtisanRS",
+      "published": "2026-09-08",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-4/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Three Invention machines: keeping my RS3 money machine running | ArtisanRS",
+      "published": "2026-09-15",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-5/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "I Just Wanted to AFK (#5) | ArtisanRS",
+      "published": "2026-09-25",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-6/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Who Uses This Outfit for Archaeology? (#6) | ArtisanRS",
+      "published": "2026-10-03",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-concentrated-gold"
+      ]
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-money-machine-episode-7/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "This Unlock Is Huge for Lazy Players (#7) | ArtisanRS",
+      "published": "2026-10-08",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-research"
+      ]
+    },
+    {
+      "url": "https://artisanrs.com/videos/afk-relic-path-rs3-leagues-2/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "My AFK Relic Path for RS3 Leagues 2 | ArtisanRS",
+      "published": "2026-08-10",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/anachronia-base-camp-guide/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Anachronia base camp: passive benefits and what to unlock first | ArtisanRS",
+      "published": "2026-09-12",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/auto-screener-vs-selling-soil/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Auto-Screener vs selling soil: is it worth it? | ArtisanRS",
+      "published": "2026-09-10",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/colossi-divination-guide/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Colossi Divination Guide: High XP, Routes & Rewards | ArtisanRS",
+      "published": "2026-09-30",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/dream-of-iaia-afk-training/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Dream of Iaia: unlock AFK training and get your camp ready | ArtisanRS",
+      "published": "2026-09-15",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-iaia-construction",
+        "rs3-iaia-crafting",
+        "rs3-iaia-fishing",
+        "rs3-iaia-fletching",
+        "rs3-iaia-herblore",
+        "rs3-iaia-hunter"
+      ]
+    },
+    {
+      "url": "https://artisanrs.com/videos/dungeoneering-solo-floor-buffs/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RS3 solo Dungeoneering: floor buffs, checkmarks and a simple routine | ArtisanRS",
+      "published": "2026-09-09",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/havenhythe-part-ii-locations/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Eastern Havenhythe: the five areas and the Heralds of Crimson preview | ArtisanRS",
+      "published": "2026-09-22",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/havenhythe-part-ii-overview/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Havenhythe Part II: quest requirements, skilling activities and rewards | ArtisanRS",
+      "published": "2026-09-28",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [
+        "The Havensilver rework removed the old damage penalty for using other weapons against creatures weak to it. Havensilver weapons deal 50% increased damage to Sanguine creatures."
+      ],
+      "methodIds": [
+        "rs3-exalted-essence"
+      ]
+    },
+    {
+      "url": "https://artisanrs.com/videos/imcando-hatchet-havenhythe-birdhouses/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Get the Imcando Hatchet Fast with Havenhythe Birdhouses (RS3) | ArtisanRS",
+      "published": "2026-07-30",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/penguin-hide-and-seek-guide/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Penguin Hide and Seek: how to find the penguins and claim your weekly XP | ArtisanRS",
+      "published": "2026-09-19",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "If you already have a weekly D&D reset token, you can use it on Penguin Hide and Seek once for another round that week. Several old token sources were removed in March 2026, including the Travelling Merchant, weekly challenge rewards and the Maw. Use the linked token page for the current acquisition list."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/rs3-plugins-beta/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RS3 plugins beta: Quest Helper, the Plugin Hub and how to try it | ArtisanRS",
+      "published": "2026-10-07",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runefest-2026-skill-30-vampyrium/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Why Skill 30 and Vampyrium were left out of the RuneFest 2026 preview | ArtisanRS",
+      "published": "2026-10-02",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "The October 3 Summit announced Dragon Slayer II, Arposandra, a new Karamja raid, an Agility rework and more restoration work."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runescape-2027-roadmap/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RuneScape's 2027 roadmap: the three story arcs and restoration plans | ArtisanRS",
+      "published": "2026-10-03",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Grandmaster clues and an Agility rework",
+        "The Agility rework was my favourite reveal. Less active training options could finally make me want to push the skill beyond where I've left it.",
+        "The announced restoration plans include a unified collection log, a reworked grouping system, a clan finder and clan improvements, a Quest Timeline rework, more Remastered Journey updates and frequent rebalances and cleanups."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runescape-4-announcement/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RuneScape 4: what the RuneFest 2026 reveal actually announced | ArtisanRS",
+      "published": "2026-10-05",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runescape-deep-clean-update/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RuneScape's Deep Clean update: bank PINs, travel and fewer repeated clicks | ArtisanRS",
+      "published": "2026-09-21",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Most boss instances no longer warn that they are about to expire. God Wars Dungeon 1 and 2 remain exceptions because kill count matters there. Re-entering an existing God Wars Dungeon 2 instance no longer asks for confirmation, and God Wars Dungeon 1 private encounters open the instance menu directly.",
+        "Death no longer asks for confirmation when reclaiming items unless the value is above 100M GP, and another box in the reclaim process was removed. Cutting dragonstones into bolt tips no longer produces a warning; the warnings for onyx and hydrix remain.",
+        "Kharid-et pylon batteries gained Charge all. The Archaeology Guild Travel Map no longer needs a second click, adding scrolls to Globetrotter armguards no longer asks for a number, and Invention blueprint discovery has fewer confirmation and Continue buttons."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runescape-mtx-item-removal/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RuneScape MTX item removal: what to use before November 23, 2026 | ArtisanRS",
+      "published": "2026-09-24",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runescape-reignited-fresh-start/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "RuneScape Reignited: the appeal of a fresh start and the risk of a split | ArtisanRS",
+      "published": "2026-10-05",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Shared clan chat would help people stay in touch, but it would not restore a boss evening they could no longer play together on those characters. Playing both would also mean finding time for both accounts and, under the original plan, paying another subscription."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/runescape-reignited-reassessment/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Jagex's Reignited reassessment: veteran progress, community and membership | ArtisanRS",
+      "published": "2026-10-06",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Jagex said it was re-evaluating RuneScape Reignited a few days after the RuneFest announcement. It apologised for making existing players feel that they were no longer the focus and said it was exploring substantial revisions."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/spirit-attraction-potion-seren-spirits/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Are Spirit Attraction Potions Worth It for Seren Spirits? (RS3) | ArtisanRS",
+      "published": "2026-09-06",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://artisanrs.com/videos/tavias-fishing-rod-red-map/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Tavia’s fishing rod: the red map hunt and what to fish | ArtisanRS",
+      "published": "2026-09-16",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-swarm"
+      ]
+    },
+    {
+      "url": "https://artisanrs.com/videos/temple-trekking-companions-level-99/",
+      "game": "rs3",
+      "provider": "artisanrs",
+      "title": "Temple Trekking Leveling Guide — All 6 Companions to 99 (RS3) | ArtisanRS",
+      "published": "2026-08-19",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://ironman.guide/afk",
+      "game": "osrs",
+      "provider": "ironman-guide",
+      "title": "AFK Training Methods",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "OSRS Wiki →Tap a row for notes, quest requirements, and ironman context. XP rates assume level 99 with skilling outfits (per the wiki's methodology) — treat them as a ceiling. A ~ after an AFK time means the idle stretch varies. Combat rates exclude Hitpoints XP. Base data from the OSRS Wiki community AFK guide, reworked for ironmen. Looking for gp"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://ironman.guide/crafting",
+      "game": "osrs",
+      "provider": "ironman-guide",
+      "title": "OSRS Ironman Crafting Guide 2026: Fastest 1-99, Golem Crafting & Superglass | ironman.guide",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Superglass Make + glassblowing (61+): Self-sufficient, produces useful items, and grants Magic XP alongside Crafting. Still the pick if you want vials, orbs, and light orbs out of your training, but since Wyrmscraig it is no longer the only supply-free route. See the dedicated section below.",
+        "QuestXPKey RequirementsSheep Shearer150NoneGoblin Diplomacy200NoneTower of Life50010 ConstructionIn Search of the Myreque60025 AgilityMisthalin Mystery600NoneDwarf Cannon750NoneAnimal Magnetism1,00019 CraftingThe Golem1,00020 Crafting, 25 ThievingMaking History1,00024 CraftingTears of Guthix1,00020 Crafting, 49 Firemaking, 20 MiningRFD - Goblin Gen"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://ironman.guide/guide/sailing",
+      "game": "osrs",
+      "provider": "ironman-guide",
+      "title": "OSRS Ironman Sailing Guide: Step-by-Step Sailing Track (2026) | ironman.guide",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://ironman.guide/herblore",
+      "game": "osrs",
+      "provider": "ironman-guide",
+      "title": "OSRS Ironman Herblore Guide 2026: 1-99 Route, Secondaries & Boosts | ironman.guide",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "LevelPotionIngredientsXPSignificance3Attack potionGuam + Eye of newt25First potion, minor Attack boost5AntipoisonMarrentill + Unicorn horn dust37.5Cures poison12Strength potionTarromin + Limpwurt root50Minor Strength boost22Restore potionHarralander + Red spiders' eggs62.5Restores lowered stats26Energy potionHarralander + Chocolate dust67.5Restores"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-abyssals"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Adamant_dart_tip",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-dart-tips-74"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Amethyst_crystals",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-amethyst"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Attack_potion",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-attack-potions"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Bird_house_trapping",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-birdhouses"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Blast_Furnace",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-pump",
+        "osrs-pedals"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Blisterwood_tree",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-blisterwood"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Blood_runecrafting",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-bloods"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Calcified_rocks",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-calcified"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Camphor_repair_kit",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-camphor-kits"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Colossal_Wyrm_Agility_Course",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-wyrm-50",
+        "osrs-wyrm-62"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Cooking",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-cook-1",
+        "osrs-cook-15",
+        "osrs-cook-25",
+        "osrs-cook-40",
+        "osrs-cook-45",
+        "osrs-cook-80"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Dungeon",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-poh-agility"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Farming",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-farm-1",
+        "osrs-farm-15",
+        "osrs-farm-27"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Fishing_spot_(Stranglewood)",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-stranglewood"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Fletching",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-bows-5",
+        "osrs-bows-20",
+        "osrs-bows-35",
+        "osrs-bows-50",
+        "osrs-bows-65",
+        "osrs-bows-80"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Fly_fishing",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-fly"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Forester's_campfire",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-campfire-1",
+        "osrs-campfire-30",
+        "osrs-campfire-60",
+        "osrs-campfire-90"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Gemstone_Crab",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-gem-crab-attack",
+        "osrs-gem-crab-strength",
+        "osrs-gem-crab-defence",
+        "osrs-gem-crab-ranged",
+        "osrs-gem-crab-magic",
+        "osrs-gem-crab-constitution"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Gilded_altar",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-altar-bones"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Glassblowing",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-glass-1",
+        "osrs-glass-33",
+        "osrs-glass-46",
+        "osrs-glass-87"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Gold_bracelet",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-gold-bracelets"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Guam_tar",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-guam-tar"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Infected_roots",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-infected-roots"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Infernal_eel",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-infernal-eels"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Iron_dart_tip",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-dart-tips-19"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Magic_tree",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-magic"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Maniacal_monkey_(Hunter)",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-monkey-traps"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Maple",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-maple"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Mithril_dart_tip",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-dart-tips-54"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Motherlode_Mine",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-motherlode"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Oak",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-oak"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Oak_repair_kit",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-repair-kits"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Opal_bolt_tips",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-bolt-tips"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-fixed-fly"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Plank_Make",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-plank-make"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Prayer_potion",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-prayer-potions"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Pyre_fox",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-pyre-fox"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Raw_anglerfish",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-angler"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Raw_cave_eel",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-cave-eels"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Raw_dark_crab",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-dark-crabs"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Raw_karambwan",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-karambwan"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Raw_shrimps",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-shrimp"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Raw_slimy_eel",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-slimy-eels"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Redwood_tree",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-redwood"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Rune_dart_tip",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-dart-tips-89"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Sacred_eel",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-sacred"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Salvaging",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-salvage-15",
+        "osrs-salvage-26",
+        "osrs-salvage-35",
+        "osrs-salvage-53",
+        "osrs-salvage-64",
+        "osrs-salvage-73",
+        "osrs-salvage-80",
+        "osrs-salvage-87"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Sand_Crab",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-sand-crabs"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Shooting_Stars",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-stars"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Slayer",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-slayer-task"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Smithing_cannonballs",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-cannonballs"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Sorceress's_Garden",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-summer-garden"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Soul_runecrafting",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-souls"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Stamina_potion",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-stamina-potions"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Stealing_valuables",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-valuables"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Steel_dart_tip",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-dart-tips-34"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Superior_dragon_bones",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-superior-bones"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tree",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-normal-trees"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Willow",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-willow"
+      ]
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Yew",
+      "game": "osrs",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-yew"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-arch-glacor/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Arch-Glacor",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-blood-reavers/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Blood Reavers  reaverpouch",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat beta changes in March 2026."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-chaos-elemental/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Chaos Elemental",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-corporeal-beast/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Corporeal Beast",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat beta changes in March 2026",
+        "Necromancy AFK Method (Outdated) necromancy"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-dagannoth-kings/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Dagannoth Kings",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-general-graardor/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK General Graardor Hard Mode",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-gregorovic/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Gregorovic",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-gwd1/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "God Wars Dungeon 1 (Normal Mode)",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-helwyr/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Helwyr",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-hermod/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Hermod",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-ivar-king-of-bones/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Ivar, King of Bones",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-kalphite-queen/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Kalphite Queen",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-kbd/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK King Black Dragon",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-kerapac/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Kerapac (NM)",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-kree-arra/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Kree'arra (Hard Mode)",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-orikalka/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Orikalka",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-osseous/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Osseous",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-overview/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK/Low Effort Overview",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-pthentraken/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Pthentraken",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-rathis/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Rathis",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-silverquill-the-dreadhog/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Silverquill, The Dreadhog",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-twin-furies/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Twin Furies",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-vindicta-hardmode/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Vindicta and Gorvek (HM)",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/afk-vindicta/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "AFK Vindicta and Gorvek",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-helwyr-hardmode/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Helwyr Hard Mode",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat beta changes in March 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-kerapac/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Kerapac, the Bound (Normal Mode)",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat beta changes in March 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-magister/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Magister",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-pthentraken/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Pthentraken",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat beta changes in March 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-raksha/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Raksha, the Shadow Colossus",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "• turmoil has not been tested and may not work",
+        "• Deathwarden Nexus has not been tested and may not work",
+        "• sorrow has not been tested and may not work"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-rasial/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Rasial, The First Necromancer",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-twin-furies-hardmode/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Twin Furies Hard Mode",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat beta changes in March 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/low-effort-vorkath/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Low Effort Zemouregal and Vorkath (HM)",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "• Method has not been tested without and may not work"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/afk/PVME-Alt1-Setup/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "PVME Alt1 Setup - PvM Encyclopedia Guides",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/getting-started/noncombat-skilling-guides/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Skills Training",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-harps",
+        "rs3-urns"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/invention-and-perks/invention-basics/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Invention Basics Guide  Invention",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-invention-disassemble",
+        "rs3-invention-siphon",
+        "rs3-invention-early",
+        "rs3-invention-60"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/invention-and-perks/scavenging-farming/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Scavenging Farming",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/new-to-bossing/mid-game-combat/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Mid game combat",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/abyssal-beasts/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Abyssal Beasts",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-beasts-afk"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/abyssal-demons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Abyssal Demons",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-abyssal-task"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/abyssal-lords/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Abyssal Lords",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-lords-afk"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/abyssal-savages/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Abyssal Savages",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-savages-afk"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/acheron-mammoths/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Acheron Mammoths",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/armoured-phantoms/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Armoured Phantoms",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [
+        "Magic magic (outdated)"
+      ],
+      "methodIds": [
+        "rs3-phantoms-afk"
+      ]
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/automatons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Automatons  automaton",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "‎ ‎ ‎ ‎• wyverncrossbow has not been tested yet and may not work very well."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/berserkers-and-ash-lords/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Greater demon berserkers and ash lords",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/block-prefer-list/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Block and Prefer Lists",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/camel-warriors/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Camel Warriors",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/capsarius/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Capsarius",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the change from Legacy Combat Mode to Classic Combat Mode"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/celestial-dragons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Celestial Dragons  celestialdragon",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/crystal-shapeshifters/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Crystal Shapeshifters",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/dinosaurs/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Dinosaurs - PvM Encyclopedia Guides",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat changes made in Q1 of 2026.",
+        "Ripper dinosaurs ripperdinosaur are highly damaging and generally not worth doing unless getting a soul ushabti . They can only be reliably AFK'd with multiple pieces of Cryptbloom cryptbloomhelm and with Vampyrism aura vampaura . The method below may not work if cutting corners such as not having omnipowerigneous"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/edimmu/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Edimmu",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method may not work after the combat changes made in Q1 of 2026",
+        "This method may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/elite-profane-scabarites/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Elite Profane Scabarites",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/gemstone-dragons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Gemstone Dragons - PvM Encyclopedia Guides",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat changes made in Q1 of 2026.",
+        "⬥ Ranged (Outdated)",
+        "⬥ Magic (Outdated)",
+        "⬥ Magic magic (Outdated)",
+        "⬥ Magic magic (Outdated)"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/glacors/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Glacors",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/kalgerion-demons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Kal'gerion Demons",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/lava-strykewyrms/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Lava Strykewyrms",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/living-wyverns/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Living Wyverns",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "⬥ Active Magic (Outdated)"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/lost-grove-creatures/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Creatures of the Lost Grove",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method may not work after the combat changes made in Q1 of 2026",
+        "Action Bar (Outdated)"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/metal-dragons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Metal Dragons",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method may not work after the combat changes made in Q1 of 2026",
+        "Action Bar (Outdated)"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/nightmare-creatures/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Nightmare Creatures",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/nihils/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Nihils",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/nodon-dragonkin/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Nodon Dragonkin",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/overview-of-slayer/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "An Overview of Slayer",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/profane-scabarites/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Profane Scabarites",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/ravenous-strigoi/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Ravenous Strigoi",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/revenants/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Revenants",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "The low effort Magic magic method consists of killing revenants using Legacy Combat Mode to AFK until they are no longer aggressive. When this happens you will follow a specific route killing revenants along the way in order to reset their aggro."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/ripper-demon/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Ripper Demons",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/risen-ghosts/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Risen Ghosts",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/sanguine-crawlers/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Sanguine Crawlers",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/sanguine-werewolves/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Sanguine Werewolves",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/shattered-worlds/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Shattered Worlds for Slayer XP",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/slayer-point-farming/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Slayer Point Farming",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/soul-devourers/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Soul Devourers",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method may not work after the combat changes made in Q1 of 2026",
+        "This method may not work after the combat changes made in Q1 of 2026",
+        "This method may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/soulgazers/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Soulgazers",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/spiritual-warriors/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Spiritual Warriors",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/tormented-demons/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Tormented Demons  mostwantedcardtormenteddemon",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/tzhaar-and-fight-cauldron/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "TzHaar farming guide ~1000 kph",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/ultimate-slayer/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Ultimate Slayer Guide",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/vile-blooms/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Vile blooms",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://pvme.io/pvme-guides/slayer/vyres/",
+      "game": "rs3",
+      "provider": "pvme",
+      "title": "Vyres",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://runescape.wiki/w/Abyssal_beast",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-beasts-afk"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Abyssal_demon",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-abyssal-task"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Abyssal_lord",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-lords-afk"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Abyssal_savage",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-savages-afk"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Aetherium_forge",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-112"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Amphitheatre_debris",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-51"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Ancestral_energy",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-ancestral"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Archaeology_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-venator",
+        "rs3-castra"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Armoured_phantom",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-phantoms-afk"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Attack_potion",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-potions"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Aughra_remains",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-106"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Bamboo",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-bamboo"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Birdhouses",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-hunter-birdhouses"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Black_warlock_(Hunter)",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-butterfly-95"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Bonecrusher",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-bonecrusher"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Bonfire",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-bonfire-1",
+        "rs3-bonfire-30",
+        "rs3-bonfire-60",
+        "rs3-bonfire-90"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Charming_imp",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-summoning-imp"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Choking_ivy",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-ivy"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Cleansing_crystal",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-cleanse"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Concentrated_gold_rocks",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-concentrated-gold"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Construction_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-fort"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Cracked_mining_urn",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-urns"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Divination_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-wisps",
+        "rs3-incandescent"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Dream_of_Iaia",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-iaia-construction",
+        "rs3-iaia-crafting",
+        "rs3-iaia-fishing",
+        "rs3-iaia-fletching",
+        "rs3-iaia-herblore",
+        "rs3-iaia-hunter"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Empty_Throne_Room",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-cycles"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Equipment_siphon",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-invention-siphon",
+        "rs3-invention-60"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Eternal_magic_tree",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-eternal-trees"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Exalted_essence",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-exalted-essence"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Farming",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-farm-crops"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Fishing",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-starter-fishing"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Fletching",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-bows-5",
+        "rs3-bows-50",
+        "rs3-bows-80",
+        "rs3-retier-bows-10",
+        "rs3-retier-bows-20",
+        "rs3-retier-bows-40",
+        "rs3-retier-bows-70",
+        "rs3-retier-bows-90"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Golden_Bamboo_(tree)",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-golden-bamboo"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Gravitron_research_debris",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-91"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Guam_tar",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-guam-tar"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Hall_of_Memories",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-hall"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Harps",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-harps"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Headless_arrow",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-headless"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Hunter_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-hunter-start"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Ikovian_memorial",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-70"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Invention_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-invention-disassemble",
+        "rs3-invention-early"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Legionary_remains",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-legionary"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Lodge_art_storage",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-24"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Magnetic_minnow",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-magnetic-minnows"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Ministry_remains",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-60"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Necromancy_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-necro-combat"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Cooking_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-cook-1",
+        "rs3-cook-15",
+        "rs3-cook-40",
+        "rs3-cook-80"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Fishing_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-menaphos"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Fletching_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-eternal-bows"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Magic_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-combat-magic"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_melee_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-combat-attack",
+        "rs3-combat-strength",
+        "rs3-combat-defence",
+        "rs3-combat-constitution"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Mining_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-core-ores"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Ranged_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-combat-ranged"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Pay-to-play_Smithing_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-forge-1",
+        "rs3-forge-50",
+        "rs3-forge-60",
+        "rs3-forge-80",
+        "rs3-forge-100"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Player-owned_farm",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-farm-animals"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Positive_energy",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arc-energy"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Prifddinas_Waterfall_Fishing",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-urchins-93",
+        "rs3-urchins-95",
+        "rs3-urchins-97"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Prodromoi_remains",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-42"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Research",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-research"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Rituals",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-ritual-5",
+        "rs3-ritual-60",
+        "rs3-ritual-90"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Ruby_harvest_(Hunter)",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-butterflies"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Runespan",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-runespan-low",
+        "rs3-runespan-mid",
+        "rs3-runespan-high"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Sacrificial_altar",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-arch-36"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Safecracking",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-safes"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Sapphire_glacialis_(Hunter)",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-butterfly-85"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Seren_stones",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-seren"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Serenity_post",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-serenity"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Silverhawk_boots",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-silverhawks"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Slayer_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-slayer-task"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Snowy_knight_(Hunter)",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-butterfly-90"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Soul_altar",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-soul-altar"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Swarm",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-swarm"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Thieving_training",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-pickpocket",
+        "rs3-high-pickpocket"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Town_Hall",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-town-hall-2",
+        "rs3-town-hall-3"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Willow",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-willow"
+      ]
+    },
+    {
+      "url": "https://runescape.wiki/w/Woodcutting",
+      "game": "rs3",
+      "provider": "RuneScape Wiki",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "mechanics-reference",
+      "publisherWarnings": [],
+      "methodIds": [
+        "rs3-starter-trees"
+      ]
+    },
+    {
+      "url": "https://secure.runescape.com/m=news/mid-game-rebalance-is-live",
+      "game": "rs3",
+      "provider": "jagex",
+      "title": "Mid-Game Rebalance is Live!",
+      "published": "2026-07-20",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "official-patch-sections-reviewed",
+      "publisherWarnings": [
+        "However, to keep the overall XP gain per hour for core furniture construction in check, you will no longer unlock speed related levelling benefits for Eternal planks. We want to ensure that the other changes we've implemented below don't become immediate redundant due to an overly strong buff on a single method of training.",
+        "Players can no longer engage in (safe) combat in the player owned house",
+        "Construction skillcape perk in the skillguide is no longer PH and shows the correct text."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://secure.runescape.com/m=news/patch-notes-mid-game-rebalance",
+      "game": "rs3",
+      "provider": "jagex",
+      "title": "Patch Notes: Mid-Game Rebalance",
+      "published": "2026-07-20",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "official-patch-sections-reviewed",
+      "publisherWarnings": [
+        "To make repeat trips to God Wars Dungeon 1 less frustrating, killcount now works similarly to God Wars Dungeon 2. Your killcount is no longer lost when leaving the dungeon, allowing you to build and maintain it across multiple visits.",
+        "With these updates in place, the Omni Soulstone and the Armadylean, Bandosian, Saradominist, and Zamorakian Soulstones have been removed, as they are no longer needed to support the killcount system.",
+        "The Demonic Skull was originally introduced as a risk-versus-reward mechanic, but we feel its role in the game is no longer meaningful. Following feedback and a review of its place in modern RuneScape, we're removing the item with this update.",
+        "The Demonic Skull is no longer obtainable. Any players who own one when the update launches should receive a full refund of its purchase cost.",
+        "To better align the ability with its intended use, it no longer requires completion of Succession and instead is unlocked naturally at 30 Agility.",
+        "Instance costs are being removed from all boss encounters. These fees no longer provide meaningful gameplay value and can act as an unnecessary barrier, particularly for players learning new bosses."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://secure.runescape.com/m=news/player-owned-housing-rework-out-now",
+      "game": "rs3",
+      "provider": "jagex",
+      "title": "Player Owned Housing Rework Out Now!",
+      "published": "2026-07-13",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "official-patch-sections-reviewed",
+      "publisherWarnings": [
+        "Player Owned Housing Rework Out Now!",
+        "Player Owned Housing Rework Out Now!",
+        "Preferred house exit locations may not work correctly.",
+        "Some house portals and doorways may not work or line up correctly.",
+        "Furniture storage filters and navigation may not work as expected."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://update.rsbandb.com/transcripts/1098_transcript.htm",
+      "game": "rs3",
+      "provider": "rsbandb",
+      "title": "",
+      "published": null,
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [
+        "Shane00:00This week on RSBANDBUpdate!, player-owned housing is back, but does it matter again? We've been building our houses, testing utility, and asking who 120 Construction is really for. Also ending build and destroy training, the future of house parties, and damaged artifact storage.00:21This is RSBANDBUpdate!, episode 1098, recorded Wednesday"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/13-afk-skilling-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "13 AFK Skilling Methods in OSRS",
+      "published": "2025-11-16",
+      "modified": "2025-11-16",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "This method is more AFK at a lower level where you're more likely to fail the traps, because at a higher level you'll sometimes make it all the way through the traps and will no longer be training."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/20-afk-combat-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "20 AFK Combat Methods in OSRS",
+      "published": "2025-11-16",
+      "modified": "2025-11-16",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/20-afk-combat-training-methods-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "20 AFK Combat Training Methods (OSRS)\n",
+      "published": "2018-12-10",
+      "modified": "2018-12-10",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/20-very-afk-skilling-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "20 Very AFK Skilling Methods in OSRS",
+      "published": "2018-12-04",
+      "modified": "2018-12-04",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-agility-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Agility Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-combat-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Combat Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-construction-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Construction Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-cooking-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Cooking Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-crafting-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Crafting Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-farming-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Farming Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-firemaking-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Firemaking Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-fishing-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Fishing Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-fletching-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Fletching Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-herblore-methods-for-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Herblore Methods for OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-hunter-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Hunter Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-mining-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Mining Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-prayer-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Prayer Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-runecrafting-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Runecrafting Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-skilling-methods-for-osrs-mobile",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Skilling Methods for OSRS Mobile",
+      "published": "2018-10-26",
+      "modified": "2018-10-26",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-slayer-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Slayer Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-smithing-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Smithing Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-thieving-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Thieving Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/afk-woodcutting-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "AFK Woodcutting Methods in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/best-afk-fishing-spots-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Best AFK Fishing Spots in OSRS",
+      "published": "2026-03-03",
+      "modified": "2026-03-03",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-fixed-fly",
+        "osrs-slimy-eels",
+        "osrs-infernal-eels",
+        "osrs-dark-crabs"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/best-skilling-money-makers-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Best Skilling Money Makers in 2026 (OSRS)",
+      "published": "2026-02-16",
+      "modified": "2026-02-16",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/complete-1-99-agility-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Complete 1-99 Agility Guide (OSRS)",
+      "published": "2024-07-27",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Jagex also added 11 new agility shortcuts and reworked the existing shortcuts.",
+        "If you're not into questing, there's a wide range of low-level training options available for agility. The Draynor rooftop course no longer has a 10 agility requirement, making it an easily accessible agility training method right off Tutorial Island.",
+        "It was recently reworked to be highly profitable, and it's currently the fastest agility experience between levels 47 and 62."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/complete-1-99-farming-guide-for-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Farming Guide (OSRS 2026)",
+      "published": "2023-11-27",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/drift-net-fishing-fast-hunter-fishing-xp-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Drift Net Fishing - Fast Hunter & Fishing XP (OSRS)",
+      "published": "2026-04-27",
+      "modified": "2026-04-27",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/every-afk-thieving-method-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Every AFK Thieving Method in OSRS",
+      "published": "2026-03-03",
+      "modified": "2026-03-03",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-valuables",
+        "osrs-summer-garden"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-1-99-crafting-method-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest 1-99 Crafting Method in OSRS",
+      "published": "2018-10-26",
+      "modified": "2018-10-27",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-construction-xp-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Construction XP in OSRS",
+      "published": "2022-12-19",
+      "modified": "2022-12-21",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-fishing-xp-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Fishing XP in OSRS",
+      "published": "2022-12-19",
+      "modified": "2022-12-19",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-fishing-xp-in-osrs-1",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Fishing XP in OSRS",
+      "published": "2026-03-03",
+      "modified": "2026-03-03",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-fishing-xp-in-osrs-ft-thurco",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Fishing XP in OSRS (ft. Thurco)",
+      "published": "2018-12-06",
+      "modified": "2018-12-06",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-hunter-xp-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Hunter XP in OSRS",
+      "published": "2022-12-19",
+      "modified": "2022-12-21",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-hunter-xp-in-osrs-ft-thurco",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Hunter XP in OSRS (ft. Thurco)",
+      "published": "2019-04-14",
+      "modified": "2019-04-14",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-way-to-99-sailing-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Way To 99 Sailing (OSRS)",
+      "published": "2025-11-23",
+      "modified": "2025-11-25",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/fastest-woodcutting-xp-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Fastest Woodcutting XP in OSRS",
+      "published": "2022-12-19",
+      "modified": "2022-12-21",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-agility-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Agility in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-wyrm-62",
+        "osrs-pedals",
+        "osrs-poh-agility"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-attack-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Attack in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-construction-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Construction in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-cooking-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Cooking in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-cook-1",
+        "osrs-cook-15",
+        "osrs-cook-25",
+        "osrs-cook-40",
+        "osrs-cook-45",
+        "osrs-cook-80"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-crafting-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Crafting in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-glass-1",
+        "osrs-glass-33",
+        "osrs-glass-46",
+        "osrs-glass-87",
+        "osrs-gold-bracelets"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-defence-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Defence in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-every-skill-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How to AFK Every Skill in OSRS",
+      "published": "2023-07-17",
+      "modified": "2023-07-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-every-skill-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Every Skill in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-farming-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Farming in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-firemaking-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Firemaking in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-campfire-1",
+        "osrs-campfire-30",
+        "osrs-campfire-60",
+        "osrs-campfire-90"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-fishing-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Fishing in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-fletching-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Fletching in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-bows-5",
+        "osrs-bows-20",
+        "osrs-bows-35",
+        "osrs-bows-50",
+        "osrs-bows-65",
+        "osrs-bows-80",
+        "osrs-bolt-tips"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-herblore-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Herblore in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-stamina-potions",
+        "osrs-guam-tar"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-hitpoints-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Hitpoints in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-hunter-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Hunter in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-magic-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Magic in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-mining-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Mining in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-motherlode",
+        "osrs-calcified"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-prayer-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Prayer in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-altar-bones",
+        "osrs-superior-bones"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-ranged-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Ranged in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-runecraft-in-2026-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Runecraft in 2026 (OSRS)",
+      "published": "2026-02-16",
+      "modified": "2026-02-16",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-runecrafting-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Runecrafting in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-bloods",
+        "osrs-souls"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-slayer-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Slayer in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-slayer-task",
+        "osrs-abyssals"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-smithing-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Smithing in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-cannonballs",
+        "osrs-dart-tips-19",
+        "osrs-dart-tips-34",
+        "osrs-dart-tips-54",
+        "osrs-dart-tips-74",
+        "osrs-dart-tips-89"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-strength-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Strength in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-thieving-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Thieving in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-afk-woodcutting-in-osrs-2025",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How To AFK Woodcutting in OSRS",
+      "published": "2025-10-02",
+      "modified": "2025-10-02",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-catch-black-salamanders-osrs-hunter-guide-120k-xp-hr",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How to catch Black Salamanders (OSRS Hunter Guide) - 120k xp/hr",
+      "published": "2020-07-02",
+      "modified": "2020-07-30",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-catch-orange-salamanders-osrs-hunter-guide-70k-xp-hr",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How to catch Orange Salamanders (OSRS Hunter Guide) - 70k xp/hr",
+      "published": "2020-07-02",
+      "modified": "2020-07-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/how-to-catch-red-salamanders-osrs-hunter-guide-100k-xp-hr",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "How to catch Red Salamanders (OSRS Hunter Guide) - 100k xp/hr",
+      "published": "2020-07-02",
+      "modified": "2020-07-02",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/i-am-now-rank-1-in-bounty-hunter",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "I am now RANK 1 in Bounty Hunter",
+      "published": "2019-03-19",
+      "modified": "2019-03-19",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/longest-afk-methods-in-2026-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Longest AFK Methods in 2026 (OSRS)",
+      "published": "2026-03-03",
+      "modified": "2026-03-03",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [
+        "Jagex did nerf this method by around 30 percent a few weeks after sailings release, although its still decent considering you can now afk for 30 minutes at a time."
+      ],
+      "methodIds": [
+        "osrs-stars",
+        "osrs-magic",
+        "osrs-redwood",
+        "osrs-karambwan",
+        "osrs-infected-roots",
+        "osrs-stranglewood",
+        "osrs-pump",
+        "osrs-cave-eels"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/most-afk-99s-in-2023",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Most AFK 99s in OSRS",
+      "published": "2023-07-15",
+      "modified": "2023-07-15",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/most-afkable-99s-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Most AFKable 99s in OSRS",
+      "published": "2018-10-25",
+      "modified": "2018-10-25",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Starting off, I’m going to go through the AFKable Combat methods that you can AFK for a pretty long time doing, and really get decent XP per hour. Before I get into the methods, you need to note here that the log out timer is no longer 6 hours in Old School Runescape as of last year sometime. It’s now 20 minutes. So, after 20 minutes of AFK and no "
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/most-afkable-methods-in-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Most Afkable Methods in OSRS",
+      "published": "2019-03-05",
+      "modified": "2019-03-05",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-1-99-cooking-guide",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Cooking Guide (OSRS 2026)",
+      "published": "2025-11-03",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-1-99-firemaking-guide",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Firemaking Guide (OSRS 2026)",
+      "published": "2025-11-02",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Your hitpoints level no longer affects how much damage you take, and any item that would normally affect your hitpoints now affects warmth."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-1-99-sailing-guide",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Sailing Guide (OSRS 2026)",
+      "published": "2025-12-11",
+      "modified": "2026-02-23",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-1-99-woodcutting-forestry-guide",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "OSRS 1-99 Woodcutting Guide & Forestry Guide",
+      "published": "2018-11-25",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-construction-guide",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Construction Guide (OSRS 2026)",
+      "published": "2019-03-03",
+      "modified": "2026-04-26",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Ensure you have the Menu Entry Swapper plugin installed and turned on, then you can hold shift and right-click a piece of furniture to change the left-click option to build or remove. You no longer need to right-click, and this update was approved by Jagex. There’s also a plugin called Construction QOL which can remap the hotkeys for Construction, "
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-sailing",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "OSRS Sailing",
+      "published": "2025-08-30",
+      "modified": "2025-08-30",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-cooking-guide-fastest-cheapest-f2p-p2p-more",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "[OSRS] Ultimate 1-99 Cooking Guide (Fastest/Cheapest/F2P/P2P/more!)",
+      "published": "2018-12-29",
+      "modified": "2020-10-06",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-crafting-guide-cheapest-fastest-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "[OSRS] Ultimate 1-99 Crafting Guide (Cheapest/Fastest Methods)",
+      "published": "2018-10-22",
+      "modified": "2018-10-24",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "What's going on guys! My name's Theoatrix, and today I'm bringing you guys a level 1-99 Crafting Guide for Old School Runescape. Crafting is one of those skills that you can spend a lot of money on and do it really quickly, or you can spend a little bit of money on it and get slower levels. I was having a look at some of the other Crafting Guides o"
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-fishing-guide-fastest-f2p-p2p-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Fishing Guide (OSRS 2026)",
+      "published": "2018-11-10",
+      "modified": "2026-02-06",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-fletching-guide-profitable-fast-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Fletching Guide (OSRS 2026)",
+      "published": "2018-12-30",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-mining-guide-fastest-profitable-afkable-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Mining Guide (OSRS 2026)",
+      "published": "2019-01-10",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-prayer-guide-all-cheapest-fastest-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Prayer Guide (OSRS 2026)",
+      "published": "2019-01-13",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "Favor no longer exists in OSRS, so you can now use the Arceuus spellbook straight off Tutorial Island, just by talking to Tyss. This means the only requirement to reanimate ensouled heads is the required magic level to cast the spell."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-runecrafting-guide-fastest-afk-profitable-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Runecrafting Guide (OSRS 2026)",
+      "published": "2018-10-30",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-smithing-guide-fastest-highly-profitable-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Smithing Guide (OSRS 2026)",
+      "published": "2018-11-23",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-ultimate-1-99-thieving-guide-fastest-profitable-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Thieving Guide (OSRS 2026)",
+      "published": "2018-10-30",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/osrs-woodcutting-boosts",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "OSRS Woodcutting Boosts",
+      "published": "2024-07-30",
+      "modified": "2024-07-30",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/shipwreck-salvaging-osrs-sailing",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "OSRS Salvaging Guide (AFK Sailing XP)",
+      "published": "2025-11-23",
+      "modified": "2025-12-16",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-salvage-15",
+        "osrs-salvage-26",
+        "osrs-salvage-35",
+        "osrs-salvage-53",
+        "osrs-salvage-64",
+        "osrs-salvage-73",
+        "osrs-salvage-80",
+        "osrs-salvage-87"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/skilling-pets-chance-of-getting-one-to-lvl-99",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Skilling Pets (chance of getting one to lvl 99)",
+      "published": "2018-11-17",
+      "modified": "2018-11-17",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/theoatrix-s-1-99-combat-training-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Combat Guide (OSRS 2026)",
+      "published": "2018-10-30",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/theoatrix-s-1-99-crafting-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Crafting Guide (OSRS 2026)",
+      "published": "2019-01-31",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/theoatrix-s-1-99-magic-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Magic Guide (OSRS 2026)",
+      "published": "2025-01-09",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/theoatrix-s-1-99-ranged-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Ranged Guide (OSRS 2026)",
+      "published": "2018-11-11",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/theoatrix-s-1-99-slayer-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Complete 1-99 Slayer Guide for OSRS",
+      "published": "2019-05-02",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/top-10-skilling-money-makers-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Top 10 Skilling Money Makers in OSRS",
+      "published": "2025-10-28",
+      "modified": "2025-10-31",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/ultimate-1-99-hunter-guide-fastest-profitable-methods",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Hunter Guide (OSRS 2026)",
+      "published": "2019-01-08",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "written-sections-reviewed",
+      "publisherWarnings": [],
+      "methodIds": [
+        "osrs-monkey-traps",
+        "osrs-pyre-fox"
+      ]
+    },
+    {
+      "url": "https://www.theoatrix.net/post/updated-1-99-agility-guide-osrs",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Agility Guide (OSRS 2026)",
+      "published": "2025-11-09",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [
+        "The most easily accessed course at a low level is the Draynor rooftop, and this no longer has a level 10 agility requirement, now accessible to all levels.",
+        "Also, the wildy agility course was recently reworked to be highly profitable, providing up to 2 mil GP per hour. But, since the course is located deep in the wilderness, the XP rates and profit rates are sometimes inconsistent."
+      ],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.theoatrix.net/post/updated-1-99-herblore-guide",
+      "game": "osrs",
+      "provider": "theoatrix",
+      "title": "Theoatrix's 1-99 Herblore Guide (OSRS 2026)",
+      "published": "2024-06-20",
+      "modified": "2026-01-29",
+      "checked": "2026-11-02",
+      "evidence": "captured-not-reviewed",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "creator": "NoLeather",
+      "game": "rs3",
+      "url": "https://www.youtube.com/playlist?list=PLCeQU-BLzBlchk15VtVMegcnPKyKBWCn0",
+      "published": null,
+      "state": "archive-discovery",
+      "next": "AFKing 9 to 5 is an attention-budget research lead. Review each episode's actual setup and date before adopting rates.",
+      "provider": "NoLeather",
+      "checked": "2026-11-02",
+      "evidence": "archive-discovery",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "creator": "Meep272",
+      "game": "rs3",
+      "url": "https://www.youtube.com/watch?v=4vDq0YZjvkY",
+      "published": "2026-08-31",
+      "state": "discovery-only",
+      "next": "Identify the actual item and setup from the full video before importing any method or GP claim.",
+      "provider": "Meep272",
+      "checked": "2026-11-02",
+      "evidence": "discovery-only",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MIznKXVpomM",
+      "game": "rs3",
+      "provider": "Qp RS",
+      "title": "Best AFK Skilling Methods for ALL Skills in RuneScape 3",
+      "published": "2026-04-08",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "description-chapters-only",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=o9iJOi742co",
+      "game": "osrs",
+      "provider": "Kaoz OSRS",
+      "title": "The BEST AFK Method Per Skill In OSRS (Mobile Friendly 2026)",
+      "published": "2026-04-20",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "description-chapters-only",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "creator": "Protoxx",
+      "game": "rs3",
+      "url": "https://www.youtube.com/watch?v=qopEBG2wuNI",
+      "published": null,
+      "state": "archive-discovery",
+      "next": "Older phantom method; maximum advertised XP is not a 2026 benchmark.",
+      "provider": "Protoxx",
+      "checked": "2026-11-02",
+      "evidence": "archive-discovery",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "creator": "Protoxx",
+      "game": "rs3",
+      "url": "https://www.youtube.com/watch?v=rfzw_GkE6Mg",
+      "published": null,
+      "state": "archive-discovery",
+      "next": "Older Necromancy guide; verify current mechanics before considering any training route.",
+      "provider": "Protoxx",
+      "checked": "2026-11-02",
+      "evidence": "archive-discovery",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "creator": "Meep272",
+      "game": "rs3",
+      "url": "https://www.youtube.com/watch?v=viLZDQhLTso",
+      "published": null,
+      "state": "discovery-only",
+      "next": "Verify primary publication date, full setup, prices and post-rebalance compatibility; third-party transcript discovery is insufficient.",
+      "provider": "Meep272",
+      "checked": "2026-11-02",
+      "evidence": "discovery-only",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=wYL1FLs4H8E",
+      "game": "osrs",
+      "provider": "Link’sOcarina",
+      "title": "How to AFK Every Skill in OSRS 2026",
+      "published": "2026-01-31",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "description-chapters-only",
+      "publisherWarnings": [],
+      "methodIds": []
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xONmeRFausY",
+      "game": "rs3",
+      "provider": "Silenced",
+      "title": "Early/mid-game AFK guide (description index)",
+      "published": "2026-01-28",
+      "modified": null,
+      "checked": "2026-11-02",
+      "evidence": "description-chapters-only",
+      "publisherWarnings": [
+        "Recheck combat and skilling assumptions against the 2026 updates before using a preset."
+      ],
+      "methodIds": []
+    }
+  ]
+}

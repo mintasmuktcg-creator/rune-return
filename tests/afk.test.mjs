@@ -16,8 +16,8 @@ test('ranges are suggestions; earlier methods remain visible after the next mile
 });
 test('membership, F2P skill caps and secondary skills prevent misleading current options',()=>{
   assert.ok(buildAfkRoute({game:'rs3',skill:'runecrafting',level:70,membership:'f2p'}).rows.find(r=>r.method.level===66).status==='locked');
-  const harps=buildAfkRoute({game:'rs3',skill:'crafting',level:80,skills:{construction:60},membership:'members'});assert.equal(harps.current.length,0);assert.equal(harps.rows[0].status,'locked');
-  const missing=buildAfkRoute({game:'rs3',skill:'crafting',level:80,membership:'members'});assert.ok(missing.rows[0].reasons.some(r=>r.includes('unknown')));assert.equal(missing.rows[0].status,'check-setup');
+  const harps=buildAfkRoute({game:'rs3',skill:'crafting',level:80,skills:{construction:60},membership:'members'});assert.ok(!harps.current.some(r=>r.method.id==='rs3-harps'));assert.equal(harps.rows.find(r=>r.method.id==='rs3-harps').status,'locked');
+  const missing=buildAfkRoute({game:'rs3',skill:'crafting',level:80,membership:'members'});const harp=missing.rows.find(r=>r.method.id==='rs3-harps');assert.ok(harp.reasons.some(r=>r.includes('unknown')));assert.equal(harp.status,'check-setup');
   const archaeology=buildAfkRoute({game:'rs3',skill:'archaeology',level:21,access:'f2p'});assert.equal(archaeology.current.length,0);assert.ok(archaeology.rows.at(-1).reasons.some(r=>r.includes('capped')));
 });
 test('attention and access filters compose without claiming the remaining options are optimal',()=>{
