@@ -6,7 +6,13 @@ import {gameSkills,skillNames} from '../progression-data.js';
 const manifest=JSON.parse(await readFile('artifacts/afk-deep-dive/manifest.json','utf8'));
 const queue=JSON.parse(await readFile('research/afk-video-discovery.json','utf8'));
 const inventory=new Map();
-for(const p of manifest.sources){const source=creatorSources.find(s=>s.url===p.url);inventory.set(p.url,{url:p.url,game:p.game,provider:p.provider,title:p.title,published:source?source.published:p.published?.slice(0,10)||null,modified:source?.modified||p.modified?.slice(0,10)||null,checked:'2026-11-02',evidence:source?'written-sections-reviewed':p.provider==='jagex'?'official-patch-sections-reviewed':p.status,publisherWarnings:p.warnings||[],methodIds:afkMethods.filter(m=>(m.creatorRefs||[]).some(id=>creatorSources.find(s=>s.id===id)?.url===p.url)).map(m=>m.id)});}
+// Publish original flags, not passages extracted from the publisher's article.
+function warningFlags(page){const text=(page.warnings||[]).join(' ');return [
+  /may not work/i.test(text)?'Publisher flags possible setup incompatibility':null,
+  /March 2026|beta changes/i.test(text)?'Combat update compatibility mentioned':null,
+  /rework|no longer|nerf|outdated/i.test(text)?'Changed mechanics or historical advice mentioned; context needs checking':null,
+].filter(Boolean);}
+for(const p of manifest.sources){const source=creatorSources.find(s=>s.url===p.url);inventory.set(p.url,{url:p.url,game:p.game,provider:p.provider,title:p.title,published:source?source.published:p.published?.slice(0,10)||null,modified:source?.modified||p.modified?.slice(0,10)||null,checked:'2026-11-02',evidence:source?'written-sections-reviewed':p.provider==='jagex'?'official-patch-sections-reviewed':p.status,publisherWarnings:warningFlags(p),methodIds:afkMethods.filter(m=>(m.creatorRefs||[]).some(id=>creatorSources.find(s=>s.id===id)?.url===p.url)).map(m=>m.id)});}
 for(const s of creatorSources)if(!inventory.has(s.url))inventory.set(s.url,{url:s.url,game:s.game,provider:s.creator,title:s.title,published:s.published,modified:s.modified||null,checked:s.checked,evidence:s.review==='chapters'?'description-chapters-only':'written-sections-reviewed',publisherWarnings:s.compatibilityNote?[s.compatibilityNote]:[],methodIds:afkMethods.filter(m=>m.creatorRefs.includes(s.id)).map(m=>m.id)});
 for(const q of queue)if(!inventory.has(q.url))inventory.set(q.url,{...q,provider:q.creator,checked:'2026-11-02',evidence:q.state,publisherWarnings:[],methodIds:[]});
 for(const m of afkMethods){const p=inventory.get(m.source)||{url:m.source,game:m.game,provider:'RuneScape Wiki',published:null,modified:null,checked:m.reviewed,evidence:'mechanics-reference',publisherWarnings:[],methodIds:[]};if(!p.methodIds.includes(m.id))p.methodIds.push(m.id);inventory.set(m.source,p);}

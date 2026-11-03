@@ -254,7 +254,7 @@
       "checked": "2026-11-02",
       "evidence": "written-sections-reviewed",
       "publisherWarnings": [
-        "The Havensilver rework removed the old damage penalty for using other weapons against creatures weak to it. Havensilver weapons deal 50% increased damage to Sanguine creatures."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": [
         "rs3-exalted-essence"
@@ -282,7 +282,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "If you already have a weekly D&D reset token, you can use it on Penguin Hide and Seek once for another round that week. Several old token sources were removed in March 2026, including the Travelling Merchant, weekly challenge rewards and the Maw. Use the linked token page for the current acquisition list."
+        "Combat update compatibility mentioned"
       ],
       "methodIds": []
     },
@@ -308,7 +308,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "The October 3 Summit announced Dragon Slayer II, Arposandra, a new Karamja raid, an Agility rework and more restoration work."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -322,9 +322,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Grandmaster clues and an Agility rework",
-        "The Agility rework was my favourite reveal. Less active training options could finally make me want to push the skill beyond where I've left it.",
-        "The announced restoration plans include a unified collection log, a reworked grouping system, a clan finder and clan improvements, a Quest Timeline rework, more Remastered Journey updates and frequent rebalances and cleanups."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -350,9 +348,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Most boss instances no longer warn that they are about to expire. God Wars Dungeon 1 and 2 remain exceptions because kill count matters there. Re-entering an existing God Wars Dungeon 2 instance no longer asks for confirmation, and God Wars Dungeon 1 private encounters open the instance menu directly.",
-        "Death no longer asks for confirmation when reclaiming items unless the value is above 100M GP, and another box in the reclaim process was removed. Cutting dragonstones into bolt tips no longer produces a warning; the warnings for onyx and hydrix remain.",
-        "Kharid-et pylon batteries gained Charge all. The Archaeology Guild Travel Map no longer needs a second click, adding scrolls to Globetrotter armguards no longer asks for a number, and Invention blueprint discovery has fewer confirmation and Continue buttons."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -378,7 +374,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Shared clan chat would help people stay in touch, but it would not restore a boss evening they could no longer play together on those characters. Playing both would also mean finding time for both accounts and, under the original plan, paying another subscription."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -392,7 +388,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Jagex said it was re-evaluating RuneScape Reignited a few days after the RuneFest announcement. It apologised for making existing players feel that they were no longer the focus and said it was exploring substantial revisions."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -444,7 +440,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "OSRS Wiki →Tap a row for notes, quest requirements, and ironman context. XP rates assume level 99 with skilling outfits (per the wiki's methodology) — treat them as a ceiling. A ~ after an AFK time means the idle stretch varies. Combat rates exclude Hitpoints XP. Base data from the OSRS Wiki community AFK guide, reworked for ironmen. Looking for gp"
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -458,8 +454,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Superglass Make + glassblowing (61+): Self-sufficient, produces useful items, and grants Magic XP alongside Crafting. Still the pick if you want vials, orbs, and light orbs out of your training, but since Wyrmscraig it is no longer the only supply-free route. See the dedicated section below.",
-        "QuestXPKey RequirementsSheep Shearer150NoneGoblin Diplomacy200NoneTower of Life50010 ConstructionIn Search of the Myreque60025 AgilityMisthalin Mystery600NoneDwarf Cannon750NoneAnimal Magnetism1,00019 CraftingThe Golem1,00020 Crafting, 25 ThievingMaking History1,00024 CraftingTears of Guthix1,00020 Crafting, 49 Firemaking, 20 MiningRFD - Goblin Gen"
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -484,9 +479,7 @@
       "modified": null,
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
-      "publisherWarnings": [
-        "LevelPotionIngredientsXPSignificance3Attack potionGuam + Eye of newt25First potion, minor Attack boost5AntipoisonMarrentill + Unicorn horn dust37.5Cures poison12Strength potionTarromin + Limpwurt root50Minor Strength boost22Restore potionHarralander + Red spiders' eggs62.5Restores lowered stats26Energy potionHarralander + Chocolate dust67.5Restores"
-      ],
+      "publisherWarnings": [],
       "methodIds": []
     },
     {
@@ -1336,7 +1329,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat beta changes in March 2026."
+        "Publisher flags possible setup incompatibility",
+        "Combat update compatibility mentioned"
       ],
       "methodIds": []
     },
@@ -1362,8 +1356,9 @@
       "checked": "2026-11-02",
       "evidence": "written-sections-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat beta changes in March 2026",
-        "Necromancy AFK Method (Outdated) necromancy"
+        "Publisher flags possible setup incompatibility",
+        "Combat update compatibility mentioned",
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -1617,7 +1612,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat beta changes in March 2026"
+        "Publisher flags possible setup incompatibility",
+        "Combat update compatibility mentioned"
       ],
       "methodIds": []
     },
@@ -1631,7 +1627,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat beta changes in March 2026"
+        "Publisher flags possible setup incompatibility",
+        "Combat update compatibility mentioned"
       ],
       "methodIds": []
     },
@@ -1657,7 +1654,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat beta changes in March 2026"
+        "Publisher flags possible setup incompatibility",
+        "Combat update compatibility mentioned"
       ],
       "methodIds": []
     },
@@ -1671,9 +1669,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "• turmoil has not been tested and may not work",
-        "• Deathwarden Nexus has not been tested and may not work",
-        "• sorrow has not been tested and may not work"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -1699,7 +1695,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat beta changes in March 2026"
+        "Publisher flags possible setup incompatibility",
+        "Combat update compatibility mentioned"
       ],
       "methodIds": []
     },
@@ -1713,7 +1710,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "• Method has not been tested without and may not work"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -1863,7 +1860,7 @@
       "checked": "2026-11-02",
       "evidence": "written-sections-reviewed",
       "publisherWarnings": [
-        "Magic magic (outdated)"
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": [
         "rs3-phantoms-afk"
@@ -1879,7 +1876,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "‎ ‎ ‎ ‎• wyverncrossbow has not been tested yet and may not work very well."
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -1929,7 +1926,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the change from Legacy Combat Mode to Classic Combat Mode"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -1967,8 +1964,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat changes made in Q1 of 2026.",
-        "Ripper dinosaurs ripperdinosaur are highly damaging and generally not worth doing unless getting a soul ushabti . They can only be reliably AFK'd with multiple pieces of Cryptbloom cryptbloomhelm and with Vampyrism aura vampaura . The method below may not work if cutting corners such as not having omnipowerigneous"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -1982,8 +1978,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method may not work after the combat changes made in Q1 of 2026",
-        "This method may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2009,11 +2004,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat changes made in Q1 of 2026.",
-        "⬥ Ranged (Outdated)",
-        "⬥ Magic (Outdated)",
-        "⬥ Magic magic (Outdated)",
-        "⬥ Magic magic (Outdated)"
+        "Publisher flags possible setup incompatibility",
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -2051,7 +2043,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2065,7 +2057,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "⬥ Active Magic (Outdated)"
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -2079,8 +2071,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method may not work after the combat changes made in Q1 of 2026",
-        "Action Bar (Outdated)"
+        "Publisher flags possible setup incompatibility",
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -2094,8 +2086,8 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method may not work after the combat changes made in Q1 of 2026",
-        "Action Bar (Outdated)"
+        "Publisher flags possible setup incompatibility",
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -2121,7 +2113,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2135,7 +2127,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2161,7 +2153,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2187,7 +2179,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "The low effort Magic magic method consists of killing revenants using Legacy Combat Mode to AFK until they are no longer aggressive. When this happens you will follow a specific route killing revenants along the way in order to reset their aggro."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -2273,9 +2265,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method may not work after the combat changes made in Q1 of 2026",
-        "This method may not work after the combat changes made in Q1 of 2026",
-        "This method may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2289,7 +2279,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -2303,7 +2293,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Some methods in this guide may not work after the combat changes made in Q1 of 2026"
+        "Publisher flags possible setup incompatibility"
       ],
       "methodIds": []
     },
@@ -3389,9 +3379,7 @@
       "checked": "2026-11-02",
       "evidence": "official-patch-sections-reviewed",
       "publisherWarnings": [
-        "However, to keep the overall XP gain per hour for core furniture construction in check, you will no longer unlock speed related levelling benefits for Eternal planks. We want to ensure that the other changes we've implemented below don't become immediate redundant due to an overly strong buff on a single method of training.",
-        "Players can no longer engage in (safe) combat in the player owned house",
-        "Construction skillcape perk in the skillguide is no longer PH and shows the correct text."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -3405,12 +3393,7 @@
       "checked": "2026-11-02",
       "evidence": "official-patch-sections-reviewed",
       "publisherWarnings": [
-        "To make repeat trips to God Wars Dungeon 1 less frustrating, killcount now works similarly to God Wars Dungeon 2. Your killcount is no longer lost when leaving the dungeon, allowing you to build and maintain it across multiple visits.",
-        "With these updates in place, the Omni Soulstone and the Armadylean, Bandosian, Saradominist, and Zamorakian Soulstones have been removed, as they are no longer needed to support the killcount system.",
-        "The Demonic Skull was originally introduced as a risk-versus-reward mechanic, but we feel its role in the game is no longer meaningful. Following feedback and a review of its place in modern RuneScape, we're removing the item with this update.",
-        "The Demonic Skull is no longer obtainable. Any players who own one when the update launches should receive a full refund of its purchase cost.",
-        "To better align the ability with its intended use, it no longer requires completion of Succession and instead is unlocked naturally at 30 Agility.",
-        "Instance costs are being removed from all boss encounters. These fees no longer provide meaningful gameplay value and can act as an unnecessary barrier, particularly for players learning new bosses."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -3424,11 +3407,8 @@
       "checked": "2026-11-02",
       "evidence": "official-patch-sections-reviewed",
       "publisherWarnings": [
-        "Player Owned Housing Rework Out Now!",
-        "Player Owned Housing Rework Out Now!",
-        "Preferred house exit locations may not work correctly.",
-        "Some house portals and doorways may not work or line up correctly.",
-        "Furniture storage filters and navigation may not work as expected."
+        "Publisher flags possible setup incompatibility",
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -3441,9 +3421,7 @@
       "modified": null,
       "checked": "2026-11-02",
       "evidence": "written-sections-reviewed",
-      "publisherWarnings": [
-        "Shane00:00This week on RSBANDBUpdate!, player-owned housing is back, but does it matter again? We've been building our houses, testing utility, and asking who 120 Construction is really for. Also ending build and destroy training, the future of house parties, and damaged artifact storage.00:21This is RSBANDBUpdate!, episode 1098, recorded Wednesday"
-      ],
+      "publisherWarnings": [],
       "methodIds": []
     },
     {
@@ -3456,7 +3434,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "This method is more AFK at a lower level where you're more likely to fail the traps, because at a higher level you'll sometimes make it all the way through the traps and will no longer be training."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -3763,9 +3741,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Jagex also added 11 new agility shortcuts and reworked the existing shortcuts.",
-        "If you're not into questing, there's a wide range of low-level training options available for agility. The Draynor rooftop course no longer has a 10 agility requirement, making it an easily accessible agility training method right off Tutorial Island.",
-        "It was recently reworked to be highly profitable, and it's currently the fastest agility experience between levels 47 and 62."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -4338,7 +4314,7 @@
       "checked": "2026-11-02",
       "evidence": "written-sections-reviewed",
       "publisherWarnings": [
-        "Jagex did nerf this method by around 30 percent a few weeks after sailings release, although its still decent considering you can now afk for 30 minutes at a time."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": [
         "osrs-stars",
@@ -4373,7 +4349,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Starting off, I’m going to go through the AFKable Combat methods that you can AFK for a pretty long time doing, and really get decent XP per hour. Before I get into the methods, you need to note here that the log out timer is no longer 6 hours in Old School Runescape as of last year sometime. It’s now 20 minutes. So, after 20 minutes of AFK and no "
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -4411,7 +4387,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Your hitpoints level no longer affects how much damage you take, and any item that would normally affect your hitpoints now affects warmth."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -4449,7 +4425,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Ensure you have the Menu Entry Swapper plugin installed and turned on, then you can hold shift and right-click a piece of furniture to change the left-click option to build or remove. You no longer need to right-click, and this update was approved by Jagex. There’s also a plugin called Construction QOL which can remap the hotkeys for Construction, "
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -4486,9 +4462,7 @@
       "modified": "2018-10-24",
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
-      "publisherWarnings": [
-        "What's going on guys! My name's Theoatrix, and today I'm bringing you guys a level 1-99 Crafting Guide for Old School Runescape. Crafting is one of those skills that you can spend a lot of money on and do it really quickly, or you can spend a little bit of money on it and get slower levels. I was having a look at some of the other Crafting Guides o"
-      ],
+      "publisherWarnings": [],
       "methodIds": []
     },
     {
@@ -4537,7 +4511,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "Favor no longer exists in OSRS, so you can now use the Arceuus spellbook straight off Tutorial Island, just by talking to Tyss. This means the only requirement to reanimate ensouled heads is the required magic level to cast the spell."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
@@ -4719,8 +4693,7 @@
       "checked": "2026-11-02",
       "evidence": "captured-not-reviewed",
       "publisherWarnings": [
-        "The most easily accessed course at a low level is the Draynor rooftop, and this no longer has a level 10 agility requirement, now accessible to all levels.",
-        "Also, the wildy agility course was recently reworked to be highly profitable, providing up to 2 mil GP per hour. But, since the course is located deep in the wilderness, the XP rates and profit rates are sometimes inconsistent."
+        "Changed mechanics or historical advice mentioned; context needs checking"
       ],
       "methodIds": []
     },
