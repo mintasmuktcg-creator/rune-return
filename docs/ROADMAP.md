@@ -5,7 +5,7 @@ is now the leading product direction. The progression foundation is implemented;
 the trust, recovery and API-verification gates below still apply. The original
 review findings describe the earlier baseline rather than the current complete feature set.
 
-Status: **proposal**, November 1, 2026. Phases are ordered by dependencies and
+Status: **proposal**, updated November 3, 2026. Phases are ordered by dependencies and
 evidence, not promised launch dates. Keep the current GitHub Pages site while
 the product is being validated. Findings refer to [the site review](SITE-REVIEW.md).
 
@@ -34,10 +34,30 @@ is unchanged by the documentation work.
 | Full backup/restore (R03/R11) | Protect progress before changing storage or domains | Two characters and both games round-trip; retired IDs are retained; tokens excluded |
 | Transactional local journal (R06) | Avoid lost concurrent writes and growing JSON rewrites | IndexedDB migration is reversible from backup; two-tab test preserves both entries |
 | Source freshness (R05) | Give every estimate a defensible context | Price date, activity review and archive cutoff are tracked independently |
+| Automatic content discovery and publication (R14) | Keep game updates and source revisions current without manual crawling | Scheduled ingestion publishes validated, allowlisted changes; publication, source revision, detection, site update and review dates remain distinct; failures retain the last good catalog |
 | Browser smoke tests and asset handling (R10/R13) | Make navigation/storage regressions and production-only asset failures reviewable | CI exercises the core flows with fixtures and no real credentials; expected assets return 200 from the compiled subpath |
 
 Ship in small changes. Add storage schema migration only after full backup/restore
 exists. Do not enable a backend to compensate for an unresolved local data model.
+
+### Automatic content maintenance (R14)
+
+Add a tool that checks approved OSRS/RS3 news, update indexes and creator sources,
+detects new or revised content, and automatically updates eligible site records.
+Start with structured archive/metadata changes, then widen automatic publishing
+after provider-specific validation. Conflicting methods and quantitative claims
+enter review while other validated changes can publish.
+
+Updated content retains its original publication date and source-supplied update
+date. Keep first discovery, successful checks, detected revisions, accepted site
+changes and actual reviews separately. A scrape or rebuild must not make an old
+article look newly updated. Preserve revision history and stable IDs; catch-up
+filtering must not mistake guide revisions for newly released game content.
+
+The [content automation plan](CONTENT-AUTOMATION-PLAN.md) defines the pipeline,
+date contract, automatic publication scope, failure recovery and acceptance
+criteria. This is planned work; the existing research crawler and manual archive
+refresh are not an unattended publishing service.
 
 ## Phase 2 — Learn from actual sessions
 

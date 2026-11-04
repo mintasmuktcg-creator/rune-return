@@ -13,6 +13,7 @@ decision is whether to add backend services, change the frontend host, or both.
 | --- | --- |
 | [Site review](SITE-REVIEW.md) | Findings, evidence, priorities and verification limits |
 | [Product roadmap](ROADMAP.md) | What to build next, in order, with completion criteria |
+| [Automatic content updates](CONTENT-AUTOMATION-PLAN.md) | Planned scraping, scheduled publication, retained source dates and revision history |
 | [Progression and API launch priority](PROGRESSION-LAUNCH-PLAN.md) | The new number-one objective, current foundation and release-day gates |
 | [AFK progression routes](AFK-ROUTES.md) | Current level ladders, attention patterns, source coverage and storage boundaries |
 | [Creator/community methods](CREATOR-METHODS.md) | Creator credits, dated guides, video chapters and evidence limits |

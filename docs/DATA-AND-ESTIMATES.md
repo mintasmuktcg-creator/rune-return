@@ -103,6 +103,14 @@ Before expanding ingestion, document each provider's license, attribution,
 allowed access pattern and request budget. Prefer documented APIs and bounded,
 identified requests. Use a reviewable content diff before publication.
 
+The November 3 [content automation plan](CONTENT-AUTOMATION-PLAN.md) extends this
+with scheduled ingestion and automatic publication for validated, allowlisted
+fields. Preserve original publication and source modification dates separately
+from discovery, checks, detected changes, accepted site updates and actual
+review. Unknown source dates stay unknown. A source revision must not change a
+game feature's release date or rewrite historical journal receipts. Conflicting
+method/rate changes remain pending review while eligible metadata can update.
+
 ## Current journal and its limits
 
 Completion records include a UUID, activity ID, UTC completion timestamp,

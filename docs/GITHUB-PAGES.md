@@ -83,10 +83,14 @@ It does not update editorial highlights, activity rules or GP assumptions.
 Run tests/build after updating metadata together; do not only change a review
 date to suppress the site's stale-content notice.
 
-Proposed cadence: weekly source review, plus a targeted review after relevant
-game changes. A future scheduled workflow should open a proposed diff for human
-review, rather than automatically label announcements as playable releases.
-Keep an identifiable request user agent and respect source access/licensing rules.
+Proposed cadence: daily incremental discovery, weekly reconciliation/source
+review, and targeted review after relevant game changes. The November 3
+[automation plan](CONTENT-AUTOMATION-PLAN.md) proposes automatic publication of
+validated, allowlisted archive/metadata changes; uncertain method/rate changes
+enter review. Preserve original publication, source update and actual review
+dates independently. Announcements must not become playable releases merely
+because a scrape found them. Keep an identifiable request user agent and respect
+source access/licensing rules. Scheduling and automatic publication are not yet enabled.
 
 ## Shipping and rollback
 
