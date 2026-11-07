@@ -70,7 +70,7 @@ node scripts/serve.mjs --dist
 ```
 
 Stop the development server first when previewing `dist/` on the same port.
-The current suite has **69 automated tests**. The November 1 review also checked
+The current suite has **73 automated tests**. The November 1 review also checked
 live desktop/mobile flows; those manual browser checks are not yet CI tests.
 
 ## Hosting and accounts

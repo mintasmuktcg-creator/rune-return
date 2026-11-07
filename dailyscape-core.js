@@ -11,6 +11,27 @@ export function nextReset(cadence, now = new Date()) {
   else date.setUTCDate(date.getUTCDate() + (cadence === 'weekly' ? 7 : 1));
   return date.toISOString();
 }
+export function formatCountdown(target, now = new Date()) {
+  if (!target || !Number.isFinite(Date.parse(target))) return null;
+  const seconds = Math.max(0, Math.ceil((Date.parse(target) - now.getTime()) / 1000));
+  const days = Math.floor(seconds / 86400);
+  const clock = [Math.floor(seconds % 86400 / 3600), Math.floor(seconds % 3600 / 60), seconds % 60].map(n=>String(n).padStart(2,'0')).join(':');
+  return `${days ? `${days}d ` : ''}${clock}`;
+}
+export function activityTimer(activity, status, now = new Date()) {
+  if (activity.reset === 'manual') return { label:'No fixed reset', target:null, text:'Repeatable' };
+  if (activity.reset === 'cooldown') return status.done
+    ? { label:'Reminder ready in', target:status.resetAt, text:formatCountdown(status.resetAt,now) }
+    : { label:'Personal reminder', target:null, text:status.lastAt?'Ready to check':'Log a completion to start timer' };
+  const target = nextReset(activity.reset,now);
+  const timer = { label:'Next reset in', target, text:formatCountdown(target,now) };
+  if (!status.scheduled && Number.isInteger(activity.availableDay)) {
+    const day = new Date(`${isoDay(now)}T00:00:00Z`);
+    day.setUTCDate(day.getUTCDate() + (activity.availableDay - day.getUTCDay() + 7) % 7);
+    timer.availableAt = day.toISOString();
+  }
+  return timer;
+}
 export function activityStatus(activity, logs, now = new Date(), member = true, legacy = null) {
   const entries = logs.filter(log => log.activityId === activity.id && !log.undoneAt && !log.extra).sort((a,b) => b.at.localeCompare(a.at));
   const limit = !member && activity.freeLimit ? activity.freeLimit : activity.limit;

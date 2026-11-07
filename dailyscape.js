@@ -1,5 +1,5 @@
 import { routines, dailyCatalog } from './dailyscape-data.js';
-import { activityStatus, nextReset, estimateReward, cleanJournal, csvLog } from './dailyscape-core.js';
+import { activityStatus, nextReset, formatCountdown, activityTimer, estimateReward, cleanJournal, csvLog } from './dailyscape-core.js';
 import { escapeHtml as esc } from './core.js';
 
 const $ = selector => document.querySelector(selector);
@@ -9,7 +9,7 @@ const labels = {daily:'Daily',weekly:'Weekly',monthly:'Monthly',flexible:'On you
 const kinds = {all:'All activities',dnd:'D&Ds',training:'XP & training',claim:'Free claims',shop:'Shop runs',utility:'Utility',reputation:'Reputation',combat:'Combat'};
 let hooks, game='osrs', query='', tab='activities', cadence='all', kind='all', onlyPinned=false, statusFilter='all', logLimit=30;
 let identity='', journal=cleanJournal(null,routines), broken=false;
-let statusSignature='';
+let statusRefreshAt=0;
 let cardLimit=6,cardRange='';
 const activityById = id => routines.find(activity=>activity.id===id);
 function load() {
@@ -30,21 +30,25 @@ function save(next) {
 }
 function estimate(activity){return estimateReward(activity,journal.overrides[activity.id],journal.rates[activity.game]);}
 function stateFor(activity,now=new Date()){return activityStatus(activity,journal.logs,now,journal.member,journal.legacy[activity.id]);}
-function signature(){return `${new Date().toISOString().slice(0,10)}|${game}|${routines.filter(activity=>activity.game===game).map(activity=>{const status=stateFor(activity);return `${status.count}:${status.ready}`;}).join('|')}`;}
 function allowed(activity){return (!activity.members||journal.member)&&!(activity.noIron&&hooks.getProfile().mode&&hooks.getProfile().mode!=='normal');}
 function timeBenefit(value) {
   if(value.savedMinutes==null)return value.gp!=null?'GP reward; XP not valued':'No fixed GP or XP estimate';
   return value.savedMinutes>=0?`~${number(value.savedMinutes)} min saved`:`~${number(-value.savedMinutes)} min slower than training`;
 }
-function countdown(value){const minutes=Math.max(0,Math.ceil((Date.parse(value)-Date.now())/60000));return minutes>=1440?`${Math.floor(minutes/1440)}d ${Math.floor(minutes%1440/60)}h`:minutes>=60?`${Math.floor(minutes/60)}h ${minutes%60}m`:`${minutes}m`;}
-function resetWidgets() {
+function countdown(value,now=new Date()){return formatCountdown(value,now)||'Time unavailable';}
+function timerMarkup(activity,status,now=new Date()) {
+  const timer=activityTimer(activity,status,now);
+  return `<span>${esc(timer.label)}</span><strong>${esc(timer.text)}</strong>${timer.target?`<time datetime="${timer.target}" title="${timer.target}">${esc(stamp(timer.target))}</time>`:''}${timer.availableAt?`<small>Available in ${countdown(timer.availableAt,now)} <time datetime="${timer.availableAt}">(${esc(stamp(timer.availableAt))})</time></small>`:''}`;
+}
+function resetWidgets(now=new Date()) {
   return ['daily','weekly','monthly'].map(period=>{
     if(game==='osrs'&&period==='monthly')return '<span>Monthly cycle<strong class="daily-reset-note">No standard cycle</strong><small>See optional recurring runs instead.</small></span>';
     if(game==='osrs'&&period==='weekly'){
-      const status=stateFor(activityById('osrs-tears'));
-      return `<span>Tears of Guthix<strong class="daily-reset-note">${status.done?countdown(status.resetAt):'Ready to check'}</strong><small>Personal 7-day cooldown; XP/quest-point eligibility also applies.</small></span>`;
+      const activity=activityById('osrs-tears'),status=stateFor(activity,now),timer=activityTimer(activity,status,now);
+      return `<span>Tears of Guthix<strong class="daily-reset-note">${esc(timer.text)}</strong><small>Personal 7-day reminder; log your run to start it. XP/quest-point eligibility also applies.</small></span>`;
     }
-    return `<span>${labels[period]} reset<strong data-daily-countdown="${period}">${countdown(nextReset(period))}</strong><time title="${nextReset(period)}">${esc(stamp(nextReset(period)))}</time></span>`;
+    const target=nextReset(period,now);
+    return `<span>${labels[period]} reset<strong>${countdown(target,now)}</strong><time datetime="${target}" title="${target}">${esc(stamp(target))}</time></span>`;
   }).join('');
 }
 function receipt(value) {
@@ -62,13 +66,13 @@ function card(activity) {
     <div class="daily-card-top"><span class="badge ${status.done?'live':''}">${esc(labels[activity.cadence])} · ${esc(limitText)}</span><button class="daily-pin" data-daily-pin="${activity.id}" aria-pressed="${pinned}" aria-label="${pinned?'Unpin':'Pin'} ${esc(activity.title)}">${pinned?'★':'☆'}</button></div>
     <h3>${esc(activity.title)}</h3><p class="description">${esc(activity.summary)}</p>
     <div class="daily-value"><strong>${value.scenario?'Example: ':''}${value.gp!=null?`~${number(value.gp)} GP`:value.xp||value.bxp?`${number(value.xp||0)} XP${value.bxp?` + ${number(value.bxp)} BXP`:''}`:'Reward varies / utility'}</strong><span>${esc(timeBenefit(value))}</span><small>${number(value.minutes)} min active · ${number(value.rate)} XP/h comparison${value.gp!=null?' · GP before selling fees':''}</small></div>
+    <div class="daily-activity-timer" role="timer" aria-live="off" data-activity-timer="${activity.id}">${timerMarkup(activity,status)}</div>
     <details class="daily-info"><summary>Details & reward calculator</summary>
     <p class="daily-requirements">${activity.members?'Members':'Free-to-play available'} · ${esc(activity.requirements)}${activity.noIron?' Not available to Ironman accounts.':''}</p>
     <p class="daily-basis">${value.custom?'Your estimate. ':value.scenario?'Example scenario. ':activity.snapshot?'Dated price estimate. ':''}${esc(value.basis)}</p>
     ${activity.timing?`<p class="daily-timing">${esc(activity.timing)}</p>`:''}
     ${!status.scheduled?`<p class="daily-timing">Not scheduled today (UTC). Check the stated availability day.</p>`:''}
     ${latest?`<p class="daily-completed">Last marked <time datetime="${latest.at}" title="${latest.at}">${esc(stamp(latest.at))}</time>${latest.extra?' · reset-token run':''} <button class="text-button" data-daily-undo="${latest.id}">Undo</button></p>`:status.legacy?'<p class="daily-completed">Imported checked reminder; original timestamp unavailable.</p>':''}
-    ${status.resetAt?`<p class="daily-timing">${activity.reset==='cooldown'?'Reminder ready':'Next reset'}: <time datetime="${status.resetAt}" title="${status.resetAt}">${esc(stamp(status.resetAt))}</time>${status.done?` · in ${countdown(status.resetAt)}`:''}</p>`:''}
     <details class="daily-calculator"><summary>Edit reward & time estimate</summary>
       <form data-daily-estimate="${activity.id}" class="daily-estimate-form">
         <label>Net GP before selling fees<input type="number" name="gp" min="-1000000000000" max="1000000000000" step="any" value="${value.gp??''}" placeholder="Unknown / no GP reward"></label>
@@ -101,7 +105,7 @@ export function renderDailyScape(nextGame,nextQuery) {
   $('#stats').innerHTML=[...['daily','weekly','monthly'].map(period=>[relevant.filter(activity=>activity.cadence===period&&allowed(activity)&&stateFor(activity).ready).length,`${period} activities ready`]),[todayLogs.length,'completions logged today (UTC)']].map(([count,label])=>`<div><span>◷</span><strong>${count}</strong><small>${label}</small></div>`).join('');
   const selected=relevant.filter(activity=>(cadence==='all'||activity.cadence===cadence)&&(kind==='all'||activity.kind===kind)&&(!onlyPinned||journal.pinned.includes(activity.id))&&(`${activity.title} ${activity.summary} ${activity.requirements}`.toLowerCase().includes(query.toLowerCase().trim()))&&(statusFilter==='all'||(statusFilter==='ready'?stateFor(activity).ready&&allowed(activity):stateFor(activity).done)));
   $('#shown-count').textContent=`${selected.length} activities · ${relevant.length} in catalog`;
-  const controls=`<div class="daily-hub"><details class="daily-reset-details"><summary>Reset times & rules</summary><div class="daily-intro"><p class="eyebrow">A LITTLE PROGRESS, ON YOUR TERMS</p><h3>Make your own DailyScape.</h3><p>Browse D&Ds, claims, shop runs and repeatable goals. Pin what matters to you, compare the rewards and keep a dated record of every run.</p><div class="daily-resets">${resetWidgets()}</div><p class="daily-timing">Global resets use 00:00 UTC (RS3 weeklies: Wednesday). Personal cooldowns, stock accumulation and availability days are labelled separately. This list ignores your last-played date. Quest eligibility is not imported.</p></div></details>
+  const controls=`<div class="daily-hub"><div class="daily-resets" data-daily-reset-widgets role="timer" aria-live="off" aria-label="Activity reset countdowns">${resetWidgets()}</div><details class="daily-reset-details"><summary>Reset times & rules</summary><div class="daily-intro"><p class="eyebrow">A LITTLE PROGRESS, ON YOUR TERMS</p><h3>Make your own DailyScape.</h3><p>Browse D&Ds, claims, shop runs and repeatable goals. Pin what matters to you, compare the rewards and keep a dated record of every run.</p><p class="daily-timing">Global resets use 00:00 UTC (RS3 weeklies: Wednesday). Personal cooldowns, stock accumulation and availability days are labelled separately. This list ignores your last-played date. Quest eligibility is not imported.</p></div></details>
     <div class="daily-tabs" role="group" aria-label="DailyScape view"><button class="outline-button" data-daily-tab="activities" aria-pressed="${tab==='activities'}">Activity checklist</button><button class="outline-button" data-daily-tab="history" aria-pressed="${tab==='history'}">Completion journal (${journal.logs.filter(log=>activityById(log.activityId)?.game===game).length})</button></div>
     <details class="daily-settings"><summary>Account, estimates & backups</summary><p>Journal for <strong>${esc(hooks.getProfile().label)}</strong>. Stored in this browser, separately for each selected character. DailyScape history is not cloud-synced. Export a backup to keep or move it; importing merges records without deleting existing history.</p><form id="daily-settings-form" class="daily-settings-form"><label><input type="checkbox" name="member" ${journal.member?'checked':''}> Members account</label><label>Default ${game.toUpperCase()} comparison XP/hour<input type="number" name="rate" min="1" max="1000000000000" required value="${journal.rates[game]}"></label><button class="outline-button">Save settings</button></form><p>Use a realistic alternative training rate. Card estimates can override it. GP snapshots were reviewed ${dailyCatalog.reviewed}; they are not live quotes. XP planning examples are labelled and do not assume your imported levels.</p><div class="daily-actions"><button class="outline-button" data-daily-export="json">Download JSON backup</button><button class="outline-button" data-daily-export="csv">Export full CSV</button><label class="outline-button daily-upload">Merge JSON backup<input type="file" id="daily-import" accept="application/json,.json"></label></div></details>
     ${broken?'<p class="notice">The local journal could not be read. New writes are blocked to protect the stored copy. Restore a JSON backup to recover your journal.</p>':''}
@@ -110,7 +114,7 @@ export function renderDailyScape(nextGame,nextQuery) {
     ${game==='rs3'?`<p class="daily-catalog-note">Reviewed ${dailyCatalog.reviewed} after the <a href="${dailyCatalog.overhaul}" target="_blank" rel="noopener noreferrer">2026 overhaul ↗</a>. Removed dailies are excluded; uncapped activities are under “On your clock.” Shop routes group related stores. ${relevant.length} catalog activities; account restrictions and specific shop margins still need checking.</p>`:`<p class="daily-catalog-note">OSRS has no standard monthly D&D cycle in this catalog. Tears of Guthix uses a personal seven-day cooldown. Shop claims and diary utility charges are included alongside optional recurring runs.</p>`}
     <p class="daily-catalog-note">Activity references: <a href="${dailyCatalog.sources[game]}" target="_blank" rel="noopener noreferrer">${game.toUpperCase()} repeatable-events index ↗</a>. This catalog covers the reviewed repeatable activities and grouped routes, rather than every possible stock item or training loop. Numeric estimates never verify actual completion or profit.</p></details></div>`;
   $('#results').innerHTML=controls;
-  statusSignature=signature();
+  const now=new Date();statusRefreshAt=Math.min(Date.parse(nextReset('daily',now)),...relevant.map(activity=>Date.parse(stateFor(activity,now).resetAt)).filter(time=>Number.isFinite(time)&&time>now.getTime()));
 }
 export function dailyPlanningContext(selectedGame) {
   load();
@@ -178,8 +182,15 @@ export function initDailyScape(callbacks) {
     }
   });
   window.addEventListener('storage',event=>{if(event.key===identity){identity='';load();rerender();}});
-  // Keep reset status fresh without replacing a form or open calculator in use.
-  const refreshWhenIdle=()=>{if(document.hidden||!hooks.isVisible())return;document.querySelectorAll('[data-daily-countdown]').forEach(node=>node.textContent=countdown(nextReset(node.dataset.dailyCountdown)));if(signature()!==statusSignature&&!$('#results details[open]')&&!document.activeElement?.closest('#results form'))rerender();};
+  // Update only clock fragments; preserve open calculators, inputs and focus.
+  const refreshWhenIdle=()=>{
+    if(document.hidden||!hooks.isVisible())return;
+    const now=new Date();
+    const widgets=$('[data-daily-reset-widgets]');if(widgets)widgets.innerHTML=resetWidgets(now);
+    document.querySelectorAll('[data-activity-timer]').forEach(node=>{const activity=activityById(node.dataset.activityTimer);if(activity)node.innerHTML=timerMarkup(activity,stateFor(activity,now),now);});
+    if(now.getTime()>=statusRefreshAt&&!$('#results details[open]')&&!document.activeElement?.closest('#results form'))rerender();
+  };
   document.addEventListener('visibilitychange',refreshWhenIdle);
-  setInterval(refreshWhenIdle,60000);
+  window.addEventListener('focus',refreshWhenIdle);
+  setInterval(refreshWhenIdle,1000);
 }

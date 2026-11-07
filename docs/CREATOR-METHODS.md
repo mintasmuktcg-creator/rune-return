@@ -49,6 +49,6 @@ supplies, whole-loop attention, rate exclusions and patch compatibility. Budget
 and maximum-gear setups need different evidence. A partial style update cannot
 clear an entire publisher warning.
 
-The full automated suite has **69 tests**. Browser checks cover skill selection,
+The full automated suite has **73 tests**. Browser checks cover skill selection,
 source states, persistent filters, patch links and responsive layouts. Gameplay
 verification and automatic creator-feed monitoring are not configured.
